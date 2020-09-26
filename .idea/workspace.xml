@@ -1,21 +1,16 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="8a44e83d-274b-4edf-acc6-375a302ec66a" name="Default Changelist" comment="FactoryPattern">
-      <change afterPath="$PROJECT_DIR$/.idea/.name" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/compiler.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/uiDesigner.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/vcs.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Factory.iml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/pom.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/base/Factory.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/base/FindFirstNegativeElem.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/base/FindMaxElem.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/base/FindMinElem.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/base/IFindElement.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/test/java/base/TestFactory.java" afterDir="false" />
+    <list default="true" id="8a44e83d-274b-4edf-acc6-375a302ec66a" name="Default Changelist" comment="">
+      <change afterPath="$PROJECT_DIR$/src/main/java/builder/BlouseBuilder.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/builder/Builder.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/builder/Clothes.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/builder/CoatBuilder.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/builder/Director.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/builder/DressBuilder.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/builder/JeansBuilder.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/test/java/builder/TestBuilder.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -46,7 +41,38 @@
     <property name="project.structure.side.proportion" value="0.2" />
     <property name="settings.editor.selected.configurable" value="reference.projectsettings.compiler.javacompiler" />
   </component>
-  <component name="RunManager" selected="JUnit.TestFactory.testFindNegative">
+  <component name="RunManager" selected="JUnit.TestBuilder">
+    <configuration name="TestBuilder" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+      <module name="Factory" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="builder.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <option name="PACKAGE_NAME" value="builder" />
+      <option name="MAIN_CLASS_NAME" value="builder.TestBuilder" />
+      <option name="TEST_OBJECT" value="class" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="TestBuilder.test" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+      <module name="Factory" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="builder.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <option name="PACKAGE_NAME" value="builder" />
+      <option name="MAIN_CLASS_NAME" value="builder.TestBuilder" />
+      <option name="METHOD_NAME" value="test" />
+      <option name="TEST_OBJECT" value="method" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
     <configuration name="TestFactory.testFindMax" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
       <module name="Factory" />
       <extension name="coverage">
@@ -97,6 +123,8 @@
     </configuration>
     <recent_temporary>
       <list>
+        <item itemvalue="JUnit.TestBuilder" />
+        <item itemvalue="JUnit.TestBuilder.test" />
         <item itemvalue="JUnit.TestFactory.testFindNegative" />
         <item itemvalue="JUnit.TestFactory.testFindMin" />
         <item itemvalue="JUnit.TestFactory.testFindMax" />
@@ -114,6 +142,14 @@
       <option name="presentableId" value="Default" />
       <updated>1600072364533</updated>
     </task>
+    <task id="LOCAL-00001" summary="FactoryPattern">
+      <created>1600082625259</created>
+      <option name="number" value="00001" />
+      <option name="presentableId" value="LOCAL-00001" />
+      <option name="project" value="LOCAL" />
+      <updated>1600082625259</updated>
+    </task>
+    <option name="localTasksCounter" value="2" />
     <servers />
   </component>
   <component name="VcsManagerConfiguration">
@@ -125,37 +161,57 @@
       <screen x="0" y="0" width="1536" height="824" />
     </state>
     <state x="361" y="71" key="#Project_Structure/0.0.1536.824@0.0.1536.824" timestamp="1600072397722" />
-    <state x="574" y="128" key="#com.intellij.ide.util.MemberChooser" timestamp="1600075200457">
+    <state x="574" y="128" key="#com.intellij.ide.util.MemberChooser" timestamp="1601113569083">
       <screen x="0" y="0" width="1536" height="824" />
     </state>
-    <state x="574" y="128" key="#com.intellij.ide.util.MemberChooser/0.0.1536.824@0.0.1536.824" timestamp="1600075200457" />
-    <state x="424" y="7" key="CommitChangelistDialog2" timestamp="1600082527402">
+    <state x="574" y="128" key="#com.intellij.ide.util.MemberChooser/0.0.1536.824@0.0.1536.824" timestamp="1601113569083" />
+    <state x="424" y="7" key="CommitChangelistDialog2" timestamp="1601124599253">
       <screen x="0" y="0" width="1536" height="824" />
     </state>
-    <state x="424" y="7" key="CommitChangelistDialog2/0.0.1536.824@0.0.1536.824" timestamp="1600082527402" />
-    <state x="549" y="167" key="FileChooserDialogImpl" timestamp="1600080644001">
+    <state x="424" y="7" key="CommitChangelistDialog2/0.0.1536.824@0.0.1536.824" timestamp="1601124599253" />
+    <state x="549" y="167" key="FileChooserDialogImpl" timestamp="1601121575994">
       <screen x="0" y="0" width="1536" height="824" />
     </state>
-    <state x="549" y="167" key="FileChooserDialogImpl/0.0.1536.824@0.0.1536.824" timestamp="1600080644001" />
-    <state width="1493" height="210" key="GridCell.Tab.0.bottom" timestamp="1600082527419">
+    <state x="549" y="167" key="FileChooserDialogImpl/0.0.1536.824@0.0.1536.824" timestamp="1601121575994" />
+    <state width="1493" height="210" key="GridCell.Tab.0.bottom" timestamp="1601124621363">
       <screen x="0" y="0" width="1536" height="824" />
     </state>
-    <state width="1493" height="210" key="GridCell.Tab.0.bottom/0.0.1536.824@0.0.1536.824" timestamp="1600082527419" />
-    <state width="1493" height="210" key="GridCell.Tab.0.center" timestamp="1600082527419">
+    <state width="1493" height="210" key="GridCell.Tab.0.bottom/0.0.1536.824@0.0.1536.824" timestamp="1601124621363" />
+    <state width="1493" height="210" key="GridCell.Tab.0.center" timestamp="1601124621363">
       <screen x="0" y="0" width="1536" height="824" />
     </state>
-    <state width="1493" height="210" key="GridCell.Tab.0.center/0.0.1536.824@0.0.1536.824" timestamp="1600082527419" />
-    <state width="1493" height="210" key="GridCell.Tab.0.left" timestamp="1600082527419">
+    <state width="1493" height="210" key="GridCell.Tab.0.center/0.0.1536.824@0.0.1536.824" timestamp="1601124621363" />
+    <state width="1493" height="210" key="GridCell.Tab.0.left" timestamp="1601124621363">
       <screen x="0" y="0" width="1536" height="824" />
     </state>
-    <state width="1493" height="210" key="GridCell.Tab.0.left/0.0.1536.824@0.0.1536.824" timestamp="1600082527419" />
-    <state width="1493" height="210" key="GridCell.Tab.0.right" timestamp="1600082527419">
+    <state width="1493" height="210" key="GridCell.Tab.0.left/0.0.1536.824@0.0.1536.824" timestamp="1601124621363" />
+    <state width="1493" height="210" key="GridCell.Tab.0.right" timestamp="1601124621363">
       <screen x="0" y="0" width="1536" height="824" />
     </state>
-    <state width="1493" height="210" key="GridCell.Tab.0.right/0.0.1536.824@0.0.1536.824" timestamp="1600082527419" />
+    <state width="1493" height="210" key="GridCell.Tab.0.right/0.0.1536.824@0.0.1536.824" timestamp="1601124621363" />
+    <state width="1493" height="261" key="GridCell.Tab.1.bottom" timestamp="1601121619751">
+      <screen x="0" y="0" width="1536" height="824" />
+    </state>
+    <state width="1493" height="261" key="GridCell.Tab.1.bottom/0.0.1536.824@0.0.1536.824" timestamp="1601121619751" />
+    <state width="1493" height="261" key="GridCell.Tab.1.center" timestamp="1601121619751">
+      <screen x="0" y="0" width="1536" height="824" />
+    </state>
+    <state width="1493" height="261" key="GridCell.Tab.1.center/0.0.1536.824@0.0.1536.824" timestamp="1601121619751" />
+    <state width="1493" height="261" key="GridCell.Tab.1.left" timestamp="1601121619751">
+      <screen x="0" y="0" width="1536" height="824" />
+    </state>
+    <state width="1493" height="261" key="GridCell.Tab.1.left/0.0.1536.824@0.0.1536.824" timestamp="1601121619751" />
+    <state width="1493" height="261" key="GridCell.Tab.1.right" timestamp="1601121619751">
+      <screen x="0" y="0" width="1536" height="824" />
+    </state>
+    <state width="1493" height="261" key="GridCell.Tab.1.right/0.0.1536.824@0.0.1536.824" timestamp="1601121619751" />
     <state x="249" y="0" key="SettingsEditor" timestamp="1600081558380">
       <screen x="0" y="0" width="1536" height="824" />
     </state>
     <state x="249" y="0" key="SettingsEditor/0.0.1536.824@0.0.1536.824" timestamp="1600081558380" />
+    <state x="0" y="0" key="com.intellij.ide.util.TipDialog" timestamp="1601110713078">
+      <screen x="0" y="0" width="1536" height="824" />
+    </state>
+    <state x="0" y="0" key="com.intellij.ide.util.TipDialog/0.0.1536.824@0.0.1536.824" timestamp="1601110713078" />
   </component>
 </project>
