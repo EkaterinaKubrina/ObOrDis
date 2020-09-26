@@ -1,16 +1,18 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="8a44e83d-274b-4edf-acc6-375a302ec66a" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/src/main/java/builder/BlouseBuilder.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/builder/Builder.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/builder/Clothes.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/builder/CoatBuilder.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/builder/Director.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/builder/DressBuilder.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/builder/JeansBuilder.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/test/java/builder/TestBuilder.java" afterDir="false" />
+    <list default="true" id="8a44e83d-274b-4edf-acc6-375a302ec66a" name="Default Changelist" comment="PrototypeAndSingletonPattern">
+      <change afterPath="$PROJECT_DIR$/src/main/java/singletonAndPrototype/Goods.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/singletonAndPrototype/Prototype.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/singletonAndPrototype/Seller.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/singletonAndPrototype/Shop.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/singletonAndPrototype/ShopOwner.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/test/java/singletonAndPrototype/TestPrototype.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/test/java/singletonAndPrototype/TestSingleton.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/base/Factory.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/base/FactoryInt.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/builder/Director.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/builder/Director.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/test/java/base/TestFactory.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/base/TestFactoryInt.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -41,7 +43,7 @@
     <property name="project.structure.side.proportion" value="0.2" />
     <property name="settings.editor.selected.configurable" value="reference.projectsettings.compiler.javacompiler" />
   </component>
-  <component name="RunManager" selected="JUnit.TestBuilder">
+  <component name="RunManager" selected="JUnit.singletonAndPrototype in Factory">
     <configuration name="TestBuilder" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
       <module name="Factory" />
       <extension name="coverage">
@@ -57,7 +59,7 @@
         <option name="Make" enabled="true" />
       </method>
     </configuration>
-    <configuration name="TestBuilder.test" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+    <configuration name="TestBuilder.test2" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
       <module name="Factory" />
       <extension name="coverage">
         <pattern>
@@ -67,67 +69,65 @@
       </extension>
       <option name="PACKAGE_NAME" value="builder" />
       <option name="MAIN_CLASS_NAME" value="builder.TestBuilder" />
+      <option name="METHOD_NAME" value="test2" />
+      <option name="TEST_OBJECT" value="method" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="TestPrototype.test" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+      <module name="Factory" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="singletonAndPrototype.Seller" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <option name="PACKAGE_NAME" value="singletonAndPrototype" />
+      <option name="MAIN_CLASS_NAME" value="singletonAndPrototype.TestPrototype" />
       <option name="METHOD_NAME" value="test" />
       <option name="TEST_OBJECT" value="method" />
       <method v="2">
         <option name="Make" enabled="true" />
       </method>
     </configuration>
-    <configuration name="TestFactory.testFindMax" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+    <configuration name="TestSingleton.test" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
       <module name="Factory" />
       <extension name="coverage">
         <pattern>
-          <option name="PATTERN" value="base.*" />
+          <option name="PATTERN" value="singletonAndPrototype.Seller" />
           <option name="ENABLED" value="true" />
         </pattern>
       </extension>
-      <option name="PACKAGE_NAME" value="base" />
-      <option name="MAIN_CLASS_NAME" value="base.TestFactory" />
-      <option name="METHOD_NAME" value="testFindMax" />
+      <option name="PACKAGE_NAME" value="singletonAndPrototype" />
+      <option name="MAIN_CLASS_NAME" value="singletonAndPrototype.TestSingleton" />
+      <option name="METHOD_NAME" value="test" />
       <option name="TEST_OBJECT" value="method" />
       <method v="2">
         <option name="Make" enabled="true" />
       </method>
     </configuration>
-    <configuration name="TestFactory.testFindMin" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+    <configuration name="singletonAndPrototype in Factory" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
       <module name="Factory" />
       <extension name="coverage">
         <pattern>
-          <option name="PATTERN" value="base.*" />
+          <option name="PATTERN" value="singletonAndPrototype.*" />
           <option name="ENABLED" value="true" />
         </pattern>
       </extension>
-      <option name="PACKAGE_NAME" value="base" />
-      <option name="MAIN_CLASS_NAME" value="base.TestFactory" />
-      <option name="METHOD_NAME" value="testFindMin" />
-      <option name="TEST_OBJECT" value="method" />
-      <method v="2">
-        <option name="Make" enabled="true" />
-      </method>
-    </configuration>
-    <configuration name="TestFactory.testFindNegative" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
-      <module name="Factory" />
-      <extension name="coverage">
-        <pattern>
-          <option name="PATTERN" value="base.*" />
-          <option name="ENABLED" value="true" />
-        </pattern>
-      </extension>
-      <option name="PACKAGE_NAME" value="base" />
-      <option name="MAIN_CLASS_NAME" value="base.TestFactory" />
-      <option name="METHOD_NAME" value="testFindNegative" />
-      <option name="TEST_OBJECT" value="method" />
+      <option name="PACKAGE_NAME" value="singletonAndPrototype" />
+      <option name="TEST_OBJECT" value="package" />
       <method v="2">
         <option name="Make" enabled="true" />
       </method>
     </configuration>
     <recent_temporary>
       <list>
+        <item itemvalue="JUnit.singletonAndPrototype in Factory" />
+        <item itemvalue="JUnit.TestPrototype.test" />
+        <item itemvalue="JUnit.TestSingleton.test" />
+        <item itemvalue="JUnit.TestBuilder.test2" />
         <item itemvalue="JUnit.TestBuilder" />
-        <item itemvalue="JUnit.TestBuilder.test" />
-        <item itemvalue="JUnit.TestFactory.testFindNegative" />
-        <item itemvalue="JUnit.TestFactory.testFindMin" />
-        <item itemvalue="JUnit.TestFactory.testFindMax" />
       </list>
     </recent_temporary>
   </component>
@@ -149,62 +149,79 @@
       <option name="project" value="LOCAL" />
       <updated>1600082625259</updated>
     </task>
-    <option name="localTasksCounter" value="2" />
+    <task id="LOCAL-00002" summary="BuilderPattern">
+      <created>1601124627780</created>
+      <option name="number" value="00002" />
+      <option name="presentableId" value="LOCAL-00002" />
+      <option name="project" value="LOCAL" />
+      <updated>1601124627780</updated>
+    </task>
+    <option name="localTasksCounter" value="3" />
     <servers />
   </component>
   <component name="VcsManagerConfiguration">
     <MESSAGE value="FactoryPattern" />
-    <option name="LAST_COMMIT_MESSAGE" value="FactoryPattern" />
+    <MESSAGE value="BuilderPattern" />
+    <MESSAGE value="PrototypeAndSingletonPattern" />
+    <option name="LAST_COMMIT_MESSAGE" value="PrototypeAndSingletonPattern" />
   </component>
   <component name="WindowStateProjectService">
     <state x="361" y="71" key="#Project_Structure" timestamp="1600072397722">
       <screen x="0" y="0" width="1536" height="824" />
     </state>
     <state x="361" y="71" key="#Project_Structure/0.0.1536.824@0.0.1536.824" timestamp="1600072397722" />
-    <state x="574" y="128" key="#com.intellij.ide.util.MemberChooser" timestamp="1601113569083">
+    <state x="93" y="93" width="1350" height="638" key="#com.intellij.execution.junit2.states.ComparisonFailureState$DiffDialog" timestamp="1601136698165">
       <screen x="0" y="0" width="1536" height="824" />
     </state>
-    <state x="574" y="128" key="#com.intellij.ide.util.MemberChooser/0.0.1536.824@0.0.1536.824" timestamp="1601113569083" />
-    <state x="424" y="7" key="CommitChangelistDialog2" timestamp="1601124599253">
+    <state x="93" y="93" width="1350" height="638" key="#com.intellij.execution.junit2.states.ComparisonFailureState$DiffDialog/0.0.1536.824@0.0.1536.824" timestamp="1601136698165" />
+    <state x="574" y="128" key="#com.intellij.ide.util.MemberChooser" timestamp="1601137602018">
       <screen x="0" y="0" width="1536" height="824" />
     </state>
-    <state x="424" y="7" key="CommitChangelistDialog2/0.0.1536.824@0.0.1536.824" timestamp="1601124599253" />
+    <state x="574" y="128" key="#com.intellij.ide.util.MemberChooser/0.0.1536.824@0.0.1536.824" timestamp="1601137602018" />
+    <state x="345" y="0" key="#com.intellij.refactoring.rename.AutomaticRenamingDialog" timestamp="1601134168776">
+      <screen x="0" y="0" width="1536" height="824" />
+    </state>
+    <state x="345" y="0" key="#com.intellij.refactoring.rename.AutomaticRenamingDialog/0.0.1536.824@0.0.1536.824" timestamp="1601134168776" />
+    <state x="424" y="7" key="CommitChangelistDialog2" timestamp="1601148493523">
+      <screen x="0" y="0" width="1536" height="824" />
+    </state>
+    <state x="424" y="7" key="CommitChangelistDialog2/0.0.1536.824@0.0.1536.824" timestamp="1601148493523" />
     <state x="549" y="167" key="FileChooserDialogImpl" timestamp="1601121575994">
       <screen x="0" y="0" width="1536" height="824" />
     </state>
     <state x="549" y="167" key="FileChooserDialogImpl/0.0.1536.824@0.0.1536.824" timestamp="1601121575994" />
-    <state width="1493" height="210" key="GridCell.Tab.0.bottom" timestamp="1601124621363">
+    <state width="1493" height="210" key="GridCell.Tab.0.bottom" timestamp="1601148493536">
       <screen x="0" y="0" width="1536" height="824" />
     </state>
-    <state width="1493" height="210" key="GridCell.Tab.0.bottom/0.0.1536.824@0.0.1536.824" timestamp="1601124621363" />
-    <state width="1493" height="210" key="GridCell.Tab.0.center" timestamp="1601124621363">
+    <state width="1493" height="210" key="GridCell.Tab.0.bottom/0.0.1536.824@0.0.1536.824" timestamp="1601148493536" />
+    <state width="1493" height="210" key="GridCell.Tab.0.center" timestamp="1601148493536">
       <screen x="0" y="0" width="1536" height="824" />
     </state>
-    <state width="1493" height="210" key="GridCell.Tab.0.center/0.0.1536.824@0.0.1536.824" timestamp="1601124621363" />
-    <state width="1493" height="210" key="GridCell.Tab.0.left" timestamp="1601124621363">
+    <state width="1493" height="210" key="GridCell.Tab.0.center/0.0.1536.824@0.0.1536.824" timestamp="1601148493536" />
+    <state width="1493" height="210" key="GridCell.Tab.0.left" timestamp="1601148493536">
       <screen x="0" y="0" width="1536" height="824" />
     </state>
-    <state width="1493" height="210" key="GridCell.Tab.0.left/0.0.1536.824@0.0.1536.824" timestamp="1601124621363" />
-    <state width="1493" height="210" key="GridCell.Tab.0.right" timestamp="1601124621363">
+    <state width="1493" height="210" key="GridCell.Tab.0.left/0.0.1536.824@0.0.1536.824" timestamp="1601148493536" />
+    <state width="1493" height="210" key="GridCell.Tab.0.right" timestamp="1601148493536">
       <screen x="0" y="0" width="1536" height="824" />
     </state>
-    <state width="1493" height="210" key="GridCell.Tab.0.right/0.0.1536.824@0.0.1536.824" timestamp="1601124621363" />
-    <state width="1493" height="261" key="GridCell.Tab.1.bottom" timestamp="1601121619751">
+    <state width="1493" height="210" key="GridCell.Tab.0.right/0.0.1536.824@0.0.1536.824" timestamp="1601148493536" />
+    <state width="1493" height="261" key="GridCell.Tab.1.bottom" timestamp="1601136717730">
       <screen x="0" y="0" width="1536" height="824" />
     </state>
-    <state width="1493" height="261" key="GridCell.Tab.1.bottom/0.0.1536.824@0.0.1536.824" timestamp="1601121619751" />
-    <state width="1493" height="261" key="GridCell.Tab.1.center" timestamp="1601121619751">
+    <state width="1493" height="261" key="GridCell.Tab.1.bottom/0.0.1536.824@0.0.1536.824" timestamp="1601136717730" />
+    <state width="1493" height="261" key="GridCell.Tab.1.center" timestamp="1601136717730">
       <screen x="0" y="0" width="1536" height="824" />
     </state>
-    <state width="1493" height="261" key="GridCell.Tab.1.center/0.0.1536.824@0.0.1536.824" timestamp="1601121619751" />
-    <state width="1493" height="261" key="GridCell.Tab.1.left" timestamp="1601121619751">
+    <state width="1493" height="261" key="GridCell.Tab.1.center/0.0.1536.824@0.0.1536.824" timestamp="1601136717730" />
+    <state width="1493" height="261" key="GridCell.Tab.1.left" timestamp="1601136717730">
       <screen x="0" y="0" width="1536" height="824" />
     </state>
-    <state width="1493" height="261" key="GridCell.Tab.1.left/0.0.1536.824@0.0.1536.824" timestamp="1601121619751" />
-    <state width="1493" height="261" key="GridCell.Tab.1.right" timestamp="1601121619751">
+    <state width="1493" height="261" key="GridCell.Tab.1.left/0.0.1536.824@0.0.1536.824" timestamp="1601136717730" />
+    <state width="1493" height="261" key="GridCell.Tab.1.right" timestamp="1601136717730">
       <screen x="0" y="0" width="1536" height="824" />
     </state>
-    <state width="1493" height="261" key="GridCell.Tab.1.right/0.0.1536.824@0.0.1536.824" timestamp="1601121619751" />
+    <state width="1493" height="261" key="GridCell.Tab.1.right/0.0.1536.824@0.0.1536.824" timestamp="1601136717730" />
     <state x="249" y="0" key="SettingsEditor" timestamp="1600081558380">
       <screen x="0" y="0" width="1536" height="824" />
     </state>
@@ -213,5 +230,9 @@
       <screen x="0" y="0" width="1536" height="824" />
     </state>
     <state x="0" y="0" key="com.intellij.ide.util.TipDialog/0.0.1536.824@0.0.1536.824" timestamp="1601110713078" />
+    <state x="578" y="329" key="com.intellij.openapi.vcs.update.UpdateOrStatusOptionsDialogupdate-v2" timestamp="1601124632760">
+      <screen x="0" y="0" width="1536" height="824" />
+    </state>
+    <state x="578" y="329" key="com.intellij.openapi.vcs.update.UpdateOrStatusOptionsDialogupdate-v2/0.0.1536.824@0.0.1536.824" timestamp="1601124632760" />
   </component>
 </project>

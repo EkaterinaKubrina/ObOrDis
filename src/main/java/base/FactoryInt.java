@@ -1,6 +1,6 @@
 package base;
 
-public class Factory {
+public class FactoryInt {
     public IFindElement getFindElem(String id, int[] array){
         switch (id) {
             case "FirstNegativeElem":

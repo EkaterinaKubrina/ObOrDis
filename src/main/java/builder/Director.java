@@ -1,8 +1,5 @@
 package builder;
 
-import base.FindFirstNegativeElem;
-import base.FindMaxElem;
-import base.FindMinElem;
 
 public class Director {
     private Builder builder;
