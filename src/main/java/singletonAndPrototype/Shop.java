@@ -3,13 +3,13 @@ package singletonAndPrototype;
 public class Shop {
     private ShopOwner shopOwner; //одиночка
     private Seller seller;
-    public Prototype[] goods;
+    public IPrototype[] goods;
 
     public Shop(String name) {
         shopOwner = ShopOwner.getInstance(name);
     }
 
-    public void setGoods(Prototype[] goods) {
+    public void setGoods(IPrototype[] goods) {
         this.goods = goods;
     }
 

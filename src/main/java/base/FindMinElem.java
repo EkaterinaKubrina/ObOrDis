@@ -1,6 +1,8 @@
 package base;
 
-public class FindMinElem implements IFindElement {
+import abstractFactory.IFindMin;
+
+public class FindMinElem implements IFindElement, IFindMin { // находит минимальный элемент
     public String id = "MinElem";
     int[] array;
 

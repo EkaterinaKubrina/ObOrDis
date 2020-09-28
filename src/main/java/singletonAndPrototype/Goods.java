@@ -4,7 +4,7 @@ package singletonAndPrototype;
 import builder.Clothes;
 import builder.Director;
 
-public class Goods implements Prototype{
+public class Goods implements IPrototype {
     private int price;
     private String type;
     private Clothes clothes;
@@ -44,7 +44,7 @@ public class Goods implements Prototype{
     }
 
     @Override
-    public Prototype clone() {
+    public IPrototype clone() {
         return new Goods(this);
     }
 }

@@ -2,8 +2,8 @@ package singletonAndPrototype;
 
 import builder.Clothes;
 
-public interface Prototype {
-    Prototype clone();
+public interface IPrototype {
+    IPrototype clone();
     int getPrice();
     String getType();
     Clothes getClothes();

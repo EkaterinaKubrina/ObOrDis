@@ -1,7 +1,9 @@
 package base;
 
-public class FindMaxElem implements IFindElement {
-    public String id = "MaxElem";
+import abstractFactory.IFindMax;
+
+public class FindMaxElem implements IFindMax, IFindElement { //гаходит максимальный элемент
+    public static String id = "MaxElem";
     int[] array;
 
     public FindMaxElem(int[] array) {
