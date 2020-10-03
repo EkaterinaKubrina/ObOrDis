@@ -2,19 +2,13 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="8a44e83d-274b-4edf-acc6-375a302ec66a" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/src/main/java/bridgeAndDecoratorAndAdapter/AdapterMilk.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/bridgeAndDecoratorAndAdapter/AlmondMilk.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/bridgeAndDecoratorAndAdapter/ClientWithALactoseAllergy.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/bridgeAndDecoratorAndAdapter/CoconutMilk.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/bridgeAndDecoratorAndAdapter/CowsMilk.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/bridgeAndDecoratorAndAdapter/Cup.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/bridgeAndDecoratorAndAdapter/DrawingOnTheCup.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/bridgeAndDecoratorAndAdapter/LactoseFreeMilk.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/bridgeAndDecoratorAndAdapter/Milk.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/bridgeAndDecoratorAndAdapter/Milkshake.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/bridgeAndDecoratorAndAdapter/Order.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/bridgeAndDecoratorAndAdapter/Tubule.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/test/java/bridgeAndDecoratorAndAdapter/TestBridgeAndDecoratorAndAdapter.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/compositeAndVisitor/Box.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/compositeAndVisitor/IVisitor.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/compositeAndVisitor/IncreaseVisitor.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/compositeAndVisitor/Pack.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/compositeAndVisitor/PacketOfCandy.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/compositeAndVisitor/PacketOfMiniChocolate.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/test/java/compositeAndVisitor/TestCompositeAndVisitor.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
@@ -46,6 +40,7 @@
     <property name="project.structure.last.edited" value="Modules" />
     <property name="project.structure.proportion" value="0.15" />
     <property name="project.structure.side.proportion" value="0.2" />
+    <property name="run.code.analysis.last.selected.profile" value="pProject Default" />
     <property name="settings.editor.selected.configurable" value="reference.projectsettings.compiler.javacompiler" />
   </component>
   <component name="RecentsManager">
@@ -56,7 +51,7 @@
       <recent name="C:\Users\katty\OdjectOrientedDesign\ObOrDis\src\main\java\abstractFactory" />
     </key>
   </component>
-  <component name="RunManager" selected="JUnit.TestBridgeAndDecoratorAndAdapter.testDecorator">
+  <component name="RunManager" selected="JUnit.TestCompositeAndVisitor.testComposite">
     <configuration name="TestBridgeAndDecoratorAndAdapter" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
       <module name="Factory" />
       <extension name="coverage">
@@ -68,38 +63,6 @@
       <option name="PACKAGE_NAME" value="bridgeAndDecoratorAndAdapter" />
       <option name="MAIN_CLASS_NAME" value="bridgeAndDecoratorAndAdapter.TestBridgeAndDecoratorAndAdapter" />
       <option name="TEST_OBJECT" value="class" />
-      <method v="2">
-        <option name="Make" enabled="true" />
-      </method>
-    </configuration>
-    <configuration name="TestBridgeAndDecoratorAndAdapter.testAdapter" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
-      <module name="Factory" />
-      <extension name="coverage">
-        <pattern>
-          <option name="PATTERN" value="bridgeAndDecoratorAndAdapter.*" />
-          <option name="ENABLED" value="true" />
-        </pattern>
-      </extension>
-      <option name="PACKAGE_NAME" value="bridgeAndDecoratorAndAdapter" />
-      <option name="MAIN_CLASS_NAME" value="bridgeAndDecoratorAndAdapter.TestBridgeAndDecoratorAndAdapter" />
-      <option name="METHOD_NAME" value="testAdapter" />
-      <option name="TEST_OBJECT" value="method" />
-      <method v="2">
-        <option name="Make" enabled="true" />
-      </method>
-    </configuration>
-    <configuration name="TestBridgeAndDecoratorAndAdapter.testBridge" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
-      <module name="Factory" />
-      <extension name="coverage">
-        <pattern>
-          <option name="PATTERN" value="bridgeAndDecoratorAndAdapter.*" />
-          <option name="ENABLED" value="true" />
-        </pattern>
-      </extension>
-      <option name="PACKAGE_NAME" value="bridgeAndDecoratorAndAdapter" />
-      <option name="MAIN_CLASS_NAME" value="bridgeAndDecoratorAndAdapter.TestBridgeAndDecoratorAndAdapter" />
-      <option name="METHOD_NAME" value="testBridge" />
-      <option name="TEST_OBJECT" value="method" />
       <method v="2">
         <option name="Make" enabled="true" />
       </method>
@@ -120,17 +83,49 @@
         <option name="Make" enabled="true" />
       </method>
     </configuration>
-    <configuration name="TestFactoryAbstract.test" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+    <configuration name="TestCompositeAndVisitor.test" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
       <module name="Factory" />
       <extension name="coverage">
         <pattern>
-          <option name="PATTERN" value="abstractFactory.*" />
+          <option name="PATTERN" value="composite.Chocolate" />
           <option name="ENABLED" value="true" />
         </pattern>
       </extension>
-      <option name="PACKAGE_NAME" value="abstractFactory" />
-      <option name="MAIN_CLASS_NAME" value="abstractFactory.TestFactoryAbstract" />
+      <option name="PACKAGE_NAME" value="compositeAndVisitor" />
+      <option name="MAIN_CLASS_NAME" value="compositeAndVisitor.TestCompositeAndVisitor" />
       <option name="METHOD_NAME" value="test" />
+      <option name="TEST_OBJECT" value="method" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="TestCompositeAndVisitor.testComposite" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+      <module name="Factory" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="compositeAndVisitor.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <option name="PACKAGE_NAME" value="compositeAndVisitor" />
+      <option name="MAIN_CLASS_NAME" value="compositeAndVisitor.TestCompositeAndVisitor" />
+      <option name="METHOD_NAME" value="testComposite" />
+      <option name="TEST_OBJECT" value="method" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="TestCompositeAndVisitor.testVisitor" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+      <module name="Factory" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="compositeAndVisitor.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <option name="PACKAGE_NAME" value="compositeAndVisitor" />
+      <option name="MAIN_CLASS_NAME" value="compositeAndVisitor.TestCompositeAndVisitor" />
+      <option name="METHOD_NAME" value="testVisitor" />
       <option name="TEST_OBJECT" value="method" />
       <method v="2">
         <option name="Make" enabled="true" />
@@ -138,11 +133,11 @@
     </configuration>
     <recent_temporary>
       <list>
+        <item itemvalue="JUnit.TestCompositeAndVisitor.testComposite" />
+        <item itemvalue="JUnit.TestCompositeAndVisitor.testVisitor" />
+        <item itemvalue="JUnit.TestCompositeAndVisitor.test" />
         <item itemvalue="JUnit.TestBridgeAndDecoratorAndAdapter.testDecorator" />
         <item itemvalue="JUnit.TestBridgeAndDecoratorAndAdapter" />
-        <item itemvalue="JUnit.TestBridgeAndDecoratorAndAdapter.testAdapter" />
-        <item itemvalue="JUnit.TestBridgeAndDecoratorAndAdapter.testBridge" />
-        <item itemvalue="JUnit.TestFactoryAbstract.test" />
       </list>
     </recent_temporary>
   </component>
@@ -185,7 +180,14 @@
       <option name="project" value="LOCAL" />
       <updated>1601320564445</updated>
     </task>
-    <option name="localTasksCounter" value="5" />
+    <task id="LOCAL-00005" summary="Bridge and Adapter and Decorator">
+      <created>1601722052355</created>
+      <option name="number" value="00005" />
+      <option name="presentableId" value="LOCAL-00005" />
+      <option name="project" value="LOCAL" />
+      <updated>1601722052355</updated>
+    </task>
+    <option name="localTasksCounter" value="6" />
     <servers />
   </component>
   <component name="VcsManagerConfiguration">
@@ -193,7 +195,8 @@
     <MESSAGE value="BuilderPattern" />
     <MESSAGE value="PrototypeAndSingletonPattern" />
     <MESSAGE value="AbstractFactory" />
-    <option name="LAST_COMMIT_MESSAGE" value="AbstractFactory" />
+    <MESSAGE value="Bridge and Adapter and Decorator" />
+    <option name="LAST_COMMIT_MESSAGE" value="Bridge and Adapter and Decorator" />
   </component>
   <component name="WindowStateProjectService">
     <state x="361" y="71" key="#Project_Structure" timestamp="1600072397722">
@@ -204,10 +207,10 @@
       <screen x="0" y="0" width="1536" height="824" />
     </state>
     <state x="93" y="93" width="1350" height="638" key="#com.intellij.execution.junit2.states.ComparisonFailureState$DiffDialog/0.0.1536.824@0.0.1536.824" timestamp="1601136698165" />
-    <state x="574" y="128" key="#com.intellij.ide.util.MemberChooser" timestamp="1601721114140">
+    <state x="574" y="128" key="#com.intellij.ide.util.MemberChooser" timestamp="1601742010070">
       <screen x="0" y="0" width="1536" height="824" />
     </state>
-    <state x="574" y="128" key="#com.intellij.ide.util.MemberChooser/0.0.1536.824@0.0.1536.824" timestamp="1601721114140" />
+    <state x="574" y="128" key="#com.intellij.ide.util.MemberChooser/0.0.1536.824@0.0.1536.824" timestamp="1601742010070" />
     <state x="566" y="272" width="403" height="287" key="#com.intellij.refactoring.move.moveClassesOrPackages.MoveClassesOrPackagesDialog.classes" timestamp="1601320437741">
       <screen x="0" y="0" width="1536" height="824" />
     </state>
@@ -216,10 +219,14 @@
       <screen x="0" y="0" width="1536" height="824" />
     </state>
     <state x="345" y="0" key="#com.intellij.refactoring.rename.AutomaticRenamingDialog/0.0.1536.824@0.0.1536.824" timestamp="1601319312493" />
-    <state x="424" y="7" key="CommitChangelistDialog2" timestamp="1601320563854">
+    <state x="516" y="259" key="ANALYSIS_DLG_com.intellij.analysis.BaseAnalysisAction$1" timestamp="1601730953293">
       <screen x="0" y="0" width="1536" height="824" />
     </state>
-    <state x="424" y="7" key="CommitChangelistDialog2/0.0.1536.824@0.0.1536.824" timestamp="1601320563854" />
+    <state x="516" y="259" key="ANALYSIS_DLG_com.intellij.analysis.BaseAnalysisAction$1/0.0.1536.824@0.0.1536.824" timestamp="1601730953293" />
+    <state x="424" y="7" key="CommitChangelistDialog2" timestamp="1601743747428">
+      <screen x="0" y="0" width="1536" height="824" />
+    </state>
+    <state x="424" y="7" key="CommitChangelistDialog2/0.0.1536.824@0.0.1536.824" timestamp="1601743747428" />
     <state x="159" y="65" key="DiffContextDialog" timestamp="1601320396040">
       <screen x="0" y="0" width="1536" height="824" />
     </state>
@@ -228,38 +235,38 @@
       <screen x="0" y="0" width="1536" height="824" />
     </state>
     <state x="549" y="167" key="FileChooserDialogImpl/0.0.1536.824@0.0.1536.824" timestamp="1601717950483" />
-    <state width="1493" height="261" key="GridCell.Tab.0.bottom" timestamp="1601721902377">
+    <state width="1493" height="210" key="GridCell.Tab.0.bottom" timestamp="1601743349552">
       <screen x="0" y="0" width="1536" height="824" />
     </state>
-    <state width="1493" height="261" key="GridCell.Tab.0.bottom/0.0.1536.824@0.0.1536.824" timestamp="1601721902377" />
-    <state width="1493" height="261" key="GridCell.Tab.0.center" timestamp="1601721902377">
+    <state width="1493" height="210" key="GridCell.Tab.0.bottom/0.0.1536.824@0.0.1536.824" timestamp="1601743349552" />
+    <state width="1493" height="210" key="GridCell.Tab.0.center" timestamp="1601743349552">
       <screen x="0" y="0" width="1536" height="824" />
     </state>
-    <state width="1493" height="261" key="GridCell.Tab.0.center/0.0.1536.824@0.0.1536.824" timestamp="1601721902377" />
-    <state width="1493" height="261" key="GridCell.Tab.0.left" timestamp="1601721902376">
+    <state width="1493" height="210" key="GridCell.Tab.0.center/0.0.1536.824@0.0.1536.824" timestamp="1601743349552" />
+    <state width="1493" height="210" key="GridCell.Tab.0.left" timestamp="1601743349552">
       <screen x="0" y="0" width="1536" height="824" />
     </state>
-    <state width="1493" height="261" key="GridCell.Tab.0.left/0.0.1536.824@0.0.1536.824" timestamp="1601721902376" />
-    <state width="1493" height="261" key="GridCell.Tab.0.right" timestamp="1601721902377">
+    <state width="1493" height="210" key="GridCell.Tab.0.left/0.0.1536.824@0.0.1536.824" timestamp="1601743349552" />
+    <state width="1493" height="210" key="GridCell.Tab.0.right" timestamp="1601743349552">
       <screen x="0" y="0" width="1536" height="824" />
     </state>
-    <state width="1493" height="261" key="GridCell.Tab.0.right/0.0.1536.824@0.0.1536.824" timestamp="1601721902377" />
-    <state width="1493" height="261" key="GridCell.Tab.1.bottom" timestamp="1601721902614">
+    <state width="1493" height="210" key="GridCell.Tab.0.right/0.0.1536.824@0.0.1536.824" timestamp="1601743349552" />
+    <state width="1493" height="261" key="GridCell.Tab.1.bottom" timestamp="1601742348389">
       <screen x="0" y="0" width="1536" height="824" />
     </state>
-    <state width="1493" height="261" key="GridCell.Tab.1.bottom/0.0.1536.824@0.0.1536.824" timestamp="1601721902614" />
-    <state width="1493" height="261" key="GridCell.Tab.1.center" timestamp="1601721902614">
+    <state width="1493" height="261" key="GridCell.Tab.1.bottom/0.0.1536.824@0.0.1536.824" timestamp="1601742348389" />
+    <state width="1493" height="261" key="GridCell.Tab.1.center" timestamp="1601742348389">
       <screen x="0" y="0" width="1536" height="824" />
     </state>
-    <state width="1493" height="261" key="GridCell.Tab.1.center/0.0.1536.824@0.0.1536.824" timestamp="1601721902614" />
-    <state width="1493" height="261" key="GridCell.Tab.1.left" timestamp="1601721902614">
+    <state width="1493" height="261" key="GridCell.Tab.1.center/0.0.1536.824@0.0.1536.824" timestamp="1601742348389" />
+    <state width="1493" height="261" key="GridCell.Tab.1.left" timestamp="1601742348389">
       <screen x="0" y="0" width="1536" height="824" />
     </state>
-    <state width="1493" height="261" key="GridCell.Tab.1.left/0.0.1536.824@0.0.1536.824" timestamp="1601721902614" />
-    <state width="1493" height="261" key="GridCell.Tab.1.right" timestamp="1601721902614">
+    <state width="1493" height="261" key="GridCell.Tab.1.left/0.0.1536.824@0.0.1536.824" timestamp="1601742348389" />
+    <state width="1493" height="261" key="GridCell.Tab.1.right" timestamp="1601742348389">
       <screen x="0" y="0" width="1536" height="824" />
     </state>
-    <state width="1493" height="261" key="GridCell.Tab.1.right/0.0.1536.824@0.0.1536.824" timestamp="1601721902614" />
+    <state width="1493" height="261" key="GridCell.Tab.1.right/0.0.1536.824@0.0.1536.824" timestamp="1601742348389" />
     <state x="249" y="0" key="SettingsEditor" timestamp="1600081558380">
       <screen x="0" y="0" width="1536" height="824" />
     </state>
