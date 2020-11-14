@@ -34,3 +34,4 @@ public class TestChainOfCommandAndMemento {
         assertFalse(photo.isRetouch());   //и ретуши нет
     }
 }
+
