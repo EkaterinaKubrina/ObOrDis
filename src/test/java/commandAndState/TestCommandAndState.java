@@ -13,9 +13,9 @@ public class TestCommandAndState {
         MakeCoffee makeCoffee = new MakeCoffee(barista);
         MakeTea makeTea = new MakeTea(barista);
 
-        Drink drink = SellerCashier.submitAnOrder(makeTea); //подаем кассиру команду сделать чай
+        Drink drink = SellerCashier.submitAnOrder(makeTea); //подаем кассиру команду сделать чай (паттерн Command)
         assertEquals("Чай согревает", drink.drinking()); //бариста делает нам горячий чай
-        drink.setState(new Cold()); //остужаем чай
+        drink.setState(new Cold()); //остужаем чай (паттерн State)
         assertEquals("Чай охлаждает", drink.drinking()); //теперь чай холодный и он остужает
 
 

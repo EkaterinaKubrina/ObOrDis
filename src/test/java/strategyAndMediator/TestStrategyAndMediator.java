@@ -5,7 +5,7 @@ import static org.junit.Assert.assertEquals;
 public class TestStrategyAndMediator {
     @org.junit.Test
     public void test(){
-        DoMathProblem doMathProblem = new DoMathProblem(); //создаем посредника
+        DoMathProblem doMathProblem = new DoMathProblem(); //создаем посредника (паттерн Mediator)
         MathProblems mathProblems = new MathProblems(doMathProblem); //создаем классы использующие его интерфейс
         Calculation calculation = new Calculation(doMathProblem);
         Answer answer = new Answer(doMathProblem);
@@ -19,7 +19,7 @@ public class TestStrategyAndMediator {
 
 
         calculation.setStrategy(new MultiplicationStrategy()); //можно изменить класс Вычисления самостоятельно,
-                                                               // с помощью паттерна Стратегия
+                                                               // с помощью паттерна Strategy
         assertEquals(30, answer.getAnswer()); //посредник решит пример и задаст новый ответ в классе Ответа
 
 
