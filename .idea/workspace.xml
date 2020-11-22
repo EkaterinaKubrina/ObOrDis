@@ -1,16 +1,30 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="8a44e83d-274b-4edf-acc6-375a302ec66a" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/src/main/java/templateMethodAndObserver/Loader.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/templateMethodAndObserver/Purchase.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/templateMethodAndObserver/PurchaseInAStore.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/templateMethodAndObserver/PurchaseOnline.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/templateMethodAndObserver/Subscriber.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/templateMethodAndObserver/Warehouse.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/test/java/templateMethodAndObserver/TestTemplateMethodAndObserver.java" afterDir="false" />
+    <list default="true" id="8a44e83d-274b-4edf-acc6-375a302ec66a" name="Default Changelist" comment="Template Method and Observer">
+      <change afterPath="$PROJECT_DIR$/src/main/java/command/Barista.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/command/Coffee.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/command/Cold.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/command/Command.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/command/Drink.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/command/Hot.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/command/MakeCoffee.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/command/MakeTea.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/command/SellerCashier.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/command/State.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/command/Tea.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/strategyAndMediator/AddStrategy.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/strategyAndMediator/Answer.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/strategyAndMediator/Calculation.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/strategyAndMediator/DoMathProblem.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/strategyAndMediator/MathProblems.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/strategyAndMediator/Mediator.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/strategyAndMediator/MultiplicationStrategy.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/strategyAndMediator/Sender.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/strategyAndMediator/Strategy.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/test/java/command/TestCommandAndState.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/test/java/strategyAndMediator/TestStrategyAndMediator.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/test/java/chainOfCommandAndMemento/TestChainOfCommandAndMemento.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/chainOfCommandAndMemento/TestChainOfCommandAndMemento.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -52,48 +66,48 @@
       <recent name="C:\Users\katty\OdjectOrientedDesign\ObOrDis\src\main\java\abstractFactory" />
     </key>
   </component>
-  <component name="RunManager" selected="JUnit.TestTemplateMethodAndObserver.testObserver">
-    <configuration name="TestChainOfCommandAndMemento" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+  <component name="RunManager" selected="JUnit.TestStrategyAndMediator">
+    <configuration name="TestCommandAndState.test" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
       <module name="Factory" />
       <extension name="coverage">
         <pattern>
-          <option name="PATTERN" value="chainOfCommandAndMemento.*" />
+          <option name="PATTERN" value="command.*" />
           <option name="ENABLED" value="true" />
         </pattern>
       </extension>
-      <option name="PACKAGE_NAME" value="chainOfCommandAndMemento" />
-      <option name="MAIN_CLASS_NAME" value="chainOfCommandAndMemento.TestChainOfCommandAndMemento" />
-      <option name="TEST_OBJECT" value="class" />
-      <method v="2">
-        <option name="Make" enabled="true" />
-      </method>
-    </configuration>
-    <configuration name="TestChainOfCommandAndMemento.test" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
-      <module name="Factory" />
-      <extension name="coverage">
-        <pattern>
-          <option name="PATTERN" value="chainOfCommandAndMemento.*" />
-          <option name="ENABLED" value="true" />
-        </pattern>
-      </extension>
-      <option name="PACKAGE_NAME" value="chainOfCommandAndMemento" />
-      <option name="MAIN_CLASS_NAME" value="chainOfCommandAndMemento.TestChainOfCommandAndMemento" />
+      <option name="PACKAGE_NAME" value="command" />
+      <option name="MAIN_CLASS_NAME" value="command.TestCommandAndState" />
       <option name="METHOD_NAME" value="test" />
       <option name="TEST_OBJECT" value="method" />
       <method v="2">
         <option name="Make" enabled="true" />
       </method>
     </configuration>
-    <configuration name="TestIteratorAndProxy.test" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+    <configuration name="TestStrategyAndMediator" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
       <module name="Factory" />
       <extension name="coverage">
         <pattern>
-          <option name="PATTERN" value="IteratorAndProxy.*" />
+          <option name="PATTERN" value="strategyAndMediator.*" />
           <option name="ENABLED" value="true" />
         </pattern>
       </extension>
-      <option name="PACKAGE_NAME" value="IteratorAndProxy" />
-      <option name="MAIN_CLASS_NAME" value="IteratorAndProxy.TestIteratorAndProxy" />
+      <option name="PACKAGE_NAME" value="strategyAndMediator" />
+      <option name="MAIN_CLASS_NAME" value="strategyAndMediator.TestStrategyAndMediator" />
+      <option name="TEST_OBJECT" value="class" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="TestStrategyAndMediator.test" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+      <module name="Factory" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="strategyAndMediator.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <option name="PACKAGE_NAME" value="strategyAndMediator" />
+      <option name="MAIN_CLASS_NAME" value="strategyAndMediator.TestStrategyAndMediator" />
       <option name="METHOD_NAME" value="test" />
       <option name="TEST_OBJECT" value="method" />
       <method v="2">
@@ -134,11 +148,11 @@
     </configuration>
     <recent_temporary>
       <list>
+        <item itemvalue="JUnit.TestStrategyAndMediator" />
+        <item itemvalue="JUnit.TestStrategyAndMediator.test" />
+        <item itemvalue="JUnit.TestCommandAndState.test" />
         <item itemvalue="JUnit.TestTemplateMethodAndObserver.testObserver" />
         <item itemvalue="JUnit.TestTemplateMethodAndObserver.test" />
-        <item itemvalue="JUnit.TestChainOfCommandAndMemento.test" />
-        <item itemvalue="JUnit.TestChainOfCommandAndMemento" />
-        <item itemvalue="JUnit.TestIteratorAndProxy.test" />
       </list>
     </recent_temporary>
   </component>
@@ -209,7 +223,14 @@
       <option name="project" value="LOCAL" />
       <updated>1603535945799</updated>
     </task>
-    <option name="localTasksCounter" value="9" />
+    <task id="LOCAL-00009" summary="Template Method and Observer">
+      <created>1605391970502</created>
+      <option name="number" value="00009" />
+      <option name="presentableId" value="LOCAL-00009" />
+      <option name="project" value="LOCAL" />
+      <updated>1605391970502</updated>
+    </task>
+    <option name="localTasksCounter" value="10" />
     <servers />
   </component>
   <component name="VcsManagerConfiguration">
@@ -221,7 +242,8 @@
     <MESSAGE value="flyweight and facade" />
     <MESSAGE value="Iterator and proxy" />
     <MESSAGE value="Chain of command and memento" />
-    <option name="LAST_COMMIT_MESSAGE" value="Chain of command and memento" />
+    <MESSAGE value="Template Method and Observer" />
+    <option name="LAST_COMMIT_MESSAGE" value="Template Method and Observer" />
   </component>
   <component name="WindowStateProjectService">
     <state x="361" y="71" key="#Project_Structure" timestamp="1600072397722">
@@ -232,10 +254,10 @@
       <screen x="0" y="0" width="1536" height="824" />
     </state>
     <state x="93" y="93" width="1350" height="638" key="#com.intellij.execution.junit2.states.ComparisonFailureState$DiffDialog/0.0.1536.824@0.0.1536.824" timestamp="1605391904761" />
-    <state x="574" y="128" key="#com.intellij.ide.util.MemberChooser" timestamp="1605389719062">
+    <state x="574" y="128" key="#com.intellij.ide.util.MemberChooser" timestamp="1606036287054">
       <screen x="0" y="0" width="1536" height="824" />
     </state>
-    <state x="574" y="128" key="#com.intellij.ide.util.MemberChooser/0.0.1536.824@0.0.1536.824" timestamp="1605389719062" />
+    <state x="574" y="128" key="#com.intellij.ide.util.MemberChooser/0.0.1536.824@0.0.1536.824" timestamp="1606036287054" />
     <state x="566" y="272" width="403" height="287" key="#com.intellij.refactoring.move.moveClassesOrPackages.MoveClassesOrPackagesDialog.classes" timestamp="1601320437741">
       <screen x="0" y="0" width="1536" height="824" />
     </state>
@@ -248,10 +270,10 @@
       <screen x="0" y="0" width="1536" height="824" />
     </state>
     <state x="516" y="259" key="ANALYSIS_DLG_com.intellij.analysis.BaseAnalysisAction$1/0.0.1536.824@0.0.1536.824" timestamp="1601730953293" />
-    <state x="424" y="7" key="CommitChangelistDialog2" timestamp="1605391949281">
+    <state x="424" y="7" key="CommitChangelistDialog2" timestamp="1606036120609">
       <screen x="0" y="0" width="1536" height="824" />
     </state>
-    <state x="424" y="7" key="CommitChangelistDialog2/0.0.1536.824@0.0.1536.824" timestamp="1605391949281" />
+    <state x="424" y="7" key="CommitChangelistDialog2/0.0.1536.824@0.0.1536.824" timestamp="1606036120609" />
     <state x="159" y="65" key="DiffContextDialog" timestamp="1601320396040">
       <screen x="0" y="0" width="1536" height="824" />
     </state>
@@ -260,46 +282,46 @@
       <screen x="0" y="0" width="1536" height="824" />
     </state>
     <state x="549" y="167" key="FileChooserDialogImpl/0.0.1536.824@0.0.1536.824" timestamp="1601717950483" />
-    <state width="1493" height="237" key="GridCell.Tab.0.bottom" timestamp="1605391906315">
+    <state width="1493" height="237" key="GridCell.Tab.0.bottom" timestamp="1606036943565">
       <screen x="0" y="0" width="1536" height="824" />
     </state>
-    <state width="1493" height="237" key="GridCell.Tab.0.bottom/0.0.1536.824@0.0.1536.824" timestamp="1605391906315" />
-    <state width="1493" height="237" key="GridCell.Tab.0.center" timestamp="1605391906315">
+    <state width="1493" height="237" key="GridCell.Tab.0.bottom/0.0.1536.824@0.0.1536.824" timestamp="1606036943565" />
+    <state width="1493" height="237" key="GridCell.Tab.0.center" timestamp="1606036943565">
       <screen x="0" y="0" width="1536" height="824" />
     </state>
-    <state width="1493" height="237" key="GridCell.Tab.0.center/0.0.1536.824@0.0.1536.824" timestamp="1605391906315" />
-    <state width="1493" height="237" key="GridCell.Tab.0.left" timestamp="1605391906315">
+    <state width="1493" height="237" key="GridCell.Tab.0.center/0.0.1536.824@0.0.1536.824" timestamp="1606036943565" />
+    <state width="1493" height="237" key="GridCell.Tab.0.left" timestamp="1606036943565">
       <screen x="0" y="0" width="1536" height="824" />
     </state>
-    <state width="1493" height="237" key="GridCell.Tab.0.left/0.0.1536.824@0.0.1536.824" timestamp="1605391906315" />
-    <state width="1493" height="237" key="GridCell.Tab.0.right" timestamp="1605391906315">
+    <state width="1493" height="237" key="GridCell.Tab.0.left/0.0.1536.824@0.0.1536.824" timestamp="1606036943565" />
+    <state width="1493" height="237" key="GridCell.Tab.0.right" timestamp="1606036943565">
       <screen x="0" y="0" width="1536" height="824" />
     </state>
-    <state width="1493" height="237" key="GridCell.Tab.0.right/0.0.1536.824@0.0.1536.824" timestamp="1605391906315" />
-    <state width="1493" height="157" key="GridCell.Tab.1.bottom" timestamp="1605390945622">
+    <state width="1493" height="237" key="GridCell.Tab.0.right/0.0.1536.824@0.0.1536.824" timestamp="1606036943565" />
+    <state width="1493" height="157" key="GridCell.Tab.1.bottom" timestamp="1606036127025">
       <screen x="0" y="0" width="1536" height="824" />
     </state>
-    <state width="1493" height="157" key="GridCell.Tab.1.bottom/0.0.1536.824@0.0.1536.824" timestamp="1605390945622" />
-    <state width="1493" height="157" key="GridCell.Tab.1.center" timestamp="1605390945622">
+    <state width="1493" height="157" key="GridCell.Tab.1.bottom/0.0.1536.824@0.0.1536.824" timestamp="1606036127025" />
+    <state width="1493" height="157" key="GridCell.Tab.1.center" timestamp="1606036127025">
       <screen x="0" y="0" width="1536" height="824" />
     </state>
-    <state width="1493" height="157" key="GridCell.Tab.1.center/0.0.1536.824@0.0.1536.824" timestamp="1605390945622" />
-    <state width="1493" height="157" key="GridCell.Tab.1.left" timestamp="1605390945622">
+    <state width="1493" height="157" key="GridCell.Tab.1.center/0.0.1536.824@0.0.1536.824" timestamp="1606036127025" />
+    <state width="1493" height="157" key="GridCell.Tab.1.left" timestamp="1606036127025">
       <screen x="0" y="0" width="1536" height="824" />
     </state>
-    <state width="1493" height="157" key="GridCell.Tab.1.left/0.0.1536.824@0.0.1536.824" timestamp="1605390945622" />
-    <state width="1493" height="157" key="GridCell.Tab.1.right" timestamp="1605390945622">
+    <state width="1493" height="157" key="GridCell.Tab.1.left/0.0.1536.824@0.0.1536.824" timestamp="1606036127025" />
+    <state width="1493" height="157" key="GridCell.Tab.1.right" timestamp="1606036127025">
       <screen x="0" y="0" width="1536" height="824" />
     </state>
-    <state width="1493" height="157" key="GridCell.Tab.1.right/0.0.1536.824@0.0.1536.824" timestamp="1605390945622" />
+    <state width="1493" height="157" key="GridCell.Tab.1.right/0.0.1536.824@0.0.1536.824" timestamp="1606036127025" />
     <state x="249" y="0" key="SettingsEditor" timestamp="1600081558380">
       <screen x="0" y="0" width="1536" height="824" />
     </state>
     <state x="249" y="0" key="SettingsEditor/0.0.1536.824@0.0.1536.824" timestamp="1600081558380" />
-    <state x="0" y="0" key="com.intellij.ide.util.TipDialog" timestamp="1605380325068">
+    <state x="0" y="0" key="com.intellij.ide.util.TipDialog" timestamp="1605521906063">
       <screen x="0" y="0" width="1536" height="824" />
     </state>
-    <state x="0" y="0" key="com.intellij.ide.util.TipDialog/0.0.1536.824@0.0.1536.824" timestamp="1605380325068" />
+    <state x="0" y="0" key="com.intellij.ide.util.TipDialog/0.0.1536.824@0.0.1536.824" timestamp="1605521906063" />
     <state x="578" y="329" key="com.intellij.openapi.vcs.update.UpdateOrStatusOptionsDialogupdate-v2" timestamp="1601319062077">
       <screen x="0" y="0" width="1536" height="824" />
     </state>
