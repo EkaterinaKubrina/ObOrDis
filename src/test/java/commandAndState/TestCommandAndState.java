@@ -1,4 +1,4 @@
-package command;
+package commandAndState;
 
 import org.junit.Test;
 

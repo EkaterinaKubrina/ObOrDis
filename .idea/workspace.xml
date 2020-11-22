@@ -66,17 +66,17 @@
       <recent name="C:\Users\katty\OdjectOrientedDesign\ObOrDis\src\main\java\abstractFactory" />
     </key>
   </component>
-  <component name="RunManager" selected="JUnit.TestStrategyAndMediator">
+  <component name="RunManager" selected="JUnit.TestStrategyAndMediator.test">
     <configuration name="TestCommandAndState.test" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
       <module name="Factory" />
       <extension name="coverage">
         <pattern>
-          <option name="PATTERN" value="command.*" />
+          <option name="PATTERN" value="commandAndState.*" />
           <option name="ENABLED" value="true" />
         </pattern>
       </extension>
-      <option name="PACKAGE_NAME" value="command" />
-      <option name="MAIN_CLASS_NAME" value="command.TestCommandAndState" />
+      <option name="PACKAGE_NAME" value="commandAndState" />
+      <option name="MAIN_CLASS_NAME" value="commandAndState.TestCommandAndState" />
       <option name="METHOD_NAME" value="test" />
       <option name="TEST_OBJECT" value="method" />
       <method v="2">
@@ -148,8 +148,8 @@
     </configuration>
     <recent_temporary>
       <list>
-        <item itemvalue="JUnit.TestStrategyAndMediator" />
         <item itemvalue="JUnit.TestStrategyAndMediator.test" />
+        <item itemvalue="JUnit.TestStrategyAndMediator" />
         <item itemvalue="JUnit.TestCommandAndState.test" />
         <item itemvalue="JUnit.TestTemplateMethodAndObserver.testObserver" />
         <item itemvalue="JUnit.TestTemplateMethodAndObserver.test" />
@@ -270,10 +270,10 @@
       <screen x="0" y="0" width="1536" height="824" />
     </state>
     <state x="516" y="259" key="ANALYSIS_DLG_com.intellij.analysis.BaseAnalysisAction$1/0.0.1536.824@0.0.1536.824" timestamp="1601730953293" />
-    <state x="424" y="7" key="CommitChangelistDialog2" timestamp="1606036120609">
+    <state x="559" y="14" key="CommitChangelistDialog2" timestamp="1606037088483">
       <screen x="0" y="0" width="1536" height="824" />
     </state>
-    <state x="424" y="7" key="CommitChangelistDialog2/0.0.1536.824@0.0.1536.824" timestamp="1606036120609" />
+    <state x="559" y="14" key="CommitChangelistDialog2/0.0.1536.824@0.0.1536.824" timestamp="1606037088483" />
     <state x="159" y="65" key="DiffContextDialog" timestamp="1601320396040">
       <screen x="0" y="0" width="1536" height="824" />
     </state>
@@ -282,22 +282,22 @@
       <screen x="0" y="0" width="1536" height="824" />
     </state>
     <state x="549" y="167" key="FileChooserDialogImpl/0.0.1536.824@0.0.1536.824" timestamp="1601717950483" />
-    <state width="1493" height="237" key="GridCell.Tab.0.bottom" timestamp="1606036943565">
+    <state width="1493" height="237" key="GridCell.Tab.0.bottom" timestamp="1606037092291">
       <screen x="0" y="0" width="1536" height="824" />
     </state>
-    <state width="1493" height="237" key="GridCell.Tab.0.bottom/0.0.1536.824@0.0.1536.824" timestamp="1606036943565" />
-    <state width="1493" height="237" key="GridCell.Tab.0.center" timestamp="1606036943565">
+    <state width="1493" height="237" key="GridCell.Tab.0.bottom/0.0.1536.824@0.0.1536.824" timestamp="1606037092291" />
+    <state width="1493" height="237" key="GridCell.Tab.0.center" timestamp="1606037092291">
       <screen x="0" y="0" width="1536" height="824" />
     </state>
-    <state width="1493" height="237" key="GridCell.Tab.0.center/0.0.1536.824@0.0.1536.824" timestamp="1606036943565" />
-    <state width="1493" height="237" key="GridCell.Tab.0.left" timestamp="1606036943565">
+    <state width="1493" height="237" key="GridCell.Tab.0.center/0.0.1536.824@0.0.1536.824" timestamp="1606037092291" />
+    <state width="1493" height="237" key="GridCell.Tab.0.left" timestamp="1606037092291">
       <screen x="0" y="0" width="1536" height="824" />
     </state>
-    <state width="1493" height="237" key="GridCell.Tab.0.left/0.0.1536.824@0.0.1536.824" timestamp="1606036943565" />
-    <state width="1493" height="237" key="GridCell.Tab.0.right" timestamp="1606036943565">
+    <state width="1493" height="237" key="GridCell.Tab.0.left/0.0.1536.824@0.0.1536.824" timestamp="1606037092291" />
+    <state width="1493" height="237" key="GridCell.Tab.0.right" timestamp="1606037092291">
       <screen x="0" y="0" width="1536" height="824" />
     </state>
-    <state width="1493" height="237" key="GridCell.Tab.0.right/0.0.1536.824@0.0.1536.824" timestamp="1606036943565" />
+    <state width="1493" height="237" key="GridCell.Tab.0.right/0.0.1536.824@0.0.1536.824" timestamp="1606037092291" />
     <state width="1493" height="157" key="GridCell.Tab.1.bottom" timestamp="1606036127025">
       <screen x="0" y="0" width="1536" height="824" />
     </state>

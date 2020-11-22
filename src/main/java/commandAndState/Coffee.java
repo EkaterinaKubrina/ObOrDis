@@ -1,4 +1,4 @@
-package command;
+package commandAndState;
 
 public class Coffee implements Drink{
     State state;

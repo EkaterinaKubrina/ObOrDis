@@ -1,4 +1,4 @@
-package command;
+package commandAndState;
 
 public class MakeCoffee implements Command{
     protected Barista barista;
