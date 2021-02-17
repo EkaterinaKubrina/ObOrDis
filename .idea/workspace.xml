@@ -1,9 +1,106 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="8a44e83d-274b-4edf-acc6-375a302ec66a" name="Default Changelist" comment="Strategy and Mediator and State and Command">
+    <list default="true" id="8a44e83d-274b-4edf-acc6-375a302ec66a" name="Default Changelist" comment="??">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/test/java/commandAndState/TestCommandAndState.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/commandAndState/TestCommandAndState.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/IteratorAndProxy/IProxy.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/IteratorAndProxy/IterableList.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/IteratorAndProxy/Iterator.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/IteratorAndProxy/IteratorListOfGoods.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/IteratorAndProxy/ListOfGoods.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/IteratorAndProxy/ProxyListOfGoods.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/abstractFactory/AbstractFactory.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/abstractFactory/DoAbstractFactory.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/abstractFactory/FactoryElement.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/abstractFactory/FactoryIndex.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/abstractFactory/FindMaxElementIndex.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/abstractFactory/FindMinElementIndex.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/abstractFactory/IFindMax.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/abstractFactory/IFindMin.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/base/FactoryInt.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/base/FindFirstNegativeElem.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/base/FindMaxElem.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/base/FindMinElem.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/base/IFindElement.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/bridgeAndDecoratorAndAdapter/AdapterMilk.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/bridgeAndDecoratorAndAdapter/AlmondMilk.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/bridgeAndDecoratorAndAdapter/ClientWithALactoseAllergy.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/bridgeAndDecoratorAndAdapter/CoconutMilk.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/bridgeAndDecoratorAndAdapter/CowsMilk.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/bridgeAndDecoratorAndAdapter/Cup.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/bridgeAndDecoratorAndAdapter/DrawingOnTheCup.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/bridgeAndDecoratorAndAdapter/LactoseFreeMilk.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/bridgeAndDecoratorAndAdapter/Milk.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/bridgeAndDecoratorAndAdapter/Milkshake.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/bridgeAndDecoratorAndAdapter/Order.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/bridgeAndDecoratorAndAdapter/Tubule.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/builder/BlouseBuilder.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/builder/Builder.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/builder/Clothes.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/builder/CoatBuilder.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/builder/Director.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/builder/DressBuilder.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/builder/JeansBuilder.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/chainOfCommandAndMemento/Formatting.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/chainOfCommandAndMemento/Handler.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/chainOfCommandAndMemento/Memento.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/chainOfCommandAndMemento/Photo.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/chainOfCommandAndMemento/Processing.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/chainOfCommandAndMemento/Retouch.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/commandAndState/Barista.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/commandAndState/Coffee.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/commandAndState/Cold.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/commandAndState/Command.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/commandAndState/Drink.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/commandAndState/Hot.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/commandAndState/MakeCoffee.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/commandAndState/MakeTea.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/commandAndState/SellerCashier.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/commandAndState/State.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/commandAndState/Tea.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/compositeAndVisitor/Box.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/compositeAndVisitor/IVisitor.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/compositeAndVisitor/IncreaseVisitor.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/compositeAndVisitor/Pack.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/compositeAndVisitor/PacketOfCandy.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/compositeAndVisitor/PacketOfMiniChocolate.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/flyweightAndFacade/Facade.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/flyweightAndFacade/House.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/flyweightAndFacade/Road.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/flyweightAndFacade/RoadSigns.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/singletonAndPrototype/Goods.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/singletonAndPrototype/IPrototype.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/singletonAndPrototype/Seller.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/singletonAndPrototype/Shop.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/singletonAndPrototype/ShopOwner.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/strategyAndMediator/AddStrategy.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/strategyAndMediator/Answer.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/strategyAndMediator/Calculation.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/strategyAndMediator/DoMathProblem.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/strategyAndMediator/MathProblems.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/strategyAndMediator/Mediator.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/strategyAndMediator/MultiplicationStrategy.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/strategyAndMediator/Sender.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/strategyAndMediator/Strategy.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/templateMethodAndObserver/Loader.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/templateMethodAndObserver/Purchase.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/templateMethodAndObserver/PurchaseInAStore.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/templateMethodAndObserver/PurchaseOnline.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/templateMethodAndObserver/Subscriber.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/templateMethodAndObserver/Warehouse.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/test/java/IteratorAndProxy/TestIteratorAndProxy.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/test/java/abstractFactory/TestFactoryAbstract.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/test/java/base/TestFactoryInt.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/test/java/bridgeAndDecoratorAndAdapter/TestBridgeAndDecoratorAndAdapter.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/test/java/builder/TestBuilder.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/test/java/chainOfCommandAndMemento/TestChainOfCommandAndMemento.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/test/java/commandAndState/TestCommandAndState.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/test/java/compositeAndVisitor/TestCompositeAndVisitor.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/test/java/flyweightAndFacade/TestFlyweightAndFacade.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/test/java/singletonAndPrototype/TestIPrototype.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/test/java/singletonAndPrototype/TestSingleton.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/test/java/strategyAndMediator/TestStrategyAndMediator.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/test/java/templateMethodAndObserver/TestTemplateMethodAndObserver.java" beforeDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -230,7 +327,21 @@
       <option name="project" value="LOCAL" />
       <updated>1606037225609</updated>
     </task>
-    <option name="localTasksCounter" value="13" />
+    <task id="LOCAL-00013" summary="??">
+      <created>1613561366428</created>
+      <option name="number" value="00013" />
+      <option name="presentableId" value="LOCAL-00013" />
+      <option name="project" value="LOCAL" />
+      <updated>1613561366428</updated>
+    </task>
+    <task id="LOCAL-00014" summary="??">
+      <created>1613561462287</created>
+      <option name="number" value="00014" />
+      <option name="presentableId" value="LOCAL-00014" />
+      <option name="project" value="LOCAL" />
+      <updated>1613561462287</updated>
+    </task>
+    <option name="localTasksCounter" value="15" />
     <servers />
   </component>
   <component name="VcsManagerConfiguration">
@@ -244,9 +355,14 @@
     <MESSAGE value="Chain of command and memento" />
     <MESSAGE value="Template Method and Observer" />
     <MESSAGE value="Strategy and Mediator and State and Command" />
-    <option name="LAST_COMMIT_MESSAGE" value="Strategy and Mediator and State and Command" />
+    <MESSAGE value="??" />
+    <option name="LAST_COMMIT_MESSAGE" value="??" />
   </component>
   <component name="WindowStateProjectService">
+    <state x="361" y="71" key="#Project_Structure" timestamp="1613561828036">
+      <screen x="0" y="0" width="1536" height="824" />
+    </state>
+    <state x="361" y="71" key="#Project_Structure/0.0.1536.824@0.0.1536.824" timestamp="1613561828036" />
     <state x="93" y="93" width="1350" height="638" key="#com.intellij.execution.junit2.states.ComparisonFailureState$DiffDialog" timestamp="1605391904761">
       <screen x="0" y="0" width="1536" height="824" />
     </state>
@@ -255,10 +371,10 @@
       <screen x="0" y="0" width="1536" height="824" />
     </state>
     <state x="574" y="128" key="#com.intellij.ide.util.MemberChooser/0.0.1536.824@0.0.1536.824" timestamp="1606036287054" />
-    <state x="559" y="14" key="CommitChangelistDialog2" timestamp="1613561365786">
+    <state x="559" y="14" key="CommitChangelistDialog2" timestamp="1613561471586">
       <screen x="0" y="0" width="1536" height="824" />
     </state>
-    <state x="559" y="14" key="CommitChangelistDialog2/0.0.1536.824@0.0.1536.824" timestamp="1613561365786" />
+    <state x="559" y="14" key="CommitChangelistDialog2/0.0.1536.824@0.0.1536.824" timestamp="1613561471586" />
     <state x="549" y="167" key="FileChooserDialogImpl" timestamp="1607164470387">
       <screen x="0" y="0" width="1536" height="824" />
     </state>
