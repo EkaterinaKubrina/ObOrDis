@@ -1,419 +1,198 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
+  <component name="AndroidLayouts">
+    <shared>
+      <config />
+    </shared>
+  </component>
+  <component name="AndroidLogFilters">
+    <option name="TOOL_WINDOW_CONFIGURED_FILTER" value="Show only selected application" />
+  </component>
   <component name="ChangeListManager">
-    <list default="true" id="8a44e83d-274b-4edf-acc6-375a302ec66a" name="Default Changelist" comment="??">
+    <list default="true" id="25c180b0-e2d4-4f79-bab1-49f76112a335" name="Default Changelist" comment="">
+      <change beforePath="$PROJECT_DIR$/.gitignore" beforeDir="false" afterPath="$PROJECT_DIR$/.gitignore" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/.name" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/compiler.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/misc.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/uiDesigner.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/vcs.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/vcs.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/IteratorAndProxy/IProxy.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/IteratorAndProxy/IterableList.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/IteratorAndProxy/Iterator.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/IteratorAndProxy/IteratorListOfGoods.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/IteratorAndProxy/ListOfGoods.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/IteratorAndProxy/ProxyListOfGoods.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/abstractFactory/AbstractFactory.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/abstractFactory/DoAbstractFactory.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/abstractFactory/FactoryElement.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/abstractFactory/FactoryIndex.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/abstractFactory/FindMaxElementIndex.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/abstractFactory/FindMinElementIndex.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/abstractFactory/IFindMax.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/abstractFactory/IFindMin.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/base/FactoryInt.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/base/FindFirstNegativeElem.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/base/FindMaxElem.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/base/FindMinElem.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/base/IFindElement.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/bridgeAndDecoratorAndAdapter/AdapterMilk.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/bridgeAndDecoratorAndAdapter/AlmondMilk.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/bridgeAndDecoratorAndAdapter/ClientWithALactoseAllergy.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/bridgeAndDecoratorAndAdapter/CoconutMilk.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/bridgeAndDecoratorAndAdapter/CowsMilk.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/bridgeAndDecoratorAndAdapter/Cup.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/bridgeAndDecoratorAndAdapter/DrawingOnTheCup.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/bridgeAndDecoratorAndAdapter/LactoseFreeMilk.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/bridgeAndDecoratorAndAdapter/Milk.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/bridgeAndDecoratorAndAdapter/Milkshake.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/bridgeAndDecoratorAndAdapter/Order.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/bridgeAndDecoratorAndAdapter/Tubule.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/builder/BlouseBuilder.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/builder/Builder.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/builder/Clothes.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/builder/CoatBuilder.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/builder/Director.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/builder/DressBuilder.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/builder/JeansBuilder.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/chainOfCommandAndMemento/Formatting.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/chainOfCommandAndMemento/Handler.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/chainOfCommandAndMemento/Memento.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/chainOfCommandAndMemento/Photo.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/chainOfCommandAndMemento/Processing.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/chainOfCommandAndMemento/Retouch.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/commandAndState/Barista.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/commandAndState/Coffee.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/commandAndState/Cold.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/commandAndState/Command.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/commandAndState/Drink.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/commandAndState/Hot.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/commandAndState/MakeCoffee.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/commandAndState/MakeTea.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/commandAndState/SellerCashier.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/commandAndState/State.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/commandAndState/Tea.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/compositeAndVisitor/Box.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/compositeAndVisitor/IVisitor.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/compositeAndVisitor/IncreaseVisitor.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/compositeAndVisitor/Pack.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/compositeAndVisitor/PacketOfCandy.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/compositeAndVisitor/PacketOfMiniChocolate.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/flyweightAndFacade/Facade.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/flyweightAndFacade/House.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/flyweightAndFacade/Road.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/flyweightAndFacade/RoadSigns.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/singletonAndPrototype/Goods.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/singletonAndPrototype/IPrototype.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/singletonAndPrototype/Seller.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/singletonAndPrototype/Shop.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/singletonAndPrototype/ShopOwner.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/strategyAndMediator/AddStrategy.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/strategyAndMediator/Answer.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/strategyAndMediator/Calculation.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/strategyAndMediator/DoMathProblem.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/strategyAndMediator/MathProblems.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/strategyAndMediator/Mediator.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/strategyAndMediator/MultiplicationStrategy.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/strategyAndMediator/Sender.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/strategyAndMediator/Strategy.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/templateMethodAndObserver/Loader.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/templateMethodAndObserver/Purchase.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/templateMethodAndObserver/PurchaseInAStore.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/templateMethodAndObserver/PurchaseOnline.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/templateMethodAndObserver/Subscriber.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/templateMethodAndObserver/Warehouse.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/test/java/IteratorAndProxy/TestIteratorAndProxy.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/test/java/abstractFactory/TestFactoryAbstract.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/test/java/base/TestFactoryInt.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/test/java/bridgeAndDecoratorAndAdapter/TestBridgeAndDecoratorAndAdapter.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/test/java/builder/TestBuilder.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/test/java/chainOfCommandAndMemento/TestChainOfCommandAndMemento.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/test/java/commandAndState/TestCommandAndState.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/test/java/compositeAndVisitor/TestCompositeAndVisitor.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/test/java/flyweightAndFacade/TestFlyweightAndFacade.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/test/java/singletonAndPrototype/TestIPrototype.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/test/java/singletonAndPrototype/TestSingleton.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/test/java/strategyAndMediator/TestStrategyAndMediator.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/test/java/templateMethodAndObserver/TestTemplateMethodAndObserver.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Factory.iml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/pom.xml" beforeDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
     <option name="LAST_RESOLUTION" value="IGNORE" />
   </component>
-  <component name="FileTemplateManagerImpl">
-    <option name="RECENT_TEMPLATES">
-      <list>
-        <option value="Interface" />
-        <option value="Class" />
-      </list>
-    </option>
+  <component name="ExecutionTargetManager" SELECTED_TARGET="device_and_snapshot_combo_box_target[]" />
+  <component name="ExternalProjectsData">
+    <projectState path="$PROJECT_DIR$">
+      <ProjectState />
+    </projectState>
+  </component>
+  <component name="ExternalProjectsManager">
+    <system id="GRADLE">
+      <state>
+        <projects_view>
+          <tree_state>
+            <expand>
+              <path>
+                <item name="" type="6a2764b6:ExternalProjectsStructure$RootNode" />
+                <item name="My Application" type="f1a62948:ProjectNode" />
+              </path>
+            </expand>
+            <select />
+          </tree_state>
+        </projects_view>
+      </state>
+    </system>
   </component>
   <component name="Git.Settings">
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
-    <option name="UPDATE_TYPE" value="MERGE" />
   </component>
-  <component name="ProjectId" id="1hUj3L4JqMQtWaQdsvXy0TXs61H" />
+  <component name="ProjectId" id="1oL4dXzR6aPy8KpLfxflzuByOpM" />
   <component name="ProjectViewState">
     <option name="hideEmptyMiddlePackages" value="true" />
-    <option name="showExcludedFiles" value="true" />
     <option name="showLibraryContents" value="true" />
   </component>
   <component name="PropertiesComponent">
+    <property name="RunOnceActivity.OpenProjectViewOnStart" value="true" />
     <property name="RunOnceActivity.ShowReadmeOnStart" value="true" />
     <property name="last_opened_file_path" value="$PROJECT_DIR$" />
-    <property name="project.structure.last.edited" value="Modules" />
-    <property name="project.structure.proportion" value="0.15" />
-    <property name="project.structure.side.proportion" value="0.2" />
-    <property name="run.code.analysis.last.selected.profile" value="pProject Default" />
-    <property name="settings.editor.selected.configurable" value="reference.projectsettings.compiler.javacompiler" />
   </component>
   <component name="RecentsManager">
-    <key name="MoveClassesOrPackagesDialog.RECENTS_KEY">
-      <recent name="abstractFactory" />
-    </key>
-    <key name="CopyFile.RECENT_KEYS">
-      <recent name="C:\Users\katty\OdjectOrientedDesign\ObOrDis\src\main\java\abstractFactory" />
+    <key name="MoveFile.RECENT_KEYS">
+      <recent name="C:\Users\katty\AndroidStudioProjects\MyApplication2\app\src\main\res\drawable-v24" />
     </key>
   </component>
-  <component name="RunManager" selected="JUnit.TestFactoryInt.testFindMax">
-    <configuration name="TestCommandAndState.test" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
-      <module name="Factory" />
-      <extension name="coverage">
-        <pattern>
-          <option name="PATTERN" value="commandAndState.*" />
-          <option name="ENABLED" value="true" />
-        </pattern>
-      </extension>
-      <option name="PACKAGE_NAME" value="commandAndState" />
-      <option name="MAIN_CLASS_NAME" value="commandAndState.TestCommandAndState" />
-      <option name="METHOD_NAME" value="test" />
-      <option name="TEST_OBJECT" value="method" />
-      <method v="2">
-        <option name="Make" enabled="true" />
-      </method>
-    </configuration>
-    <configuration name="TestFactoryInt.testFindMax" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
-      <module name="Factory" />
-      <extension name="coverage">
-        <pattern>
-          <option name="PATTERN" value="base.*" />
-          <option name="ENABLED" value="true" />
-        </pattern>
-      </extension>
-      <option name="PACKAGE_NAME" value="base" />
-      <option name="MAIN_CLASS_NAME" value="base.TestFactoryInt" />
-      <option name="METHOD_NAME" value="testFindMax" />
-      <option name="TEST_OBJECT" value="method" />
-      <method v="2">
-        <option name="Make" enabled="true" />
-      </method>
-    </configuration>
-    <configuration name="TestStrategyAndMediator" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
-      <module name="Factory" />
-      <extension name="coverage">
-        <pattern>
-          <option name="PATTERN" value="strategyAndMediator.*" />
-          <option name="ENABLED" value="true" />
-        </pattern>
-      </extension>
-      <option name="PACKAGE_NAME" value="strategyAndMediator" />
-      <option name="MAIN_CLASS_NAME" value="strategyAndMediator.TestStrategyAndMediator" />
+  <component name="RunManager">
+    <configuration default="true" type="AndroidJUnit" factoryName="Android JUnit">
       <option name="TEST_OBJECT" value="class" />
+      <option name="WORKING_DIRECTORY" value="$MODULE_DIR$" />
       <method v="2">
-        <option name="Make" enabled="true" />
+        <option name="Android.Gradle.BeforeRunTask" enabled="true" />
       </method>
     </configuration>
-    <configuration name="TestStrategyAndMediator.test" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
-      <module name="Factory" />
-      <extension name="coverage">
-        <pattern>
-          <option name="PATTERN" value="strategyAndMediator.*" />
-          <option name="ENABLED" value="true" />
-        </pattern>
-      </extension>
-      <option name="PACKAGE_NAME" value="strategyAndMediator" />
-      <option name="MAIN_CLASS_NAME" value="strategyAndMediator.TestStrategyAndMediator" />
-      <option name="METHOD_NAME" value="test" />
-      <option name="TEST_OBJECT" value="method" />
+    <configuration name="app" type="AndroidRunConfigurationType" factoryName="Android App" activateToolWindowBeforeRun="false">
+      <module name="My_Application.app" />
+      <option name="DEPLOY" value="true" />
+      <option name="DEPLOY_APK_FROM_BUNDLE" value="false" />
+      <option name="DEPLOY_AS_INSTANT" value="false" />
+      <option name="ARTIFACT_NAME" value="" />
+      <option name="PM_INSTALL_OPTIONS" value="" />
+      <option name="ALL_USERS" value="false" />
+      <option name="DYNAMIC_FEATURES_DISABLED_LIST" value="" />
+      <option name="ACTIVITY_EXTRA_FLAGS" value="" />
+      <option name="MODE" value="default_activity" />
+      <option name="CLEAR_LOGCAT" value="false" />
+      <option name="SHOW_LOGCAT_AUTOMATICALLY" value="false" />
+      <option name="SKIP_NOOP_APK_INSTALLATIONS" value="true" />
+      <option name="FORCE_STOP_RUNNING_APP" value="true" />
+      <option name="TARGET_SELECTION_MODE" value="DEVICE_AND_SNAPSHOT_COMBO_BOX" />
+      <option name="SELECTED_CLOUD_MATRIX_CONFIGURATION_ID" value="-1" />
+      <option name="SELECTED_CLOUD_MATRIX_PROJECT_ID" value="" />
+      <option name="DEBUGGER_TYPE" value="Auto" />
+      <Auto>
+        <option name="USE_JAVA_AWARE_DEBUGGER" value="false" />
+        <option name="SHOW_STATIC_VARS" value="true" />
+        <option name="WORKING_DIR" value="" />
+        <option name="TARGET_LOGGING_CHANNELS" value="lldb process:gdb-remote packets" />
+        <option name="SHOW_OPTIMIZED_WARNING" value="true" />
+      </Auto>
+      <Hybrid>
+        <option name="USE_JAVA_AWARE_DEBUGGER" value="false" />
+        <option name="SHOW_STATIC_VARS" value="true" />
+        <option name="WORKING_DIR" value="" />
+        <option name="TARGET_LOGGING_CHANNELS" value="lldb process:gdb-remote packets" />
+        <option name="SHOW_OPTIMIZED_WARNING" value="true" />
+      </Hybrid>
+      <Java />
+      <Native>
+        <option name="USE_JAVA_AWARE_DEBUGGER" value="false" />
+        <option name="SHOW_STATIC_VARS" value="true" />
+        <option name="WORKING_DIR" value="" />
+        <option name="TARGET_LOGGING_CHANNELS" value="lldb process:gdb-remote packets" />
+        <option name="SHOW_OPTIMIZED_WARNING" value="true" />
+      </Native>
+      <Profilers>
+        <option name="ADVANCED_PROFILING_ENABLED" value="false" />
+        <option name="STARTUP_PROFILING_ENABLED" value="false" />
+        <option name="STARTUP_CPU_PROFILING_ENABLED" value="false" />
+        <option name="STARTUP_CPU_PROFILING_CONFIGURATION_NAME" value="Sample Java Methods" />
+        <option name="STARTUP_NATIVE_MEMORY_PROFILING_ENABLED" value="false" />
+        <option name="NATIVE_MEMORY_SAMPLE_RATE_BYTES" value="2048" />
+      </Profilers>
+      <option name="DEEP_LINK" value="" />
+      <option name="ACTIVITY_CLASS" value="" />
+      <option name="SEARCH_ACTIVITY_IN_GLOBAL_SCOPE" value="false" />
+      <option name="SKIP_ACTIVITY_VALIDATION" value="false" />
       <method v="2">
-        <option name="Make" enabled="true" />
+        <option name="Android.Gradle.BeforeRunTask" enabled="true" />
       </method>
     </configuration>
-    <configuration name="TestTemplateMethodAndObserver.testObserver" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
-      <module name="Factory" />
-      <extension name="coverage">
-        <pattern>
-          <option name="PATTERN" value="templateMethodAndObserver.*" />
-          <option name="ENABLED" value="true" />
-        </pattern>
-      </extension>
-      <option name="PACKAGE_NAME" value="templateMethodAndObserver" />
-      <option name="MAIN_CLASS_NAME" value="templateMethodAndObserver.TestTemplateMethodAndObserver" />
-      <option name="METHOD_NAME" value="testObserver" />
-      <option name="TEST_OBJECT" value="method" />
-      <method v="2">
-        <option name="Make" enabled="true" />
-      </method>
-    </configuration>
-    <recent_temporary>
-      <list>
-        <item itemvalue="JUnit.TestFactoryInt.testFindMax" />
-        <item itemvalue="JUnit.TestCommandAndState.test" />
-        <item itemvalue="JUnit.TestStrategyAndMediator.test" />
-        <item itemvalue="JUnit.TestStrategyAndMediator" />
-        <item itemvalue="JUnit.TestTemplateMethodAndObserver.testObserver" />
-      </list>
-    </recent_temporary>
   </component>
   <component name="SvnConfiguration">
     <configuration />
   </component>
   <component name="TaskManager">
     <task active="true" id="Default" summary="Default task">
-      <changelist id="8a44e83d-274b-4edf-acc6-375a302ec66a" name="Default Changelist" comment="" />
-      <created>1600072364533</created>
+      <changelist id="25c180b0-e2d4-4f79-bab1-49f76112a335" name="Default Changelist" comment="" />
+      <created>1613052624473</created>
       <option name="number" value="Default" />
       <option name="presentableId" value="Default" />
-      <updated>1600072364533</updated>
+      <updated>1613052624473</updated>
     </task>
-    <task id="LOCAL-00001" summary="FactoryPattern">
-      <created>1600082625259</created>
-      <option name="number" value="00001" />
-      <option name="presentableId" value="LOCAL-00001" />
-      <option name="project" value="LOCAL" />
-      <updated>1600082625259</updated>
-    </task>
-    <task id="LOCAL-00002" summary="BuilderPattern">
-      <created>1601124627780</created>
-      <option name="number" value="00002" />
-      <option name="presentableId" value="LOCAL-00002" />
-      <option name="project" value="LOCAL" />
-      <updated>1601124627780</updated>
-    </task>
-    <task id="LOCAL-00003" summary="PrototypeAndSingletonPattern">
-      <created>1601148525895</created>
-      <option name="number" value="00003" />
-      <option name="presentableId" value="LOCAL-00003" />
-      <option name="project" value="LOCAL" />
-      <updated>1601148525895</updated>
-    </task>
-    <task id="LOCAL-00004" summary="AbstractFactory">
-      <created>1601320564445</created>
-      <option name="number" value="00004" />
-      <option name="presentableId" value="LOCAL-00004" />
-      <option name="project" value="LOCAL" />
-      <updated>1601320564445</updated>
-    </task>
-    <task id="LOCAL-00005" summary="Bridge and Adapter and Decorator">
-      <created>1601722052355</created>
-      <option name="number" value="00005" />
-      <option name="presentableId" value="LOCAL-00005" />
-      <option name="project" value="LOCAL" />
-      <updated>1601722052355</updated>
-    </task>
-    <task id="LOCAL-00006" summary="flyweight and facade">
-      <created>1602322002742</created>
-      <option name="number" value="00006" />
-      <option name="presentableId" value="LOCAL-00006" />
-      <option name="project" value="LOCAL" />
-      <updated>1602322002742</updated>
-    </task>
-    <task id="LOCAL-00007" summary="Iterator and proxy">
-      <created>1603212163042</created>
-      <option name="number" value="00007" />
-      <option name="presentableId" value="LOCAL-00007" />
-      <option name="project" value="LOCAL" />
-      <updated>1603212163042</updated>
-    </task>
-    <task id="LOCAL-00008" summary="Chain of command and memento">
-      <created>1603535945799</created>
-      <option name="number" value="00008" />
-      <option name="presentableId" value="LOCAL-00008" />
-      <option name="project" value="LOCAL" />
-      <updated>1603535945799</updated>
-    </task>
-    <task id="LOCAL-00009" summary="Template Method and Observer">
-      <created>1605391970502</created>
-      <option name="number" value="00009" />
-      <option name="presentableId" value="LOCAL-00009" />
-      <option name="project" value="LOCAL" />
-      <updated>1605391970502</updated>
-    </task>
-    <task id="LOCAL-00010" summary="Strategy and Mediator and State and Command">
-      <created>1606037089014</created>
-      <option name="number" value="00010" />
-      <option name="presentableId" value="LOCAL-00010" />
-      <option name="project" value="LOCAL" />
-      <updated>1606037089014</updated>
-    </task>
-    <task id="LOCAL-00011" summary="Strategy and Mediator and State and Command">
-      <created>1606037126259</created>
-      <option name="number" value="00011" />
-      <option name="presentableId" value="LOCAL-00011" />
-      <option name="project" value="LOCAL" />
-      <updated>1606037126259</updated>
-    </task>
-    <task id="LOCAL-00012" summary="Strategy and Mediator and State and Command">
-      <created>1606037225609</created>
-      <option name="number" value="00012" />
-      <option name="presentableId" value="LOCAL-00012" />
-      <option name="project" value="LOCAL" />
-      <updated>1606037225609</updated>
-    </task>
-    <task id="LOCAL-00013" summary="??">
-      <created>1613561366428</created>
-      <option name="number" value="00013" />
-      <option name="presentableId" value="LOCAL-00013" />
-      <option name="project" value="LOCAL" />
-      <updated>1613561366428</updated>
-    </task>
-    <task id="LOCAL-00014" summary="??">
-      <created>1613561462287</created>
-      <option name="number" value="00014" />
-      <option name="presentableId" value="LOCAL-00014" />
-      <option name="project" value="LOCAL" />
-      <updated>1613561462287</updated>
-    </task>
-    <option name="localTasksCounter" value="15" />
     <servers />
   </component>
-  <component name="VcsManagerConfiguration">
-    <MESSAGE value="FactoryPattern" />
-    <MESSAGE value="BuilderPattern" />
-    <MESSAGE value="PrototypeAndSingletonPattern" />
-    <MESSAGE value="AbstractFactory" />
-    <MESSAGE value="Bridge and Adapter and Decorator" />
-    <MESSAGE value="flyweight and facade" />
-    <MESSAGE value="Iterator and proxy" />
-    <MESSAGE value="Chain of command and memento" />
-    <MESSAGE value="Template Method and Observer" />
-    <MESSAGE value="Strategy and Mediator and State and Command" />
-    <MESSAGE value="??" />
-    <option name="LAST_COMMIT_MESSAGE" value="??" />
-  </component>
   <component name="WindowStateProjectService">
-    <state x="361" y="71" key="#Project_Structure" timestamp="1613561828036">
+    <state x="499" y="159" key="#com.intellij.refactoring.safeDelete.UnsafeUsagesDialog" timestamp="1613221326142">
       <screen x="0" y="0" width="1536" height="824" />
     </state>
-    <state x="361" y="71" key="#Project_Structure/0.0.1536.824@0.0.1536.824" timestamp="1613561828036" />
-    <state x="93" y="93" width="1350" height="638" key="#com.intellij.execution.junit2.states.ComparisonFailureState$DiffDialog" timestamp="1605391904761">
+    <state x="499" y="159" key="#com.intellij.refactoring.safeDelete.UnsafeUsagesDialog/0.0.1536.824@0.0.1536.824" timestamp="1613221326142" />
+    <state x="350" y="163" key="AndroidCreateResourceFileDialog" timestamp="1613220468414">
       <screen x="0" y="0" width="1536" height="824" />
     </state>
-    <state x="93" y="93" width="1350" height="638" key="#com.intellij.execution.junit2.states.ComparisonFailureState$DiffDialog/0.0.1536.824@0.0.1536.824" timestamp="1605391904761" />
-    <state x="574" y="128" key="#com.intellij.ide.util.MemberChooser" timestamp="1606036287054">
+    <state x="350" y="163" key="AndroidCreateResourceFileDialog/0.0.1536.824@0.0.1536.824" timestamp="1613220468414" />
+    <state x="734" y="164" key="FileChooserDialogImpl" timestamp="1613562425178">
       <screen x="0" y="0" width="1536" height="824" />
     </state>
-    <state x="574" y="128" key="#com.intellij.ide.util.MemberChooser/0.0.1536.824@0.0.1536.824" timestamp="1606036287054" />
-    <state x="559" y="14" key="CommitChangelistDialog2" timestamp="1613561471586">
+    <state x="734" y="164" key="FileChooserDialogImpl/0.0.1536.824@0.0.1536.824" timestamp="1613562425178" />
+    <state width="1491" height="210" key="GridCell.Tab.0.bottom" timestamp="1613226800146">
       <screen x="0" y="0" width="1536" height="824" />
     </state>
-    <state x="559" y="14" key="CommitChangelistDialog2/0.0.1536.824@0.0.1536.824" timestamp="1613561471586" />
-    <state x="549" y="167" key="FileChooserDialogImpl" timestamp="1607164470387">
+    <state width="1491" height="210" key="GridCell.Tab.0.bottom/0.0.1536.824@0.0.1536.824" timestamp="1613226800146" />
+    <state width="1491" height="210" key="GridCell.Tab.0.center" timestamp="1613226800146">
       <screen x="0" y="0" width="1536" height="824" />
     </state>
-    <state x="549" y="167" key="FileChooserDialogImpl/0.0.1536.824@0.0.1536.824" timestamp="1607164470387" />
-    <state width="1493" height="237" key="GridCell.Tab.0.bottom" timestamp="1606038136829">
+    <state width="1491" height="210" key="GridCell.Tab.0.center/0.0.1536.824@0.0.1536.824" timestamp="1613226800146" />
+    <state width="1491" height="210" key="GridCell.Tab.0.left" timestamp="1613226800146">
       <screen x="0" y="0" width="1536" height="824" />
     </state>
-    <state width="1493" height="237" key="GridCell.Tab.0.bottom/0.0.1536.824@0.0.1536.824" timestamp="1606038136829" />
-    <state width="1493" height="237" key="GridCell.Tab.0.center" timestamp="1606038136829">
+    <state width="1491" height="210" key="GridCell.Tab.0.left/0.0.1536.824@0.0.1536.824" timestamp="1613226800146" />
+    <state width="1491" height="210" key="GridCell.Tab.0.right" timestamp="1613226800146">
       <screen x="0" y="0" width="1536" height="824" />
     </state>
-    <state width="1493" height="237" key="GridCell.Tab.0.center/0.0.1536.824@0.0.1536.824" timestamp="1606038136829" />
-    <state width="1493" height="237" key="GridCell.Tab.0.left" timestamp="1606038136829">
+    <state width="1491" height="210" key="GridCell.Tab.0.right/0.0.1536.824@0.0.1536.824" timestamp="1613226800146" />
+    <state width="1491" height="210" key="GridCell.Tab.1.bottom" timestamp="1613226751086">
       <screen x="0" y="0" width="1536" height="824" />
     </state>
-    <state width="1493" height="237" key="GridCell.Tab.0.left/0.0.1536.824@0.0.1536.824" timestamp="1606038136829" />
-    <state width="1493" height="237" key="GridCell.Tab.0.right" timestamp="1606038136829">
+    <state width="1491" height="210" key="GridCell.Tab.1.bottom/0.0.1536.824@0.0.1536.824" timestamp="1613226751086" />
+    <state width="1491" height="210" key="GridCell.Tab.1.center" timestamp="1613226751086">
       <screen x="0" y="0" width="1536" height="824" />
     </state>
-    <state width="1493" height="237" key="GridCell.Tab.0.right/0.0.1536.824@0.0.1536.824" timestamp="1606038136829" />
-    <state width="1493" height="157" key="GridCell.Tab.1.bottom" timestamp="1606036127025">
+    <state width="1491" height="210" key="GridCell.Tab.1.center/0.0.1536.824@0.0.1536.824" timestamp="1613226751086" />
+    <state width="1491" height="210" key="GridCell.Tab.1.left" timestamp="1613226751086">
       <screen x="0" y="0" width="1536" height="824" />
     </state>
-    <state width="1493" height="157" key="GridCell.Tab.1.bottom/0.0.1536.824@0.0.1536.824" timestamp="1606036127025" />
-    <state width="1493" height="157" key="GridCell.Tab.1.center" timestamp="1606036127025">
+    <state width="1491" height="210" key="GridCell.Tab.1.left/0.0.1536.824@0.0.1536.824" timestamp="1613226751086" />
+    <state width="1491" height="210" key="GridCell.Tab.1.right" timestamp="1613226751086">
       <screen x="0" y="0" width="1536" height="824" />
     </state>
-    <state width="1493" height="157" key="GridCell.Tab.1.center/0.0.1536.824@0.0.1536.824" timestamp="1606036127025" />
-    <state width="1493" height="157" key="GridCell.Tab.1.left" timestamp="1606036127025">
+    <state width="1491" height="210" key="GridCell.Tab.1.right/0.0.1536.824@0.0.1536.824" timestamp="1613226751086" />
+    <state x="337" y="141" key="com.intellij.xdebugger.impl.breakpoints.ui.BreakpointsDialogFactory$2" timestamp="1613226706545">
       <screen x="0" y="0" width="1536" height="824" />
     </state>
-    <state width="1493" height="157" key="GridCell.Tab.1.left/0.0.1536.824@0.0.1536.824" timestamp="1606036127025" />
-    <state width="1493" height="157" key="GridCell.Tab.1.right" timestamp="1606036127025">
-      <screen x="0" y="0" width="1536" height="824" />
-    </state>
-    <state width="1493" height="157" key="GridCell.Tab.1.right/0.0.1536.824@0.0.1536.824" timestamp="1606036127025" />
-    <state x="0" y="0" key="com.intellij.ide.util.TipDialog" timestamp="1607164018863">
-      <screen x="0" y="0" width="1536" height="824" />
-    </state>
-    <state x="0" y="0" key="com.intellij.ide.util.TipDialog/0.0.1536.824@0.0.1536.824" timestamp="1607164018863" />
+    <state x="337" y="141" key="com.intellij.xdebugger.impl.breakpoints.ui.BreakpointsDialogFactory$2/0.0.1536.824@0.0.1536.824" timestamp="1613226706545" />
   </component>
 </project>
