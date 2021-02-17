@@ -1,10 +1,9 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="8a44e83d-274b-4edf-acc6-375a302ec66a" name="Default Changelist" comment="">
+    <list default="true" id="8a44e83d-274b-4edf-acc6-375a302ec66a" name="Default Changelist" comment="Strategy and Mediator and State and Command">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/test/java/commandAndState/TestCommandAndState.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/commandAndState/TestCommandAndState.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/test/java/strategyAndMediator/TestStrategyAndMediator.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/strategyAndMediator/TestStrategyAndMediator.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -31,7 +30,7 @@
   </component>
   <component name="PropertiesComponent">
     <property name="RunOnceActivity.ShowReadmeOnStart" value="true" />
-    <property name="last_opened_file_path" value="$PROJECT_DIR$/src/main/java/abstractFactory" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$" />
     <property name="project.structure.last.edited" value="Modules" />
     <property name="project.structure.proportion" value="0.15" />
     <property name="project.structure.side.proportion" value="0.2" />
@@ -46,7 +45,7 @@
       <recent name="C:\Users\katty\OdjectOrientedDesign\ObOrDis\src\main\java\abstractFactory" />
     </key>
   </component>
-  <component name="RunManager" selected="JUnit.TestCommandAndState.test">
+  <component name="RunManager" selected="JUnit.TestFactoryInt.testFindMax">
     <configuration name="TestCommandAndState.test" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
       <module name="Factory" />
       <extension name="coverage">
@@ -58,6 +57,22 @@
       <option name="PACKAGE_NAME" value="commandAndState" />
       <option name="MAIN_CLASS_NAME" value="commandAndState.TestCommandAndState" />
       <option name="METHOD_NAME" value="test" />
+      <option name="TEST_OBJECT" value="method" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="TestFactoryInt.testFindMax" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+      <module name="Factory" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="base.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <option name="PACKAGE_NAME" value="base" />
+      <option name="MAIN_CLASS_NAME" value="base.TestFactoryInt" />
+      <option name="METHOD_NAME" value="testFindMax" />
       <option name="TEST_OBJECT" value="method" />
       <method v="2">
         <option name="Make" enabled="true" />
@@ -94,22 +109,6 @@
         <option name="Make" enabled="true" />
       </method>
     </configuration>
-    <configuration name="TestTemplateMethodAndObserver.test" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
-      <module name="Factory" />
-      <extension name="coverage">
-        <pattern>
-          <option name="PATTERN" value="templateMethodAndObserver.*" />
-          <option name="ENABLED" value="true" />
-        </pattern>
-      </extension>
-      <option name="PACKAGE_NAME" value="templateMethodAndObserver" />
-      <option name="MAIN_CLASS_NAME" value="templateMethodAndObserver.TestTemplateMethodAndObserver" />
-      <option name="METHOD_NAME" value="test" />
-      <option name="TEST_OBJECT" value="method" />
-      <method v="2">
-        <option name="Make" enabled="true" />
-      </method>
-    </configuration>
     <configuration name="TestTemplateMethodAndObserver.testObserver" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
       <module name="Factory" />
       <extension name="coverage">
@@ -128,11 +127,11 @@
     </configuration>
     <recent_temporary>
       <list>
+        <item itemvalue="JUnit.TestFactoryInt.testFindMax" />
         <item itemvalue="JUnit.TestCommandAndState.test" />
         <item itemvalue="JUnit.TestStrategyAndMediator.test" />
         <item itemvalue="JUnit.TestStrategyAndMediator" />
         <item itemvalue="JUnit.TestTemplateMethodAndObserver.testObserver" />
-        <item itemvalue="JUnit.TestTemplateMethodAndObserver.test" />
       </list>
     </recent_temporary>
   </component>
@@ -224,7 +223,14 @@
       <option name="project" value="LOCAL" />
       <updated>1606037126259</updated>
     </task>
-    <option name="localTasksCounter" value="12" />
+    <task id="LOCAL-00012" summary="Strategy and Mediator and State and Command">
+      <created>1606037225609</created>
+      <option name="number" value="00012" />
+      <option name="presentableId" value="LOCAL-00012" />
+      <option name="project" value="LOCAL" />
+      <updated>1606037225609</updated>
+    </task>
+    <option name="localTasksCounter" value="13" />
     <servers />
   </component>
   <component name="VcsManagerConfiguration">
@@ -265,34 +271,34 @@
       <screen x="0" y="0" width="1536" height="824" />
     </state>
     <state x="516" y="259" key="ANALYSIS_DLG_com.intellij.analysis.BaseAnalysisAction$1/0.0.1536.824@0.0.1536.824" timestamp="1601730953293" />
-    <state x="559" y="14" key="CommitChangelistDialog2" timestamp="1606037125698">
+    <state x="559" y="14" key="CommitChangelistDialog2" timestamp="1606037744388">
       <screen x="0" y="0" width="1536" height="824" />
     </state>
-    <state x="559" y="14" key="CommitChangelistDialog2/0.0.1536.824@0.0.1536.824" timestamp="1606037125698" />
+    <state x="559" y="14" key="CommitChangelistDialog2/0.0.1536.824@0.0.1536.824" timestamp="1606037744388" />
     <state x="159" y="65" key="DiffContextDialog" timestamp="1601320396040">
       <screen x="0" y="0" width="1536" height="824" />
     </state>
     <state x="159" y="65" key="DiffContextDialog/0.0.1536.824@0.0.1536.824" timestamp="1601320396040" />
-    <state x="549" y="167" key="FileChooserDialogImpl" timestamp="1601717950483">
+    <state x="549" y="167" key="FileChooserDialogImpl" timestamp="1607164470387">
       <screen x="0" y="0" width="1536" height="824" />
     </state>
-    <state x="549" y="167" key="FileChooserDialogImpl/0.0.1536.824@0.0.1536.824" timestamp="1601717950483" />
-    <state width="1493" height="237" key="GridCell.Tab.0.bottom" timestamp="1606037132675">
+    <state x="549" y="167" key="FileChooserDialogImpl/0.0.1536.824@0.0.1536.824" timestamp="1607164470387" />
+    <state width="1493" height="237" key="GridCell.Tab.0.bottom" timestamp="1606038136829">
       <screen x="0" y="0" width="1536" height="824" />
     </state>
-    <state width="1493" height="237" key="GridCell.Tab.0.bottom/0.0.1536.824@0.0.1536.824" timestamp="1606037132675" />
-    <state width="1493" height="237" key="GridCell.Tab.0.center" timestamp="1606037132675">
+    <state width="1493" height="237" key="GridCell.Tab.0.bottom/0.0.1536.824@0.0.1536.824" timestamp="1606038136829" />
+    <state width="1493" height="237" key="GridCell.Tab.0.center" timestamp="1606038136829">
       <screen x="0" y="0" width="1536" height="824" />
     </state>
-    <state width="1493" height="237" key="GridCell.Tab.0.center/0.0.1536.824@0.0.1536.824" timestamp="1606037132675" />
-    <state width="1493" height="237" key="GridCell.Tab.0.left" timestamp="1606037132674">
+    <state width="1493" height="237" key="GridCell.Tab.0.center/0.0.1536.824@0.0.1536.824" timestamp="1606038136829" />
+    <state width="1493" height="237" key="GridCell.Tab.0.left" timestamp="1606038136829">
       <screen x="0" y="0" width="1536" height="824" />
     </state>
-    <state width="1493" height="237" key="GridCell.Tab.0.left/0.0.1536.824@0.0.1536.824" timestamp="1606037132674" />
-    <state width="1493" height="237" key="GridCell.Tab.0.right" timestamp="1606037132675">
+    <state width="1493" height="237" key="GridCell.Tab.0.left/0.0.1536.824@0.0.1536.824" timestamp="1606038136829" />
+    <state width="1493" height="237" key="GridCell.Tab.0.right" timestamp="1606038136829">
       <screen x="0" y="0" width="1536" height="824" />
     </state>
-    <state width="1493" height="237" key="GridCell.Tab.0.right/0.0.1536.824@0.0.1536.824" timestamp="1606037132675" />
+    <state width="1493" height="237" key="GridCell.Tab.0.right/0.0.1536.824@0.0.1536.824" timestamp="1606038136829" />
     <state width="1493" height="157" key="GridCell.Tab.1.bottom" timestamp="1606036127025">
       <screen x="0" y="0" width="1536" height="824" />
     </state>
@@ -313,10 +319,10 @@
       <screen x="0" y="0" width="1536" height="824" />
     </state>
     <state x="249" y="0" key="SettingsEditor/0.0.1536.824@0.0.1536.824" timestamp="1600081558380" />
-    <state x="0" y="0" key="com.intellij.ide.util.TipDialog" timestamp="1605521906063">
+    <state x="0" y="0" key="com.intellij.ide.util.TipDialog" timestamp="1607164018863">
       <screen x="0" y="0" width="1536" height="824" />
     </state>
-    <state x="0" y="0" key="com.intellij.ide.util.TipDialog/0.0.1536.824@0.0.1536.824" timestamp="1605521906063" />
+    <state x="0" y="0" key="com.intellij.ide.util.TipDialog/0.0.1536.824@0.0.1536.824" timestamp="1607164018863" />
     <state x="578" y="329" key="com.intellij.openapi.vcs.update.UpdateOrStatusOptionsDialogupdate-v2" timestamp="1601319062077">
       <screen x="0" y="0" width="1536" height="824" />
     </state>
