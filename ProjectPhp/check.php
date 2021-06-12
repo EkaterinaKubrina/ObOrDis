@@ -22,7 +22,7 @@ $subject = "=?utf-8?B?".base64_encode("Сообщение с сайта ВИС �
 
 $headers = "From: $email\r\nReply-to: $email\r\nContent-type: text/html;charset=utf-8\r\n";
 
-mail('kubrin@mail.ru', $subject, $message, $headers);
+mail('katty9999@mail.ru', $subject, $message, $headers);
 
-header('Location: /index.php');
+header('Location: /success_send');
 ?>
