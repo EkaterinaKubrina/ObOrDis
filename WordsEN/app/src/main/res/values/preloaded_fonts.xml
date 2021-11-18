@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <array name="preloaded_fonts" translatable="false">
+        <item>@font/</item>
+        <item>@font/amatic_sc</item>
+        <item>@font/amatic_sc_bold</item>
+        <item>@font/amatica_sc</item>
+        <item>@font/asset</item>
+        <item>@font/bangers</item>
+        <item>@font/marmelad</item>
+        <item>@font/montserrat_subrayada_bold</item>
+        <item>@font/noto_sans</item>
+        <item>@font/press_start_2p</item>
+        <item>@font/ruslan_display</item>
+        <item>@font/seymour_one</item>
+        <item>@font/tenor_sans</item>
+        <item>@font/titan_one</item>
+        <item>@font/underdog</item>
+    </array>
+</resources>

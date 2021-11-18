@@ -1,0 +1,9 @@
+<resources>
+    <string name="app_name">WordsEN</string>
+    <string name="Registration">Регистрация</string>
+    <string name="entry">Войти</string>
+    <string name="login">Логин</string>
+    <string name="password">Пароль</string>
+    <string name="email">Email</string>
+    <string name="repeatPassword">Повторите пароль</string>
+</resources>
