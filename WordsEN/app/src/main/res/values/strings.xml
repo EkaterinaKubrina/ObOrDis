@@ -2,8 +2,13 @@
     <string name="app_name">WordsEN</string>
     <string name="Registration">Регистрация</string>
     <string name="entry">Войти</string>
-    <string name="login">Логин</string>
     <string name="password">Пароль</string>
     <string name="email">Email</string>
     <string name="repeatPassword">Повторите пароль</string>
+    <string name="name">Ваше имя</string>
+    <string name="logo">logo</string>
+    <string name="test">пройти тест</string>
+    <string name="nice_to_meet_you">Nice to meet you!</string>
+    <string name="big_text">Для начала, если ты хочешь запоминать слова, которые подходят именно тебе - нужно узнать твой уровень английского</string>
+    <string name="i_know_level">я знаю свой уровень</string>
 </resources>
