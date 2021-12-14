@@ -8,15 +8,16 @@
 
     <ImageView
         android:id="@+id/imageView3"
-        android:layout_width="338dp"
-        android:layout_height="167dp"
-        android:layout_marginTop="16dp"
-        android:layout_marginBottom="5dp"
+        android:layout_width="362dp"
+        android:layout_height="139dp"
+        android:layout_marginTop="32dp"
         android:contentDescription="@string/logo"
-        app:layout_constraintBottom_toTopOf="@+id/textPersonName"
+        app:layout_constraintBottom_toTopOf="@+id/button"
         app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.571"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.034"
         app:srcCompat="@drawable/oneworday" />
 
     <EditText
@@ -25,6 +26,7 @@
         android:layout_height="wrap_content"
         android:layout_marginBottom="30dp"
         android:autofillHints=""
+        android:backgroundTint="@color/purple_light"
         android:ems="10"
         android:fontFamily="@font/tenor_sans"
         android:hint="@string/name"
@@ -34,19 +36,23 @@
         android:textColorHighlight="@color/mypurpl"
         android:textColorHint="@color/myfon"
         android:textColorLink="@color/mypurpl"
-        android:textCursorDrawable="@color/mypurpl"
         android:textSize="30sp"
         app:layout_constraintBottom_toTopOf="@+id/textEmailAddress"
         app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.491"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/imageView3" />
+        app:layout_constraintTop_toBottomOf="@+id/imageView3"
+        app:layout_constraintVertical_bias="1.0"
+        android:textCursorDrawable="@color/mypurpl"
+        tools:targetApi="lollipop" />
 
     <EditText
         android:id="@+id/textEmailAddress"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginBottom="32dp"
+        android:layout_marginBottom="30dp"
         android:autofillHints=""
+        android:backgroundTint="@color/purple_light"
         android:ems="10"
         android:fontFamily="@font/tenor_sans"
         android:hint="@string/email"
@@ -59,16 +65,20 @@
         android:textCursorDrawable="@color/mypurpl"
         android:textSize="30sp"
         app:layout_constraintBottom_toTopOf="@+id/textPassword"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/textPersonName" />
+        app:layout_constraintEnd_toEndOf="@+id/textPersonName"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toStartOf="@+id/textPersonName"
+        app:layout_constraintTop_toBottomOf="@+id/imageView3"
+        app:layout_constraintVertical_bias="1.0"
+        tools:targetApi="lollipop" />
 
     <EditText
         android:id="@+id/textPassword"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginBottom="24dp"
+        android:layout_marginBottom="30dp"
         android:autofillHints=""
+        android:backgroundTint="@color/purple_light"
         android:ems="10"
         android:fontFamily="@font/tenor_sans"
         android:hint="@string/password"
@@ -81,16 +91,21 @@
         android:textCursorDrawable="@color/mypurpl"
         android:textSize="30sp"
         app:layout_constraintBottom_toTopOf="@+id/textPassword2"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/textEmailAddress" />
+        app:layout_constraintEnd_toEndOf="@+id/textEmailAddress"
+        app:layout_constraintHorizontal_bias="1.0"
+        app:layout_constraintStart_toStartOf="@+id/textEmailAddress"
+        app:layout_constraintTop_toBottomOf="@+id/imageView3"
+        app:layout_constraintVertical_bias="1.0"
+        tools:targetApi="lollipop" />
 
     <EditText
         android:id="@+id/textPassword2"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginBottom="37dp"
+        android:layout_marginTop="360dp"
+        android:layout_marginBottom="50dp"
         android:autofillHints=""
+        android:backgroundTint="@color/purple_light"
         android:ems="10"
         android:fontFamily="@font/tenor_sans"
         android:hint="@string/repeatPassword"
@@ -103,15 +118,17 @@
         android:textCursorDrawable="@color/mypurpl"
         android:textSize="30sp"
         app:layout_constraintBottom_toTopOf="@+id/button"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/textPassword" />
+        app:layout_constraintEnd_toEndOf="@+id/textPassword"
+        app:layout_constraintHorizontal_bias="1.0"
+        app:layout_constraintStart_toStartOf="@+id/textPassword"
+        app:layout_constraintTop_toBottomOf="@+id/imageView3"
+        app:layout_constraintVertical_bias="1.0"
+        tools:targetApi="lollipop" />
 
     <Button
         android:id="@+id/button"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginBottom="82dp"
         android:fontFamily="@font/tenor_sans"
         android:text="@string/Registration"
         android:textAppearance="@style/TextAppearance.AppCompat.Display1"
@@ -120,6 +137,7 @@
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/textPassword2" />
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.901" />
 
 </androidx.constraintlayout.widget.ConstraintLayout>

@@ -3,12 +3,23 @@
     package="ru.ekaterinakubrina.wordsen">
 
     <application
-        android:allowBackup="true"
+        android:allowBackup="false"
         android:icon="@mipmap/ic_launcher"
         android:label="@string/app_name"
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
         android:theme="@style/Theme.WordsEN">
+        <activity
+            android:name=".DictionaryActivity"
+            android:label="@string/title_activity_dictionary"
+            android:theme="@style/Theme.WordsEN.NoActionBar" />
+        <activity android:name=".MainEntryActivity" />
+        <activity
+            android:name=".TestActivity"
+            android:allowBackup="false"
+            android:label="@string/title_activity_test"
+            android:theme="@style/Theme.WordsEN.NoActionBar" />
+        <activity android:name=".SelectLevelActivity" />
         <activity android:name=".MainActivity">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />

@@ -11,4 +11,9 @@
     <color name="mypurpl">#5659C9</color>
     <color name="mypurpl2">#7574A7</color>
     <color name="mygold">#ACA46F</color>
+    <color name="purple_light">#4147FF</color>
+    <color name="gold_dark">#857F58</color>
+    <color name="gold_dark1">#9E9766</color>
+    <color name="purpldark">#676794</color>
+    <color name="darkpurpl">#4A4969</color>
 </resources>

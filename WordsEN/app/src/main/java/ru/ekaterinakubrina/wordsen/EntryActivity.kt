@@ -2,12 +2,12 @@ package ru.ekaterinakubrina.wordsen
 
 import android.content.Intent
 import android.os.Bundle
-import android.view.View
 import android.widget.Button
 import android.widget.EditText
 import android.widget.TextView
 import androidx.appcompat.app.AppCompatActivity
 import ru.ekaterinakubrina.wordsen.data.MyDbManager
+import java.util.*
 
 class EntryActivity : AppCompatActivity() {
     private val myDbManager = MyDbManager(this)
@@ -27,8 +27,18 @@ class EntryActivity : AppCompatActivity() {
             if(checkEmail(email.text.toString())) {
                 if (checkPassword(password.text.toString())) {
                     if (id != null) {
-                        val intent = Intent(this@EntryActivity, FirstInActivity::class.java)
-                        startActivity(intent)
+                        val level = myDbManager.getLevelUser(id)
+                        if(level != 0){
+                            val intent = Intent(this@EntryActivity, MainEntryActivity::class.java)
+                            intent.putExtra("ID_USER", id.toInt())
+                            intent.putExtra("LEVEL_USER", level)
+                            startActivity(intent)
+                        }
+                        else {
+                            val intent = Intent(this@EntryActivity, FirstInActivity::class.java)
+                            intent.putExtra("ID_USER", id.toInt())
+                            startActivity(intent)
+                        }
                     } else {
                         textView.text = "Ошибка: не удалось войти"
                     }

@@ -28,31 +28,36 @@ object MyDbWordsEN {
     }
 
     object Words : BaseColumns {
-        private const val TABLE_NAME = "words"
+        const val TABLE_NAME = "words"
 
-        private const val COLUMN_WORD = "word"
-        private const val COLUMN_LEVEL = "level"
-        const val LEVEL_A0 = 1
-        const val LEVEL_A1 = 2
-        const val LEVEL_A2 = 3
-        const val LEVEL_B1 = 4
-        const val LEVEL_B2 = 5
-        const val LEVEL_C1 = 6
+        const val COLUMN_WORD = "word"
+        const val COLUMN_TRANSLATE = "translate"
+        const val COLUMN_TRANSCRIPTION = "transcription"
+        const val COLUMN_LEVEL = "level"
+        //const val LEVEL_A0 = 1
+        //const val LEVEL_A1 = 2
+        //const val LEVEL_A2 = 3
+        //const val LEVEL_B1 = 4
+        //const val LEVEL_B2 = 5
+        //const val LEVEL_C1 = 6
 
         var SQL_CREATE_TABLE = ("CREATE TABLE IF NOT EXISTS " + TABLE_NAME + " ("
                 + BaseColumns._ID + " INTEGER PRIMARY KEY AUTOINCREMENT, "
                 + COLUMN_WORD + " TEXT NOT NULL, "
-                + COLUMN_LEVEL + "  INTEGER NOT NULL);")
+                + COLUMN_TRANSLATE + " TEXT NOT NULL, "
+                + COLUMN_TRANSCRIPTION + " TEXT NOT NULL, "
+                + COLUMN_LEVEL + "  INTEGER NOT NULL, " +
+                "UNIQUE ($COLUMN_WORD));")
         const val SQL_DELETE_TABLE = "DROP TABLE IF EXISTS ${Users.TABLE_NAME}"
 
     }
 
     object UsersWords : BaseColumns {
-        private const val TABLE2_NAME = "users_words"
+         const val TABLE2_NAME = "users_words"
 
-        private const val ID_USER = "idUser"
-        private const val ID_WORDS = "idWord"
-        private const val DATE = "date"
+        const val ID_USER = "idUser"
+        const val ID_WORDS = "idWord"
+        const val DATE = "date"
 
         var SQL_CREATE_TABLE = ("CREATE TABLE IF NOT EXISTS " + TABLE2_NAME + " ("
                 + ID_USER + " INTEGER NOT NULL, "

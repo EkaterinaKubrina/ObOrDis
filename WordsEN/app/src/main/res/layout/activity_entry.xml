@@ -5,43 +5,42 @@
     android:id="@+id/name"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:background="@drawable/fonfon">
+    android:background="@drawable/ffon">
 
     <ImageView
         android:id="@+id/imageView2"
-        android:layout_width="301dp"
-        android:layout_height="251dp"
-        android:layout_marginTop="4dp"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
         android:contentDescription="@string/logo"
-        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintBottom_toTopOf="@+id/TextEmail"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.495"
+        app:layout_constraintHorizontal_bias="0.0"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.0"
+        app:layout_constraintVertical_bias="0.179"
         app:srcCompat="@drawable/oneworday" />
 
     <Button
         android:id="@+id/buttonEntry"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginTop="64dp"
         android:fontFamily="@font/tenor_sans"
         android:text="@string/entry"
         android:textAppearance="@style/TextAppearance.AppCompat.Display1"
         android:textColor="@color/myfon"
         app:backgroundTint="@color/mypurpl"
+        app:cornerRadius="@android:dimen/notification_large_icon_height"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/TextPassword"
-        app:layout_constraintVertical_bias="0.016" />
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.8" />
 
     <EditText
         android:id="@+id/TextEmail"
         android:layout_width="0dp"
         android:layout_height="wrap_content"
-        android:layout_marginTop="36dp"
+        android:layout_marginBottom="20dp"
         android:autofillHints=""
         android:ems="10"
         android:fontFamily="@font/tenor_sans"
@@ -54,15 +53,23 @@
         android:textColorLink="@color/mypurpl"
         android:textCursorDrawable="@color/mypurpl"
         android:textSize="30sp"
+        app:layout_constraintBottom_toTopOf="@+id/TextPassword"
         app:layout_constraintEnd_toEndOf="@+id/TextPassword"
+        app:layout_constraintHorizontal_bias="0.0"
         app:layout_constraintStart_toStartOf="@+id/TextPassword"
-        app:layout_constraintTop_toBottomOf="@+id/imageView2" />
+        app:layout_constraintTop_toBottomOf="@+id/imageView2"
+        android:backgroundTint="@color/purple_light"
+        tools:targetApi="lollipop"/>
 
     <EditText
         android:id="@+id/TextPassword"
-        android:layout_width="wrap_content"
+        android:layout_width="0dp"
         android:layout_height="wrap_content"
-        android:layout_marginTop="16dp"
+        android:layout_marginStart="20dp"
+        android:layout_marginLeft="20dp"
+        android:layout_marginEnd="20dp"
+        android:layout_marginRight="20dp"
+        android:layout_marginBottom="20dp"
         android:autofillHints=""
         android:ems="10"
         android:fontFamily="@font/tenor_sans"
@@ -75,15 +82,20 @@
         android:textColorLink="@color/mypurpl"
         android:textCursorDrawable="@color/mypurpl"
         android:textSize="30sp"
+        app:layout_constraintBottom_toTopOf="@+id/error"
         app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.719"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/TextEmail" />
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.967"
+        android:backgroundTint="@color/purple_light"
+        tools:targetApi="lollipop"/>
 
     <TextView
         android:id="@+id/error"
         android:layout_width="0dp"
-        android:layout_height="0dp"
-        android:layout_marginTop="15dp"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="20dp"
         android:focusableInTouchMode="false"
         android:fontFamily="@font/tenor_sans"
         android:gravity="center"
@@ -92,7 +104,5 @@
         app:layout_constraintBottom_toTopOf="@+id/buttonEntry"
         app:layout_constraintEnd_toEndOf="@+id/TextPassword"
         app:layout_constraintHorizontal_bias="0.0"
-        app:layout_constraintStart_toStartOf="@+id/TextPassword"
-        app:layout_constraintTop_toBottomOf="@+id/TextPassword"
-        app:layout_constraintVertical_bias="0.0" />
+        app:layout_constraintStart_toStartOf="@+id/TextPassword" />
 </androidx.constraintlayout.widget.ConstraintLayout>
