@@ -4,14 +4,14 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:background="@drawable/ffon"
+    android:background="@drawable/fonblure2"
     android:fontFamily="@font/tenor_sans"
-    tools:context=".MainActivity">
+    tools:context=".view.MainActivity">
 
     <ImageView
         android:id="@+id/imageView"
-        android:layout_width="0dp"
-        android:layout_height="0dp"
+        android:layout_width="385dp"
+        android:layout_height="377dp"
         android:layout_marginTop="15dp"
         android:layout_marginBottom="15dp"
         android:contentDescription="@string/logo"
@@ -19,37 +19,42 @@
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.021"
         app:srcCompat="@drawable/oneworday" />
 
     <Button
         android:id="@+id/entry"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
+        android:layout_width="294dp"
+        android:layout_height="69dp"
         android:fontFamily="@font/tenor_sans"
         android:text="@string/entry"
         android:textAppearance="@style/TextAppearance.AppCompat.Display1"
+        android:textSize="30dp"
         app:backgroundTint="@color/black"
         app:cornerRadius="@android:dimen/notification_large_icon_height"
         app:iconTint="@color/myfon"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.495"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.76" />
+        app:layout_constraintVertical_bias="0.817" />
 
     <Button
         android:id="@+id/registration"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginBottom="30dp"
+        android:layout_width="291dp"
+        android:layout_height="67dp"
+        android:layout_marginBottom="20dp"
         android:fontFamily="@font/tenor_sans"
         android:text="@string/Registration"
         android:textAppearance="@style/TextAppearance.AppCompat.Display1"
+        android:textSize="30dp"
         app:backgroundTint="@color/mypurpl"
         app:cornerRadius="@android:dimen/notification_large_icon_height"
         app:iconTint="@color/myfon"
         app:layout_constraintBottom_toTopOf="@+id/entry"
         app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.484"
         app:layout_constraintStart_toStartOf="parent" />
 
 </androidx.constraintlayout.widget.ConstraintLayout>

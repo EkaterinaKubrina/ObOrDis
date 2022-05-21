@@ -1,4 +1,4 @@
-package ru.ekaterinakubrina.wordsen
+package ru.ekaterinakubrina.wordsen.view
 
 import android.animation.ObjectAnimator
 import android.animation.ValueAnimator.REVERSE
@@ -8,6 +8,7 @@ import android.view.animation.BounceInterpolator
 import android.widget.Button
 import android.widget.ImageView
 import androidx.appcompat.app.AppCompatActivity
+import ru.ekaterinakubrina.wordsen.R
 import java.util.*
 
 class FirstInActivity : AppCompatActivity() {
@@ -16,11 +17,11 @@ class FirstInActivity : AppCompatActivity() {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_first_in)
 
-        val imageView6 : ImageView = findViewById(R.id.imageView6)
-        val buttonSelect : Button = findViewById(R.id.select_level)
-        val buttonTest : Button = findViewById(R.id.do_test)
+        val imageView6: ImageView = findViewById(R.id.imageView6)
+        val buttonSelect: Button = findViewById(R.id.select_level)
+        val buttonTest: Button = findViewById(R.id.do_test)
 
-        val id : Int = intent.getSerializableExtra("ID_USER") as Int
+        val id: String = intent.getSerializableExtra("ID_USER") as String
 
         val objectAnimator = ObjectAnimator.ofFloat(imageView6, "rotation", 360F)
         objectAnimator.duration = 4000

@@ -5,7 +5,7 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:background="@drawable/fffon"
-    tools:context=".MainEntryActivity">
+    tools:context=".view.MainEntryActivity">
 
     <androidx.appcompat.widget.Toolbar
         android:id="@+id/toolbar2"
@@ -27,7 +27,6 @@
         android:layout_width="73dp"
         android:layout_height="0dp"
         android:layout_marginEnd="10dp"
-        android:layout_marginRight="10dp"
         android:contentDescription="@string/logo"
         android:rotationY="180"
         app:layout_constraintBottom_toTopOf="@+id/divider2"
@@ -58,7 +57,6 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginEnd="108dp"
-        android:layout_marginRight="108dp"
         android:fontFamily="@font/tenor_sans"
         android:text="@string/words"
         app:layout_constraintBottom_toBottomOf="@+id/toolbar2"
@@ -98,12 +96,10 @@
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_marginStart="15dp"
-            android:layout_marginLeft="15dp"
             android:layout_marginEnd="20dp"
-            android:layout_marginRight="20dp"
             android:fontFamily="@font/tenor_sans"
             android:text="@string/example"
-            android:textColor="@color/black"
+            android:textColor="@color/myfon"
             android:textSize="20sp"
             app:iconTint="@android:color/secondary_text_dark"
             app:rippleColor="?attr/actionMenuTextColor"
@@ -118,7 +114,7 @@
             android:paddingLeft="5dp"
             android:paddingRight="5dp"
             android:text="@string/level"
-            android:textColor="@color/black"
+            android:textColor="@color/myfon"
             android:textSize="18sp" />
 
         <TextView
@@ -130,18 +126,21 @@
             android:paddingLeft="4dp"
             android:paddingRight="4dp"
             android:text="@string/example"
-            android:textColor="@color/black"
+            android:textColor="@color/myfon"
             android:textSize="24sp" />
     </LinearLayout>
 
     <androidx.cardview.widget.CardView
         android:id="@+id/cardView"
-        android:layout_width="wrap_content"
+        android:layout_width="0dp"
         android:layout_height="wrap_content"
+        android:layout_marginLeft="40dp"
+        android:layout_marginRight="40dp"
         app:cardBackgroundColor="@color/mygold"
         app:cardCornerRadius="?attr/listPreferredItemPaddingStart"
         app:cardPreventCornerOverlap="false"
         app:contentPadding="40dp"
+        app:contentPaddingLeft="40dp"
         app:layout_constraintBottom_toTopOf="@+id/linearLayout"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.497"
@@ -163,7 +162,7 @@
             android:id="@+id/main_word"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:layout_marginTop="40dp"
+            android:layout_marginTop="75dp"
             android:gravity="center"
             android:text="@string/example"
             android:textColor="@color/myfon"
@@ -173,7 +172,7 @@
             android:id="@+id/transcription"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:layout_marginTop="85dp"
+            android:layout_marginTop="120dp"
             android:fontFamily="@font/tenor_sans"
             android:gravity="center"
             android:text="@string/example"
@@ -184,11 +183,31 @@
             android:id="@+id/translate"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:layout_marginTop="110dp"
+            android:layout_marginTop="145dp"
             android:fontFamily="@font/tenor_sans"
             android:gravity="center"
             android:text="@string/example"
             android:textSize="24sp" />
+
+        <ImageView
+            android:id="@+id/imageView10"
+            android:layout_width="95dp"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="30dp"
+            android:layout_marginTop="45dp"
+            android:contentDescription="@string/sound"
+            android:paddingStart="35dp"
+            app:srcCompat="@drawable/sound" />
+
+        <ImageView
+            android:id="@+id/imageView12"
+            android:layout_width="99dp"
+            android:layout_height="42dp"
+            android:layout_marginStart="130dp"
+            android:layout_marginTop="40dp"
+            android:paddingRight="35dp"
+            app:srcCompat="@drawable/slow"
+            android:contentDescription="@string/slow_image" />
     </androidx.cardview.widget.CardView>
 
     <Button
@@ -197,9 +216,7 @@
         android:layout_width="0dp"
         android:layout_height="wrap_content"
         android:layout_marginStart="50dp"
-        android:layout_marginLeft="50dp"
         android:layout_marginEnd="50dp"
-        android:layout_marginRight="50dp"
         android:fontFamily="@font/tenor_sans"
         android:text="@string/already_know"
         android:textColor="@color/material_on_primary_emphasis_high_type"
@@ -207,7 +224,7 @@
         app:cornerRadius="@android:dimen/notification_large_icon_height"
         app:layout_constraintBottom_toTopOf="@+id/linearLayout"
         app:layout_constraintEnd_toEndOf="@+id/cardView"
-        app:layout_constraintHorizontal_bias="0.497"
+        app:layout_constraintHorizontal_bias="1.0"
         app:layout_constraintStart_toStartOf="@+id/cardView"
         app:layout_constraintTop_toBottomOf="@+id/cardView"
         app:layout_constraintVertical_bias="0.0" />

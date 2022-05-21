@@ -1,0 +1,7 @@
+<resources>
+    <style name="SplashTheme" parent="Theme.AppCompat.NoActionBar">
+        <!-- Primary brand color. -->
+        <item name="android:windowBackground">@drawable/back_flash</item>
+        <item name="android:windowFullscreen">true</item>
+    </style>
+</resources>

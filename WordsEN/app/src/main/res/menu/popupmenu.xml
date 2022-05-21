@@ -1,0 +1,41 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android">
+
+    <group android:id="@+id/menugroup1">
+        <item
+            android:id="@+id/menu1"
+            android:title="Изменить уровень">
+            <menu>
+
+                <item
+                    android:id="@+id/A0"
+                    android:title="A0" />
+                <item
+                    android:id="@+id/A1"
+                    android:title="A1" />
+
+                <item
+                    android:id="@+id/A2"
+                    android:title="A2" />
+
+                <item
+                    android:id="@+id/B1"
+                    android:title="B1" />
+
+                <item
+                    android:id="@+id/B2"
+                    android:title="B2" />
+
+                <item
+                    android:id="@+id/C1"
+                    android:title="C1" />
+            </menu>
+        </item>
+        <item
+            android:id="@+id/menu2"
+            android:icon="@mipmap/ic_launcher"
+            android:title="Выйти из аккаунта" />
+    </group>
+
+
+</menu>

@@ -13,11 +13,10 @@ import ru.ekaterinakubrina.wordsen.R
 import java.io.IOException
 
 
-class MyDbHelper(context: Context):SQLiteOpenHelper(
+class MyDbHelper(context: Context) : SQLiteOpenHelper(
     context, MyDbWordsEN.DATABASE_NAME,
     null, MyDbWordsEN.DATABASE_VERSION
-)
-{
+) {
     private val fContext: Context = context
 
     override fun onCreate(db: SQLiteDatabase?) {

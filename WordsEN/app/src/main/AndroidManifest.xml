@@ -2,6 +2,12 @@
 <manifest xmlns:android="http://schemas.android.com/apk/res/android"
     package="ru.ekaterinakubrina.wordsen">
 
+    <queries>
+        <intent>
+            <action android:name="android.intent.action.TTS_SERVICE" />
+        </intent>
+    </queries>
+
     <application
         android:allowBackup="false"
         android:icon="@mipmap/ic_launcher"
@@ -9,28 +15,75 @@
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
         android:theme="@style/Theme.WordsEN">
+        <service
+            android:name=".notify.NotifyService"
+            android:enabled="true"
+            android:exported="true"
+            android:process=":service"  />
+
         <activity
-            android:name=".DictionaryActivity"
-            android:label="@string/title_activity_dictionary"
-            android:theme="@style/Theme.WordsEN.NoActionBar" />
-        <activity android:name=".MainEntryActivity" />
+            android:name=".view.ResultTestActivity"
+            android:screenOrientation="portrait" />
         <activity
-            android:name=".TestActivity"
-            android:allowBackup="false"
-            android:label="@string/title_activity_test"
-            android:theme="@style/Theme.WordsEN.NoActionBar" />
-        <activity android:name=".SelectLevelActivity" />
-        <activity android:name=".MainActivity">
+            android:name=".view.TestingWordActivity"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".view.SelectTestActivity"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".view.ForgotPasswordActivity"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".view.SplashActivity"
+            android:screenOrientation="portrait"
+            android:theme="@style/SplashTheme">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
 
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>
-        <activity android:name=".EntryActivity" />
-        <activity android:name=".RegistrationActivity" />
-        <activity android:name=".SuccessRegistrationActivity" />
-        <activity android:name=".FirstInActivity" />
+        <activity
+            android:name=".view.MainActivity"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".view.DictionaryActivity"
+            android:label="@string/title_activity_dictionary"
+            android:screenOrientation="portrait"
+            android:theme="@style/Theme.WordsEN.NoActionBar" />
+        <activity
+            android:name=".view.MainEntryActivity"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".view.TestActivity"
+            android:allowBackup="false"
+            android:label="@string/title_activity_test"
+            android:screenOrientation="portrait"
+            android:theme="@style/Theme.WordsEN.NoActionBar" />
+        <activity
+            android:name=".view.SelectLevelActivity"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".view.EntryActivity"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".view.RegistrationActivity"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".view.SuccessRegistrationActivity"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".view.FirstInActivity"
+            android:screenOrientation="portrait" />
+
+        <receiver
+            android:name=".notify.NotificationFirstHalfReceiver"
+            android:enabled="true"
+            android:process=":service" />
+        <receiver
+            android:name=".notify.NotificationSecondHalfReceiver"
+            android:enabled="true"
+            android:process=":service" />
 
         <meta-data
             android:name="preloaded_fonts"

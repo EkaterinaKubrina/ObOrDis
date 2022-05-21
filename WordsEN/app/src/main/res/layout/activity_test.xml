@@ -4,9 +4,9 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:background="@color/mygold"
+    android:background="@drawable/fon2"
     android:fitsSystemWindows="true"
-    tools:context=".TestActivity">
+    tools:context=".view.TestActivity">
 
     <ScrollView
         android:layout_width="match_parent"
@@ -25,41 +25,52 @@
 
                 <ImageView
                     android:id="@+id/imageView5"
-                    android:layout_width="97dp"
-                    android:layout_height="76dp"
+                    android:layout_width="214dp"
+                    android:layout_height="102dp"
                     android:layout_alignParentTop="true"
                     android:layout_alignParentEnd="true"
-                    android:layout_alignParentRight="true"
                     android:layout_alignParentBottom="true"
-                    android:layout_marginStart="18dp"
-                    android:layout_marginLeft="18dp"
-                    android:layout_marginTop="28dp"
-                    android:layout_marginEnd="23dp"
-                    android:layout_marginRight="23dp"
-                    android:layout_marginBottom="17dp"
+                    android:layout_marginStart="63dp"
+                    android:layout_marginTop="8dp"
+                    android:layout_marginEnd="-29dp"
+                    android:layout_marginBottom="11dp"
                     android:layout_toEndOf="@+id/textView9"
-                    android:layout_toRightOf="@+id/textView9"
                     android:contentDescription="@string/logo"
                     android:rotationY="180"
                     app:srcCompat="@drawable/dog" />
 
                 <TextView
                     android:id="@+id/textView9"
-                    android:layout_width="207dp"
-                    android:layout_height="93dp"
-                    android:layout_alignParentStart="true"
-                    android:layout_alignParentLeft="true"
-                    android:layout_alignParentTop="true"
-                    android:layout_alignParentBottom="true"
-                    android:layout_marginStart="15dp"
-                    android:layout_marginLeft="15dp"
-                    android:layout_marginTop="21dp"
-                    android:layout_marginBottom="7dp"
+                    android:layout_width="130dp"
+                    android:layout_height="36dp"
+                    android:layout_above="@+id/textView31"
+                    android:layout_alignParentStart="false"
+                    android:layout_alignParentTop="false"
+                    android:layout_marginStart="23dp"
+                    android:layout_marginTop="15dp"
+                    android:layout_marginBottom="1dp"
                     android:fontFamily="@font/tenor_sans"
                     android:gravity="center"
                     android:text="@string/testOfLevel"
                     android:textColor="@color/black"
-                    android:textSize="22sp" />
+                    android:textSize="34sp"
+                    android:textStyle="bold" />
+
+                <TextView
+                    android:id="@+id/textView31"
+                    android:layout_width="329dp"
+                    android:layout_height="46dp"
+                    android:layout_alignParentStart="true"
+                    android:layout_alignParentBottom="true"
+                    android:layout_marginStart="15dp"
+                    android:layout_marginTop="6dp"
+                    android:layout_marginEnd="-128dp"
+                    android:layout_marginBottom="10dp"
+                    android:layout_toStartOf="@+id/imageView5"
+                    android:fontFamily="@font/tenor_sans"
+                    android:gravity="center|left"
+                    android:text="@string/notes"
+                    android:textSize="14sp" />
 
             </RelativeLayout>
 
@@ -70,22 +81,16 @@
                 android:background="?android:attr/listDivider" />
 
             <TextView
-                android:id="@+id/textView31"
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:fontFamily="@font/tenor_sans"
-                android:text="@string/notes"
-                android:textSize="12sp" />
-
-            <TextView
                 android:id="@+id/word1"
                 android:layout_width="match_parent"
                 android:layout_height="45dp"
+                android:layout_marginStart="20dp"
                 android:fontFamily="@font/tenor_sans"
-                android:gravity="center"
+                android:gravity="bottom|center"
                 android:text="@string/morning"
-                android:textColor="@color/black"
-                android:textSize="18sp" />
+                android:textColor="@color/mypurpl"
+                android:textSize="24sp"
+                android:textStyle="bold" />
 
             <RadioGroup
                 android:layout_width="match_parent"
@@ -95,6 +100,7 @@
                     android:id="@+id/correct1"
                     android:layout_width="match_parent"
                     android:layout_height="34dp"
+                    android:layout_marginStart="25dp"
                     android:checked="false"
                     android:fontFamily="@font/tenor_sans"
                     android:text="@string/morningTr"
@@ -105,6 +111,7 @@
                     android:id="@+id/incorrect1"
                     android:layout_width="match_parent"
                     android:layout_height="36dp"
+                    android:layout_marginStart="25dp"
                     android:fontFamily="@font/tenor_sans"
                     android:text="@string/falseAnsw1"
                     android:textSize="17sp"
@@ -114,10 +121,11 @@
                     android:id="@+id/incorrect2"
                     android:layout_width="match_parent"
                     android:layout_height="37dp"
+                    android:layout_marginStart="25dp"
                     android:fontFamily="@font/tenor_sans"
                     android:text="@string/falseAnsw2"
                     android:textSize="17sp"
-                    app:buttonTint="@color/black"  />
+                    app:buttonTint="@color/black" />
 
             </RadioGroup>
 
@@ -125,11 +133,13 @@
                 android:id="@+id/word2"
                 android:layout_width="match_parent"
                 android:layout_height="45dp"
+                android:layout_marginStart="20dp"
                 android:fontFamily="@font/tenor_sans"
-                android:gravity="center"
+                android:gravity="bottom|center"
                 android:text="@string/house"
-                android:textColor="@color/black"
-                android:textSize="18sp" />
+                android:textColor="@color/mypurpl"
+                android:textSize="24sp"
+                android:textStyle="bold" />
 
             <RadioGroup
                 android:layout_width="match_parent"
@@ -139,24 +149,27 @@
                     android:id="@+id/incorrect3"
                     android:layout_width="match_parent"
                     android:layout_height="35dp"
+                    android:layout_marginStart="25dp"
                     android:fontFamily="@font/tenor_sans"
                     android:text="@string/falseAnsw3"
                     android:textSize="17sp"
-                    app:buttonTint="@color/black"  />
+                    app:buttonTint="@color/black" />
 
                 <RadioButton
                     android:id="@+id/correct2"
                     android:layout_width="match_parent"
                     android:layout_height="33dp"
+                    android:layout_marginStart="25dp"
                     android:fontFamily="@font/tenor_sans"
                     android:text="@string/answ1"
                     android:textSize="17sp"
-                    app:buttonTint="@color/black"  />
+                    app:buttonTint="@color/black" />
 
                 <RadioButton
                     android:id="@+id/incorrect4"
                     android:layout_width="match_parent"
                     android:layout_height="38dp"
+                    android:layout_marginStart="25dp"
                     android:fontFamily="@font/tenor_sans"
                     android:text="@string/falseAnsw4"
                     android:textSize="17sp"
@@ -165,13 +178,15 @@
 
             <TextView
                 android:id="@+id/word3"
+                android:text="@string/laughter"
                 android:layout_width="match_parent"
                 android:layout_height="45dp"
+                android:layout_marginStart="20dp"
                 android:fontFamily="@font/tenor_sans"
-                android:gravity="center"
-                android:text="Laughter"
-                android:textColor="@color/black"
-                android:textSize="18sp" />
+                android:gravity="bottom|center"
+                android:textColor="@color/mypurpl"
+                android:textSize="24sp"
+                android:textStyle="bold" />
 
             <RadioGroup
                 android:layout_width="match_parent"
@@ -181,8 +196,9 @@
                     android:id="@+id/incorrect5"
                     android:layout_width="match_parent"
                     android:layout_height="36dp"
+                    android:layout_marginStart="25dp"
                     android:fontFamily="@font/tenor_sans"
-                    android:text="опоздание"
+                    android:text="@string/incorrect_answer5"
                     android:textSize="17sp"
                     app:buttonTint="@color/black" />
 
@@ -190,30 +206,34 @@
                     android:id="@+id/incorrect6"
                     android:layout_width="match_parent"
                     android:layout_height="33dp"
+                    android:layout_marginStart="25dp"
                     android:fontFamily="@font/tenor_sans"
-                    android:text="громкость"
+                    android:text="@string/incorrect_answer6"
                     android:textSize="17sp"
-                    app:buttonTint="@color/black"  />
+                    app:buttonTint="@color/black" />
 
                 <RadioButton
                     android:id="@+id/correct3"
                     android:layout_width="match_parent"
                     android:layout_height="33dp"
+                    android:layout_marginStart="25dp"
                     android:fontFamily="@font/tenor_sans"
-                    android:text="смех"
+                    android:text="@string/correct_answer3"
                     android:textSize="17sp"
-                    app:buttonTint="@color/black"  />
+                    app:buttonTint="@color/black" />
             </RadioGroup>
 
             <TextView
                 android:id="@+id/word4"
+                android:text="@string/event"
                 android:layout_width="match_parent"
                 android:layout_height="45dp"
+                android:layout_marginStart="20dp"
                 android:fontFamily="@font/tenor_sans"
-                android:gravity="center"
-                android:text="Event"
-                android:textColor="@color/black"
-                android:textSize="18sp" />
+                android:gravity="bottom|center"
+                android:textColor="@color/mypurpl"
+                android:textSize="24sp"
+                android:textStyle="bold" />
 
             <RadioGroup
                 android:layout_width="match_parent"
@@ -223,8 +243,9 @@
                     android:id="@+id/incorrect7"
                     android:layout_width="match_parent"
                     android:layout_height="35dp"
+                    android:layout_marginStart="25dp"
                     android:fontFamily="@font/tenor_sans"
-                    android:text="подарок"
+                    android:text="@string/incorrect_answer7"
                     android:textSize="17sp"
                     app:buttonTint="@color/black" />
 
@@ -232,8 +253,9 @@
                     android:id="@+id/incorrect8"
                     android:layout_width="match_parent"
                     android:layout_height="35dp"
+                    android:layout_marginStart="25dp"
                     android:fontFamily="@font/tenor_sans"
-                    android:text="инвентарь"
+                    android:text="@string/incorrect_answer8"
                     android:textSize="17sp"
                     app:buttonTint="@color/black" />
 
@@ -241,168 +263,188 @@
                     android:id="@+id/correct4"
                     android:layout_width="match_parent"
                     android:layout_height="35dp"
+                    android:layout_marginStart="25dp"
                     android:fontFamily="@font/tenor_sans"
-                    android:text="событие"
+                    android:text="@string/correct_answer"
                     android:textSize="17sp"
-                    app:buttonTint="@color/black"  />
+                    app:buttonTint="@color/black" />
 
             </RadioGroup>
 
             <TextView
                 android:id="@+id/word5"
+                android:text="@string/influence"
                 android:layout_width="match_parent"
                 android:layout_height="45dp"
+                android:layout_marginStart="20dp"
                 android:fontFamily="@font/tenor_sans"
-                android:gravity="center"
-                android:text="Influence"
-                android:textColor="@color/black"
-                android:textSize="18sp" />
+                android:gravity="bottom|center"
+                android:textColor="@color/mypurpl"
+                android:textSize="24sp"
+                android:textStyle="bold" />
 
             <RadioGroup
                 android:layout_width="match_parent"
-                android:layout_height="match_parent" >
+                android:layout_height="match_parent">
 
                 <RadioButton
                     android:id="@+id/incorrect9"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
+                    android:layout_marginStart="25dp"
                     android:fontFamily="@font/tenor_sans"
-                    android:text="летчик"
+                    android:text="@string/incorrect_answer9"
                     android:textSize="17sp"
-                    app:buttonTint="@color/black"  />
+                    app:buttonTint="@color/black" />
 
                 <RadioButton
                     android:id="@+id/correct5"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
+                    android:layout_marginStart="25dp"
                     android:fontFamily="@font/tenor_sans"
-                    android:text="влияние"
+                    android:text="@string/correct_answer5"
                     android:textSize="17sp"
-                    app:buttonTint="@color/black"  />
+                    app:buttonTint="@color/black" />
 
                 <RadioButton
                     android:id="@+id/incorrect10"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
+                    android:layout_marginStart="25dp"
                     android:fontFamily="@font/tenor_sans"
-                    android:text="процент"
+                    android:text="@string/incorrect_answer"
                     android:textSize="17sp"
-                    app:buttonTint="@color/black"  />
+                    app:buttonTint="@color/black" />
             </RadioGroup>
 
             <TextView
                 android:id="@+id/word6"
+                android:text="@string/setback"
                 android:layout_width="match_parent"
                 android:layout_height="45dp"
+                android:layout_marginStart="20dp"
                 android:fontFamily="@font/tenor_sans"
-                android:gravity="center"
-                android:text="А setback"
-                android:textColor="@color/black"
-                android:textSize="18sp" />
+                android:gravity="bottom|center"
+                android:textColor="@color/mypurpl"
+                android:textSize="24sp"
+                android:textStyle="bold" />
 
             <RadioGroup
                 android:layout_width="match_parent"
-                android:layout_height="match_parent" >
+                android:layout_height="match_parent">
 
                 <RadioButton
                     android:id="@+id/incorrect11"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
+                    android:layout_marginStart="25dp"
                     android:fontFamily="@font/tenor_sans"
-                    android:text="задний ход"
+                    android:text="@string/incorrect_answer1"
                     android:textSize="17sp"
-                    app:buttonTint="@color/black"  />
+                    app:buttonTint="@color/black" />
 
                 <RadioButton
                     android:id="@+id/incorrect12"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
+                    android:layout_marginStart="25dp"
                     android:fontFamily="@font/tenor_sans"
-                    android:text="тяжелый мешок"
+                    android:text="@string/incorrect_answer12"
                     android:textSize="17sp"
-                    app:buttonTint="@color/black"  />
+                    app:buttonTint="@color/black" />
 
                 <RadioButton
                     android:id="@+id/correct6"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
+                    android:layout_marginStart="25dp"
                     android:fontFamily="@font/tenor_sans"
-                    android:text="неудача"
+                    android:text="@string/correct_answer6"
                     android:textSize="17sp"
-                    app:buttonTint="@color/black"  />
+                    app:buttonTint="@color/black" />
             </RadioGroup>
 
             <TextView
                 android:id="@+id/word7"
+                android:text="@string/blithe"
                 android:layout_width="match_parent"
                 android:layout_height="45dp"
+                android:layout_marginStart="20dp"
                 android:fontFamily="@font/tenor_sans"
-                android:gravity="center"
-                android:text="Blithe"
-                android:textColor="@color/black"
-                android:textSize="18sp" />
+                android:gravity="bottom|center"
+                android:textColor="@color/mypurpl"
+                android:textSize="24sp"
+                android:textStyle="bold" />
 
             <RadioGroup
                 android:layout_width="match_parent"
-                android:layout_height="match_parent" >
+                android:layout_height="match_parent">
 
                 <RadioButton
                     android:id="@+id/incorrect13"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
+                    android:layout_marginStart="25dp"
                     android:fontFamily="@font/tenor_sans"
-                    android:text="храбрец"
+                    android:text="@string/incorrect_answer13"
                     android:textSize="17sp"
-                    app:buttonTint="@color/black"  />
+                    app:buttonTint="@color/black" />
 
                 <RadioButton
                     android:id="@+id/incorrect14"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
+                    android:layout_marginStart="25dp"
                     android:fontFamily="@font/tenor_sans"
-                    android:text="слепой"
+                    android:text="@string/incorrect_answer14"
                     android:textSize="17sp"
-                    app:buttonTint="@color/black"  />
+                    app:buttonTint="@color/black" />
 
                 <RadioButton
                     android:id="@+id/correct7"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
+                    android:layout_marginStart="25dp"
                     android:fontFamily="@font/tenor_sans"
-                    android:text="веселый"
+                    android:text="@string/correct_answer7"
                     android:textSize="17sp"
-                    app:buttonTint="@color/black"  />
+                    app:buttonTint="@color/black" />
             </RadioGroup>
 
             <TextView
                 android:id="@+id/word8"
+                android:text="@string/oblivious"
                 android:layout_width="match_parent"
                 android:layout_height="45dp"
+                android:layout_marginStart="20dp"
                 android:fontFamily="@font/tenor_sans"
-                android:gravity="center"
-                android:text="Oblivious"
-                android:textColor="@color/black"
-                android:textSize="18sp" />
+                android:gravity="bottom|center"
+                android:textColor="@color/mypurpl"
+                android:textSize="24sp"
+                android:textStyle="bold" />
 
             <RadioGroup
                 android:layout_width="match_parent"
-                android:layout_height="match_parent" >
+                android:layout_height="match_parent">
 
                 <RadioButton
                     android:id="@+id/correct8"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
+                    android:layout_marginStart="25dp"
                     android:fontFamily="@font/tenor_sans"
-                    android:text="рассеяный"
+                    android:text="@string/correct_answer8"
                     android:textSize="17sp"
-                    app:buttonTint="@color/black"  />
+                    app:buttonTint="@color/black" />
 
                 <RadioButton
                     android:id="@+id/incorrect15"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
+                    android:layout_marginStart="25dp"
                     android:fontFamily="@font/tenor_sans"
-                    android:text="очевидный"
+                    android:text="@string/incorrect_answer15"
                     android:textSize="17sp"
                     app:buttonTint="@color/black" />
 
@@ -410,83 +452,93 @@
                     android:id="@+id/incorrect16"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
+                    android:layout_marginStart="25dp"
                     android:fontFamily="@font/tenor_sans"
-                    android:text="непокоримый"
+                    android:text="@string/incorrect_answer16"
                     android:textSize="17sp"
                     app:buttonTint="@color/black" />
             </RadioGroup>
 
             <TextView
                 android:id="@+id/word9"
+                android:text="@string/derogatory"
                 android:layout_width="match_parent"
                 android:layout_height="45dp"
+                android:layout_marginStart="20dp"
                 android:fontFamily="@font/tenor_sans"
-                android:gravity="center"
-                android:text="Derogatory"
-                android:textColor="@color/black"
-                android:textSize="18sp" />
+                android:gravity="bottom|center"
+                android:textColor="@color/mypurpl"
+                android:textSize="24sp"
+                android:textStyle="bold" />
 
             <RadioGroup
                 android:layout_width="match_parent"
-                android:layout_height="match_parent" >
+                android:layout_height="match_parent">
 
                 <RadioButton
                     android:id="@+id/incorrect17"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
+                    android:layout_marginStart="25dp"
                     android:fontFamily="@font/tenor_sans"
-                    android:text="расщепленный"
+                    android:text="@string/incorrect_answer17"
                     android:textSize="17sp"
-                    app:buttonTint="@color/black"  />
+                    app:buttonTint="@color/black" />
 
                 <RadioButton
                     android:id="@+id/incorrect18"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
+                    android:layout_marginStart="25dp"
                     android:fontFamily="@font/tenor_sans"
-                    android:text="дирижер"
+                    android:text="@string/incorrect_answer18"
                     android:textSize="17sp"
-                    app:buttonTint="@color/black"  />
+                    app:buttonTint="@color/black" />
 
                 <RadioButton
                     android:id="@+id/correct9"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
+                    android:layout_marginStart="25dp"
                     android:fontFamily="@font/tenor_sans"
-                    android:text="унизительный"
+                    android:text="@string/correct_answer9"
                     android:textSize="17sp"
-                    app:buttonTint="@color/black"  />
+                    app:buttonTint="@color/black" />
             </RadioGroup>
 
             <TextView
                 android:id="@+id/word10"
+                android:text="@string/vigilance"
                 android:layout_width="match_parent"
                 android:layout_height="45dp"
+                android:layout_marginStart="20dp"
                 android:fontFamily="@font/tenor_sans"
-                android:gravity="center"
-                android:text="Vigilance"
-                android:textColor="@color/black"
-                android:textSize="18sp" />
+                android:gravity="bottom|center"
+                android:textColor="@color/mypurpl"
+                android:textSize="24sp"
+                android:textStyle="bold" />
 
             <RadioGroup
                 android:layout_width="match_parent"
-                android:layout_height="match_parent" >
+                android:layout_height="match_parent">
 
                 <RadioButton
                     android:id="@+id/correct10"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
+                    android:layout_marginStart="25dp"
                     android:fontFamily="@font/tenor_sans"
-                    android:text="бдительность"
+                    android:text="@string/correct_answer10"
                     android:textSize="17sp"
-                    app:buttonTint="@color/black"  />
+                    app:buttonTint="@color/black" />
 
                 <RadioButton
                     android:id="@+id/incorrect19"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
+                    android:layout_marginStart="25dp"
                     android:fontFamily="@font/tenor_sans"
-                    android:text="облагороженный"
+                    android:text="@string/incorrect_answer19"
                     android:textSize="17sp"
                     app:buttonTint="@color/black" />
 
@@ -494,8 +546,9 @@
                     android:id="@+id/incorrect20"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
+                    android:layout_marginStart="25dp"
                     android:fontFamily="@font/tenor_sans"
-                    android:text="преступный"
+                    android:text="@string/incorrect_answer20"
                     android:textSize="17sp"
                     app:buttonTint="@color/black" />
 
@@ -505,8 +558,12 @@
                 android:id="@+id/buttonTheEnd"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
+                android:layout_marginLeft="50dp"
+                android:layout_marginTop="15dp"
+                android:layout_marginRight="50dp"
+                android:layout_marginBottom="10dp"
                 android:fontFamily="@font/tenor_sans"
-                android:text="Закончить"
+                android:text="@string/endtestButton"
                 android:textSize="18sp"
                 app:backgroundTint="@color/mypurpl"
                 app:cornerRadius="@android:dimen/notification_large_icon_height" />

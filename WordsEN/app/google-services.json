@@ -1,0 +1,39 @@
+{
+  "project_info": {
+    "project_number": "417570083347",
+    "project_id": "wordsen-40edb",
+    "storage_bucket": "wordsen-40edb.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:417570083347:android:533a856ede507342a6e5e6",
+        "android_client_info": {
+          "package_name": "ru.ekaterinakubrina.wordsen"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "417570083347-6eoouksth1cf56612vd187imkbu8vpjd.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyCuYtbv0RuLd16-5ZUwEruCnzk3gsT7s8Q"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "417570083347-6eoouksth1cf56612vd187imkbu8vpjd.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
