@@ -1,6 +1,5 @@
 package ru.ekaterinakubrina.wordsen.view
 
-import android.annotation.SuppressLint
 import android.content.Intent
 import android.os.Bundle
 import android.widget.Button
@@ -8,17 +7,14 @@ import android.widget.EditText
 import android.widget.TextView
 import androidx.appcompat.app.AppCompatActivity
 import androidx.appcompat.content.res.AppCompatResources
-import com.google.firebase.auth.FirebaseAuth
 import ru.ekaterinakubrina.wordsen.R
-import ru.ekaterinakubrina.wordsen.daoimpl.UserDaoImpl
-import ru.ekaterinakubrina.wordsen.presenter.UserPresenter
+import ru.ekaterinakubrina.wordsen.presenter.RegistrationPresenter
 import java.util.*
 
 
-class RegistrationActivity : AppCompatActivity() {
-    private val userPresenter = UserPresenter(UserDaoImpl(this))
+class RegistrationActivity : AppCompatActivity(), RegistrationContractView {
+    private val registrationPresenter = RegistrationPresenter(this, this)
 
-    @SuppressLint("SetTextI18n")
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_registration)
@@ -29,65 +25,53 @@ class RegistrationActivity : AppCompatActivity() {
             val email: EditText = findViewById(R.id.textEmailAddress)
             val password: EditText = findViewById(R.id.textPassword)
             val password2: EditText = findViewById(R.id.textPassword2)
-            val textError: TextView = findViewById(R.id.error2)
 
-            val intent =
-                Intent(this@RegistrationActivity, SuccessRegistrationActivity()::class.java)
-
-
-            if (password.text.toString() == password2.text.toString()) {
-                if (userPresenter.checkName(name.text.toString().trim())) {
-                    if (userPresenter.checkEmail(email.text.toString().trim())) {
-                        if (userPresenter.checkPassword(password.text.toString())) {
-                            FirebaseAuth.getInstance()
-                                .createUserWithEmailAndPassword(
-                                    email.text.toString(),
-                                    password.text.toString()
-                                )
-                                .addOnCompleteListener { task ->
-                                    if (task.isSuccessful) {
-                                        val id: String =
-                                            FirebaseAuth.getInstance().currentUser?.uid!!
-                                        userPresenter.addUser(
-                                            id,
-                                            name.text.toString().trim().capitalize(Locale.ROOT),
-                                            email.text.toString(),
-                                            password.text.toString()
-                                        )
-                                        intent.putExtra(
-                                            "NAME_USER",
-                                            name.text.toString().trim().capitalize(Locale.ROOT)
-                                        )
-                                        startActivity(intent)
-                                    } else {
-                                        textError.text = task.exception?.message
-                                    }
-                                }
-
-                        } else {
-                            textError.text =
-                                "Некорректный пароль (содержит менее 6 знаков или кириллицу)"
-                            password.backgroundTintList =
-                                AppCompatResources.getColorStateList(this, R.color.myRed)
-                        }
-                    } else {
-                        textError.text = "Некорректный email"
-                        email.backgroundTintList =
-                            AppCompatResources.getColorStateList(this, R.color.myRed)
-                    }
-                } else {
-                    textError.text = "Некорректное имя пользователя"
-                    name.backgroundTintList =
-                        AppCompatResources.getColorStateList(this, R.color.myRed)
-                }
-            } else {
-                textError.text = "Введены разные пароли"
-                password2.backgroundTintList =
-                    AppCompatResources.getColorStateList(this, R.color.myRed)
-            }
+            registrationPresenter.registration(
+                name.text.toString(),
+                email.text.toString(),
+                password.text.toString(),
+                password2.text.toString()
+            )
         }
-
     }
 
+    override fun successRegistration() {
+        val name: EditText = findViewById(R.id.textPersonName)
+        val intent = Intent(this, SuccessRegistrationActivity()::class.java)
+        intent.putExtra(
+            "NAME_USER",
+            name.text.toString().trim().capitalize(Locale.ROOT)
+        )
+        startActivity(intent)
+    }
+
+    override fun setTextError(text: String) {
+        val textError: TextView = findViewById(R.id.error2)
+        textError.text = text
+    }
+
+    override fun underlineRedName() {
+        val name: EditText = findViewById(R.id.textPersonName)
+        name.backgroundTintList =
+            AppCompatResources.getColorStateList(this, R.color.myRed)
+    }
+
+    override fun underlineRedPassword() {
+        val password: EditText = findViewById(R.id.textPassword)
+        password.backgroundTintList =
+            AppCompatResources.getColorStateList(this, R.color.myRed)
+    }
+
+    override fun underlineRedRepeatPassword() {
+        val password2: EditText = findViewById(R.id.textPassword2)
+        password2.backgroundTintList =
+            AppCompatResources.getColorStateList(this, R.color.myRed)
+    }
+
+    override fun underlineRedEmail() {
+        val email: EditText = findViewById(R.id.textEmailAddress)
+        email.backgroundTintList =
+            AppCompatResources.getColorStateList(this, R.color.myRed)
+    }
 
 }

@@ -9,7 +9,6 @@ import android.widget.Button
 import android.widget.ImageView
 import androidx.appcompat.app.AppCompatActivity
 import ru.ekaterinakubrina.wordsen.R
-import java.util.*
 
 class FirstInActivity : AppCompatActivity() {
 
@@ -17,30 +16,28 @@ class FirstInActivity : AppCompatActivity() {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_first_in)
 
-        val imageView6: ImageView = findViewById(R.id.imageView6)
-        val buttonSelect: Button = findViewById(R.id.select_level)
-        val buttonTest: Button = findViewById(R.id.do_test)
-
         val id: String = intent.getSerializableExtra("ID_USER") as String
 
+        val buttonSelect: Button = findViewById(R.id.select_level)
+        buttonSelect.setOnClickListener {
+            val intent = Intent(this, SelectLevelActivity::class.java)
+            intent.putExtra("ID_USER", id)
+            startActivity(intent)
+        }
+
+        val buttonTest: Button = findViewById(R.id.do_test)
+        buttonTest.setOnClickListener {
+            val intent = Intent(this, TestActivity::class.java)
+            intent.putExtra("ID_USER", id)
+            startActivity(intent)
+        }
+
+        val imageView6: ImageView = findViewById(R.id.imageView6)
         val objectAnimator = ObjectAnimator.ofFloat(imageView6, "rotation", 360F)
         objectAnimator.duration = 4000
         objectAnimator.repeatCount = ObjectAnimator.INFINITE
         objectAnimator.repeatMode = ObjectAnimator.RESTART / REVERSE
         objectAnimator.interpolator = BounceInterpolator()
         objectAnimator.start()
-
-        buttonSelect.setOnClickListener {
-            val intent = Intent(this@FirstInActivity, SelectLevelActivity::class.java)
-            intent.putExtra("ID_USER", id)
-            startActivity(intent)
-        }
-
-        buttonTest.setOnClickListener {
-            val intent = Intent(this@FirstInActivity, TestActivity::class.java)
-            intent.putExtra("ID_USER", id)
-            startActivity(intent)
-        }
-
     }
 }

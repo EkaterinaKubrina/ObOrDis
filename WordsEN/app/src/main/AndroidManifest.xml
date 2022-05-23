@@ -77,11 +77,11 @@
             android:screenOrientation="portrait" />
 
         <receiver
-            android:name=".notify.NotificationFirstHalfReceiver"
+            android:name=".notify.NotificationNewWordReceiver"
             android:enabled="true"
             android:process=":service" />
         <receiver
-            android:name=".notify.NotificationSecondHalfReceiver"
+            android:name=".notify.NotificationRememberWordReceiver"
             android:enabled="true"
             android:process=":service" />
 

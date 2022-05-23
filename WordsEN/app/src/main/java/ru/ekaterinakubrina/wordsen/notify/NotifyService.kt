@@ -21,10 +21,9 @@ class NotifyService : Service() {
         val startFlag: Boolean = intent?.getSerializableExtra("START_FLAG") as Boolean
         val idUser: String = intent.getSerializableExtra("ID_USER") as String
         val level: Int = intent.getSerializableExtra("LEVEL_USER") as Int
-        if(startFlag){
+        if (startFlag) {
             startAlarm(idUser, level)
-        }
-        else {
+        } else {
             stopAlarms(idUser, level)
         }
         return START_NOT_STICKY
@@ -34,12 +33,12 @@ class NotifyService : Service() {
     fun startAlarm(userId: String, level: Int) {
         alarmManager = getSystemService(Context.ALARM_SERVICE) as AlarmManager?
 
-        val intent = Intent(this, NotificationFirstHalfReceiver::class.java)
+        val intent = Intent(this, NotificationNewWordReceiver::class.java)
         intent.putExtra("ID_USER", userId)
         intent.putExtra("LEVEL_USER", level)
         alarmIntent = PendingIntent.getBroadcast(this, 1, intent, 0)
 
-        val intent1 = Intent(this, NotificationSecondHalfReceiver::class.java)
+        val intent1 = Intent(this, NotificationRememberWordReceiver::class.java)
         intent1.putExtra("ID_USER", userId)
         alarmIntent1 = PendingIntent.getBroadcast(this, 2, intent1, 0)
 
@@ -67,15 +66,15 @@ class NotifyService : Service() {
     private fun stopAlarms(userId: String, level: Int) {
         alarmManager = getSystemService(Context.ALARM_SERVICE) as AlarmManager?
 
-        val intent = Intent(this, NotificationFirstHalfReceiver::class.java)
+        val intent = Intent(this, NotificationNewWordReceiver::class.java)
         intent.putExtra("ID_USER", userId)
         intent.putExtra("LEVEL_USER", level)
         alarmIntent = PendingIntent.getBroadcast(this, 1, intent, 0)
 
-        val intent1 = Intent(this, NotificationSecondHalfReceiver::class.java)
+        val intent1 = Intent(this, NotificationRememberWordReceiver::class.java)
         intent1.putExtra("ID_USER", userId)
         alarmIntent1 = PendingIntent.getBroadcast(this, 2, intent1, 0)
-        if(alarmManager!=null){
+        if (alarmManager != null) {
             alarmManager!!.cancel(alarmIntent)
             alarmManager!!.cancel(alarmIntent1)
         }

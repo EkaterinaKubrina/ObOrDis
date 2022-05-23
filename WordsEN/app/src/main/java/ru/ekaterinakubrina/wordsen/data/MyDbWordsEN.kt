@@ -53,7 +53,7 @@ object MyDbWordsEN {
 
     }
 
-    object UsersWords : BaseColumns {
+    object Dictionary : BaseColumns {
         const val TABLE2_NAME = "users_words"
 
         const val ID_USER = "idUser"

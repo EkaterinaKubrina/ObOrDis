@@ -14,14 +14,14 @@ import androidx.core.app.NotificationManagerCompat
 import com.google.firebase.FirebaseApp
 import com.google.firebase.auth.FirebaseAuth
 import ru.ekaterinakubrina.wordsen.R
-import ru.ekaterinakubrina.wordsen.daoimpl.WordDaoImpl
-import ru.ekaterinakubrina.wordsen.presenter.WordPresenter
+import ru.ekaterinakubrina.wordsen.model.UsersModel
+import ru.ekaterinakubrina.wordsen.model.WordsModel
 import ru.ekaterinakubrina.wordsen.view.SplashActivity
 import java.text.SimpleDateFormat
 import java.util.*
 
 
-class NotificationFirstHalfReceiver : BroadcastReceiver() {
+class NotificationNewWordReceiver : BroadcastReceiver() {
     private val NOTIFICATION_ID = 101
     private val CHANNEL_ID = "channelID"
 
@@ -29,7 +29,8 @@ class NotificationFirstHalfReceiver : BroadcastReceiver() {
     override fun onReceive(context: Context, intent: Intent?) {
         FirebaseApp.initializeApp(context)
         if (FirebaseAuth.getInstance().currentUser != null) {
-            val wordPresenter = WordPresenter(WordDaoImpl(context))
+            val wordsModel = WordsModel(context)
+            val usersModel = UsersModel(context)
             val idUser: String = intent?.getSerializableExtra("ID_USER") as String
             val levelUser: Int = intent.getSerializableExtra("LEVEL_USER") as Int
 
@@ -39,9 +40,27 @@ class NotificationFirstHalfReceiver : BroadcastReceiver() {
             }
             val pendingIntent = PendingIntent.getActivity(context, 0, intent1, 0)
 
-            val lastDate = wordPresenter.getLastDateAddedWord(idUser)
+            val lastDate = wordsModel.getLastDateAddedWord(idUser)
             if (lastDate != SimpleDateFormat("yyyyMMdd", Locale.ENGLISH).format(Date()).toInt()) {
-                val word = wordPresenter.addWord(idUser, levelUser)
+                var word = wordsModel.getWord(idUser, levelUser)
+                var builder1: NotificationCompat.Builder? = null
+                if (word.wordId == 0) {
+                    usersModel.setLevel(idUser, levelUser + 1)
+                    word = wordsModel.getWord(idUser, levelUser + 1)
+                    builder1 = NotificationCompat.Builder(context, CHANNEL_ID)
+                        .setSmallIcon(R.drawable.dog)
+                        .setContentTitle("Новый уровень")
+                        .setContentText("Поздравляем, ты переходишь на следующий уровень! Теперь твои слова станут сложнее и интернеснее")
+                        .setAutoCancel(true)
+                        .setPriority(NotificationCompat.PRIORITY_HIGH)
+                        .setContentIntent(pendingIntent)
+                        .setDefaults(Notification.DEFAULT_SOUND or Notification.DEFAULT_VIBRATE)
+                }
+                wordsModel.addWordToUser(idUser, word)
+
+                if (wordsModel.getCountNewWord(idUser)!! - 1 == 7) {
+                    NotificationNewTest.showNotification(context)
+                }
 
                 val builder = NotificationCompat.Builder(context, CHANNEL_ID)
                     .setSmallIcon(R.drawable.dog)
@@ -64,11 +83,16 @@ class NotificationFirstHalfReceiver : BroadcastReceiver() {
                     notificationManager.createNotificationChannel(notificationChannel)
                 }
 
+                if (builder1 != null) {
+                    with(NotificationManagerCompat.from(context)) {
+                        notify(NOTIFICATION_ID, builder1.build()) // посылаем уведомление
+                    }
+                }
                 with(NotificationManagerCompat.from(context)) {
-                    notify(NOTIFICATION_ID, builder.build()) // посылаем уведомление
+                    notify(NOTIFICATION_ID, builder.build())
                 }
             } else {
-                val word = wordPresenter.getWordByDate(
+                val word = wordsModel.getWordByDate(
                     idUser, SimpleDateFormat(
                         "yyyyMMdd",
                         Locale.ENGLISH

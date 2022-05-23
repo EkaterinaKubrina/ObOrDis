@@ -80,4 +80,10 @@
     <string name="every_week_test_description">В этом тесте для проверки собраны все твои новые слова. Если ты укажешь верный перевод слова, оно будет отмечено как изученное и останется в словаре. Иначе слово останется до следующего еженедельного теста, и после повторного неправильного ответа будет удалено из словаря.</string>
     <string name="remember_all_test">Вспомнить все!</string>
     <string name="remember_all_test_description">Тест для того, чтобы освежить память об уже изученных словах. Он состоит из 14 рандомных слов из твоего словаря. При неправильном ответе слово добавится в еженедельный тест и будет помечено как "неизученное".</string>
+    <string name="add_word">+ Добавить слово</string>
+    <string name="add">Добавить</string>
+    <string name="translate">Перевод на русском</string>
+    <string name="word">Слово</string>
+    <string name="close">close</string>
+    <string name="transcription">Транскрипция</string>
 </resources>

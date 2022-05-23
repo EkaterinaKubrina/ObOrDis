@@ -4,49 +4,31 @@ import android.app.Notification
 import android.app.NotificationChannel
 import android.app.NotificationManager
 import android.app.PendingIntent
-import android.content.BroadcastReceiver
 import android.content.Context
 import android.content.Intent
-import android.content.res.Resources
-import android.graphics.BitmapFactory
 import android.os.Build
-import androidx.annotation.RequiresApi
 import androidx.core.app.NotificationCompat
 import androidx.core.app.NotificationManagerCompat
-import com.google.firebase.FirebaseApp
-import com.google.firebase.auth.FirebaseAuth
 import ru.ekaterinakubrina.wordsen.R
-import ru.ekaterinakubrina.wordsen.daoimpl.WordDaoImpl
-import ru.ekaterinakubrina.wordsen.presenter.WordPresenter
-import ru.ekaterinakubrina.wordsen.view.MainEntryActivity
 import ru.ekaterinakubrina.wordsen.view.SplashActivity
-import java.text.SimpleDateFormat
-import java.util.*
 
-class NotificationSecondHalfReceiver : BroadcastReceiver() {
-    private val NOTIFICATION_ID = 102
-    private val CHANNEL_ID = "channelID"
+class NotificationNewTest {
 
-    @RequiresApi(Build.VERSION_CODES.O)
-    override fun onReceive(context: Context, intent: Intent?) {
-        FirebaseApp.initializeApp(context)
-        if (FirebaseAuth.getInstance().currentUser != null) {
-            val wordPresenter = WordPresenter(WordDaoImpl(context))
-            val idUser: String = intent?.getSerializableExtra("ID_USER") as String
+    companion object {
+        private val NOTIFICATION_ID = 103
+        private val CHANNEL_ID = "channelID"
 
+        fun showNotification(context: Context) {
             val intent1 = Intent(context, SplashActivity::class.java)
             intent1.apply {
-                flags = Intent.FLAG_ACTIVITY_CLEAR_TASK or Intent.FLAG_ACTIVITY_NEW_TASK
+                flags = Intent.FLAG_ACTIVITY_NEW_TASK
             }
             val pendingIntent = PendingIntent.getActivity(context, 0, intent1, 0)
 
-            val currentDate = SimpleDateFormat("yyyyMMdd", Locale.ENGLISH).format(Date()).toInt()
-            val word = wordPresenter.getWordByDate(idUser, currentDate)
-
             val builder = NotificationCompat.Builder(context, CHANNEL_ID)
                 .setSmallIcon(R.drawable.dog)
-                .setContentTitle("Ремэмбер")
-                .setContentText("Еще помнишь как переводится слово " + word.word + "?")
+                .setContentTitle("Еженедельный тест стал доступен!")
+                .setContentText("Зайди в свои тесты и проверь, как хорошо ты помнишь слова прошедшей недели")
                 .setAutoCancel(true)
                 .setPriority(NotificationCompat.PRIORITY_HIGH)
                 .setContentIntent(pendingIntent)
@@ -65,11 +47,9 @@ class NotificationSecondHalfReceiver : BroadcastReceiver() {
             }
 
             with(NotificationManagerCompat.from(context)) {
-                notify(NOTIFICATION_ID, builder.build()) // посылаем уведомление
+                notify(NOTIFICATION_ID, builder.build())
             }
+
         }
-
     }
-
-
 }

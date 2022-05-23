@@ -7,7 +7,13 @@ interface WordDao {
 
     fun getWordByDate(uid: String, date: Int): WordDto
 
-    fun addWordToUser(uid: String, lvl: Int): WordDto
+    fun getWord(uid: String, lvl: Int): WordDto
+
+    fun getIdByWord(word: String): Int
+
+    fun addWord(wordDto: WordDto, level: Int): Long?
+
+    fun addWordToUser(uid: String, wordDto: WordDto)
 
     fun alreadyKnowWord(uid: String, idWord: Int, date: Int, status: Int)
 

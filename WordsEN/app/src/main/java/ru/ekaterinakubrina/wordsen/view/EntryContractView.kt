@@ -1,7 +1,8 @@
 package ru.ekaterinakubrina.wordsen.view
 
-import com.google.firebase.auth.FirebaseAuth
+import ru.ekaterinakubrina.wordsen.dto.UserDto
 
 interface EntryContractView {
-    fun signIn(auth: FirebaseAuth, email: String, password: String)
+    fun setError(message: String)
+    fun nextActivity(userDto: UserDto)
 }

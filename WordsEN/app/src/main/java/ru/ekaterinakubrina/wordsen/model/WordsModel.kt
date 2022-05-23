@@ -1,23 +1,28 @@
-package ru.ekaterinakubrina.wordsen.presenter
+package ru.ekaterinakubrina.wordsen.model
 
+import android.content.Context
+import android.database.sqlite.SQLiteConstraintException
 import com.google.firebase.database.DataSnapshot
 import com.google.firebase.database.DatabaseError
 import com.google.firebase.database.FirebaseDatabase
 import com.google.firebase.database.ValueEventListener
-import ru.ekaterinakubrina.wordsen.dao.WordDao
+import ru.ekaterinakubrina.wordsen.daoimpl.WordDaoImpl
 import ru.ekaterinakubrina.wordsen.data.MyDbWordsEN
 import ru.ekaterinakubrina.wordsen.dto.WordDto
 import java.text.SimpleDateFormat
 import java.util.*
 
+class WordsModel(context: Context) {
+    private val wordDao = WordDaoImpl(context)
 
-class WordPresenter(private val wordDao: WordDao) {
+    fun getWord(uid: String, lvl: Int): WordDto {
+        return wordDao.getWord(uid, lvl)
+    }
 
-
-    fun addWord(uid: String, lvl: Int): WordDto {
-        val word = wordDao.addWordToUser(uid, lvl)
+    fun addWordToUser(uid: String, word: WordDto): WordDto {
         val currentDate = SimpleDateFormat("yyyyMMdd", Locale.ENGLISH).format(Date()).toInt()
-        saveNewWordToFirebase(uid, word.wordId, currentDate, MyDbWordsEN.UsersWords.NEW)
+        wordDao.addWordToUser(uid, word)
+        saveNewWordToFirebase(uid, word.wordId, currentDate, MyDbWordsEN.Dictionary.NEW)
         return word
     }
 
@@ -31,6 +36,23 @@ class WordPresenter(private val wordDao: WordDao) {
 
     fun getWordByDate(uid: String, date: Int): WordDto {
         return wordDao.getWordByDate(uid, date)
+    }
+
+    fun addUsersWord(word: WordDto, level: Int, uid: String): Boolean {
+        try {
+            val id = wordDao.addWord(word, level)
+            if (id != null && id.compareTo(-1) != 0){
+                wordDao.addWordToUser(uid, word)
+                return true
+            }
+        } catch (e: SQLiteConstraintException){
+            val id1 = wordDao.getIdByWord(word.word)
+            if (id1.compareTo(-1) != 0){
+                wordDao.addWordToUser(uid, word)
+                return true
+            }
+        }
+        return false
     }
 
     fun alreadyKnowWord(uid: String, idWord: Int, date: Int, status: Int) {
@@ -89,14 +111,14 @@ class WordPresenter(private val wordDao: WordDao) {
     private fun saveNewStatusToFirebase(uid: String, idWord: Int, status: Int, statusOld: Int) {
         val db = FirebaseDatabase.getInstance()
         val ref = db.getReference("users/$uid") //key
-        if (statusOld == MyDbWordsEN.UsersWords.NEW && status == MyDbWordsEN.UsersWords.BAD_STUDIED) {
+        if (statusOld == MyDbWordsEN.Dictionary.NEW && status == MyDbWordsEN.Dictionary.BAD_STUDIED) {
             ref.child("new_words").child(idWord.toString()).child("status")
                 .setValue(status.toString())
         } else {
             val ref2 = FirebaseDatabase.getInstance().getReference("users/$uid")
             ref2.addValueEventListener(object : ValueEventListener {
                 override fun onDataChange(dataSnapshot: DataSnapshot) {
-                    if (statusOld == MyDbWordsEN.UsersWords.NEW) {
+                    if (statusOld == MyDbWordsEN.Dictionary.NEW) {
                         val date =
                             dataSnapshot.child("new_words").child(idWord.toString()).child("date")
                                 .getValue(Int::class.java)
@@ -105,10 +127,10 @@ class WordPresenter(private val wordDao: WordDao) {
                                 uid,
                                 idWord,
                                 date,
-                                MyDbWordsEN.UsersWords.STUDIED
+                                MyDbWordsEN.Dictionary.STUDIED
                             )
                         }
-                    } else if (statusOld == MyDbWordsEN.UsersWords.STUDIED) {
+                    } else if (statusOld == MyDbWordsEN.Dictionary.STUDIED) {
                         val date = dataSnapshot.child("studied_words").child(idWord.toString())
                             .child("date").getValue(Int::class.java)
                         if (date != null) {
@@ -116,7 +138,7 @@ class WordPresenter(private val wordDao: WordDao) {
                                 uid,
                                 idWord,
                                 date,
-                                MyDbWordsEN.UsersWords.BAD_STUDIED
+                                MyDbWordsEN.Dictionary.BAD_STUDIED
                             )
                         }
                     }
@@ -124,9 +146,9 @@ class WordPresenter(private val wordDao: WordDao) {
 
                 override fun onCancelled(databaseError: DatabaseError) {}
             })
-            if (statusOld == MyDbWordsEN.UsersWords.NEW) {
+            if (statusOld == MyDbWordsEN.Dictionary.NEW) {
                 ref.child("new_words").child(idWord.toString()).removeValue()
-            } else if (statusOld == MyDbWordsEN.UsersWords.STUDIED) {
+            } else if (statusOld == MyDbWordsEN.Dictionary.STUDIED) {
                 ref.child("studied_words").child(idWord.toString()).removeValue()
             }
         }
@@ -146,7 +168,6 @@ class WordPresenter(private val wordDao: WordDao) {
         ref.child(uid).child("studied_words").child(idWord.toString()).updateChildren(hopperUpdates)
     }
 
-
     private fun deleteNewWordFirebase(uid: String) {
         val db = FirebaseDatabase.getInstance()
         val ref = db.getReference("users")
@@ -158,6 +179,5 @@ class WordPresenter(private val wordDao: WordDao) {
         val ref = db.getReference("users")
         ref.child(uid).child("new_words").child(idWord.toString()).removeValue()
     }
-
 
 }

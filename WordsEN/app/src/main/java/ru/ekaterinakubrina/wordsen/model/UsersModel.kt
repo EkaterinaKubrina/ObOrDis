@@ -6,7 +6,7 @@ import ru.ekaterinakubrina.wordsen.daoimpl.UserDaoImpl
 import ru.ekaterinakubrina.wordsen.dto.UserDto
 import java.util.*
 
-class User(context: Context) {
+class UsersModel(context: Context) {
     private val userDao = UserDaoImpl(context)
 
     fun getDictionary(uid: String): ArrayList<String> {
@@ -50,28 +50,6 @@ class User(context: Context) {
         if (uid != null && level != null) {
             userDao.setLevel(uid, level)
         }
-    }
-
-    fun checkEmail(str: String): Boolean {
-        return android.util.Patterns.EMAIL_ADDRESS.matcher(str).matches()
-    }
-
-    fun checkPassword(str: String): Boolean {
-        if (str.length < 6) {
-            return false
-        } else if (str.contains("^[а-яА-я\\s]".toRegex())) {
-            return false
-        }
-        return true
-    }
-
-    fun checkName(str: String): Boolean {
-        if (str.length < 2) {
-            return false
-        } else if (str.contains("[^a-zA-ZА-Яа-я]".toRegex())) {
-            return false
-        }
-        return true
     }
 
     private fun saveNameUserToFirebase(uid: String, name: String) {

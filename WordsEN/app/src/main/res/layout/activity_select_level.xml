@@ -7,125 +7,33 @@
     android:background="@drawable/fon3"
     tools:context=".view.SelectLevelActivity">
 
-    <CheckBox
-        android:id="@+id/checkBox"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:checked="false"
-        android:fontFamily="@font/tenor_sans"
-        android:text="@string/a0_starter"
-        android:textColor="@color/myfon"
-        android:textSize="18dp"
-        app:buttonTint="@color/myfon"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.275"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.19" />
-
-    <CheckBox
-        android:id="@+id/checkBox2"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginTop="28dp"
-        android:fontFamily="@font/tenor_sans"
-        android:text="@string/a1_beginner"
-        android:textColor="@color/myfon"
-        android:textSize="18dp"
-        app:buttonTint="@color/myfon"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.0"
-        app:layout_constraintStart_toStartOf="@+id/checkBox"
-        app:layout_constraintTop_toBottomOf="@+id/checkBox" />
-
-    <CheckBox
-        android:id="@+id/checkBox3"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginTop="35dp"
-        android:fontFamily="@font/tenor_sans"
-        android:text="@string/a2_elementary"
-        android:textColor="@color/myfon"
-        android:textSize="18dp"
-        app:buttonTint="@color/myfon"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.0"
-        app:layout_constraintStart_toStartOf="@+id/checkBox2"
-        app:layout_constraintTop_toBottomOf="@+id/checkBox2" />
-
-    <CheckBox
-        android:id="@+id/checkBox4"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginTop="35dp"
-        android:fontFamily="@font/tenor_sans"
-        android:text="@string/b1_intermediate"
-        android:textColor="@color/myfon"
-        android:textSize="18dp"
-        app:buttonTint="@color/myfon"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.0"
-        app:layout_constraintStart_toStartOf="@+id/checkBox3"
-        app:layout_constraintTop_toBottomOf="@+id/checkBox3" />
-
-    <CheckBox
-        android:id="@+id/checkBox5"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginTop="35dp"
-        android:fontFamily="@font/tenor_sans"
-        android:text="@string/b2_upper_intermediate"
-        android:textColor="@color/myfon"
-        android:textSize="18dp"
-        app:buttonTint="@color/myfon"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.0"
-        app:layout_constraintStart_toStartOf="@+id/checkBox4"
-        app:layout_constraintTop_toBottomOf="@+id/checkBox4" />
-
-    <CheckBox
-        android:id="@+id/checkBox6"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginTop="35dp"
-        android:fontFamily="@font/tenor_sans"
-        android:text="@string/c1_advanced"
-        android:textColor="@color/myfon"
-        android:textSize="18dp"
-        app:buttonTint="@color/myfon"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.0"
-        app:layout_constraintStart_toStartOf="@+id/checkBox5"
-        app:layout_constraintTop_toBottomOf="@+id/checkBox5" />
-
     <Button
         android:id="@+id/button5"
         android:layout_width="313dp"
         android:layout_height="71dp"
+        android:layout_marginBottom="48dp"
         android:fontFamily="@font/tenor_sans"
         android:text="@string/accept"
-        android:textSize="16dp"
+        android:textSize="16sp"
         app:backgroundTint="@color/black"
         app:cornerRadius="@android:dimen/notification_large_icon_height"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/checkBox6"
-        app:layout_constraintVertical_bias="0.654" />
+        app:layout_constraintStart_toStartOf="parent" />
 
     <ImageView
         android:id="@+id/imageView4"
-        android:layout_width="81dp"
-        android:layout_height="86dp"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
         android:contentDescription="@string/logo"
+        android:paddingTop="15dp"
+        android:paddingBottom="15dp"
         android:rotationY="180"
-        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintBottom_toTopOf="@+id/textView3"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.951"
+        app:layout_constraintHorizontal_bias="0.448"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.024"
         app:srcCompat="@drawable/dog" />
 
     <TextView
@@ -133,17 +41,91 @@
         android:layout_width="0dp"
         android:layout_height="43dp"
         android:layout_marginLeft="15dp"
-        android:layout_marginTop="25dp"
         android:layout_marginRight="15dp"
-        android:layout_marginBottom="5dp"
+        android:layout_marginBottom="432dp"
         android:fontFamily="@font/tenor_sans"
+        android:paddingLeft="30dp"
+        android:paddingTop="15dp"
+        android:paddingRight="30dp"
         android:text="@string/select_level"
         android:textColor="@color/black"
-        android:textSize="22dp"
-        app:layout_constraintBottom_toTopOf="@+id/checkBox"
-        app:layout_constraintEnd_toStartOf="@+id/imageView4"
-        app:layout_constraintHorizontal_bias="0.551"
+        android:textSize="22sp"
+        app:layout_constraintBottom_toTopOf="@+id/button5"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toStartOf="parent" />
+
+    <RadioGroup
+        android:id="@+id/radioGroup2"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:layout_marginLeft="15dp"
+        android:layout_marginRight="15dp"
+        android:layout_marginBottom="40dp"
+        android:gravity="center"
+        android:paddingLeft="50dp"
+        android:paddingTop="15dp"
+        android:paddingRight="50dp"
+        android:paddingBottom="15dp"
+        app:layout_constraintBottom_toTopOf="@+id/button5"
+        app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.596" />
+        app:layout_constraintTop_toBottomOf="@+id/textView3">
+
+        <RadioButton
+            android:id="@+id/radioButton1"
+            style="@style/Widget.AppCompat.CompoundButton.RadioButton"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:buttonTint="@color/black"
+            android:checked="false"
+            android:text="@string/a0_starter"
+            android:textSize="18sp" />
+
+        <RadioButton
+            android:id="@+id/radioButton2"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="10dp"
+            android:buttonTint="@color/black"
+            android:text="@string/a1_beginner"
+            android:textSize="18sp" />
+
+        <RadioButton
+            android:id="@+id/radioButton3"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="10dp"
+            android:buttonTint="@color/black"
+            android:text="@string/a2_elementary"
+            android:textSize="18sp" />
+
+        <RadioButton
+            android:id="@+id/radioButton4"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="10dp"
+            android:buttonTint="@color/black"
+            android:text="@string/b1_intermediate"
+            android:textSize="18sp" />
+
+        <RadioButton
+            android:id="@+id/radioButton5"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="10dp"
+            android:buttonTint="@color/black"
+            android:text="@string/b2_upper_intermediate"
+            android:textSize="18sp" />
+
+        <RadioButton
+            android:id="@+id/radioButton6"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="10dp"
+            android:buttonTint="@color/black"
+            android:text="@string/c1_advanced"
+            android:textSize="18sp" />
+    </RadioGroup>
+
 </androidx.constraintlayout.widget.ConstraintLayout>

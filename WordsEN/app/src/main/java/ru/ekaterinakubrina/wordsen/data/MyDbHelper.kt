@@ -22,7 +22,7 @@ class MyDbHelper(context: Context) : SQLiteOpenHelper(
     override fun onCreate(db: SQLiteDatabase?) {
         db?.execSQL(MyDbWordsEN.Users.SQL_CREATE_TABLE)
         db?.execSQL(MyDbWordsEN.Words.SQL_CREATE_TABLE)
-        db?.execSQL(MyDbWordsEN.UsersWords.SQL_CREATE_TABLE)
+        db?.execSQL(MyDbWordsEN.Dictionary.SQL_CREATE_TABLE)
 
         // Добавляем записи в таблицу
         val values = ContentValues()
@@ -69,7 +69,7 @@ class MyDbHelper(context: Context) : SQLiteOpenHelper(
     override fun onUpgrade(db: SQLiteDatabase?, oldVersion: Int, newVersion: Int) {
         db?.execSQL(MyDbWordsEN.Users.SQL_DELETE_TABLE)
         db?.execSQL(MyDbWordsEN.Words.SQL_DELETE_TABLE)
-        db?.execSQL(MyDbWordsEN.UsersWords.SQL_DELETE_TABLE)
+        db?.execSQL(MyDbWordsEN.Dictionary.SQL_DELETE_TABLE)
         onCreate(db)
     }
 }

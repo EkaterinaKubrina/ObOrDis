@@ -27,17 +27,36 @@ class WordDaoImpl(context: Context) : WordDao {
         return word
     }
 
-    override fun addWordToUser(uid: String, lvl: Int): WordDto {
+    override fun addWordToUser(uid: String, wordDto: WordDto) {
         myDbManager.openDb()
-        val wordDto: WordDto = myDbManager.getWord(uid, lvl)
         myDbManager.insertWordToUser(
             uid,
             wordDto.wordId,
             SimpleDateFormat("yyyyMMdd", Locale.ENGLISH).format(Date()).toInt(),
-            MyDbWordsEN.UsersWords.NEW
+            MyDbWordsEN.Dictionary.NEW
         )
         myDbManager.closeDb()
+    }
+
+    override fun getWord(uid: String, lvl: Int): WordDto {
+        myDbManager.openDb()
+        val wordDto: WordDto = myDbManager.getWord(uid, lvl)
+        myDbManager.closeDb()
         return wordDto
+    }
+
+    override fun getIdByWord(word: String): Int {
+        myDbManager.openDb()
+        val id: Int = myDbManager.getIdByWord(word)
+        myDbManager.closeDb()
+        return id
+    }
+
+    override fun addWord(wordDto: WordDto, level: Int): Long? {
+        myDbManager.openDb()
+        val id: Long? = myDbManager.addWord(wordDto, level)
+        myDbManager.closeDb()
+        return id
     }
 
 

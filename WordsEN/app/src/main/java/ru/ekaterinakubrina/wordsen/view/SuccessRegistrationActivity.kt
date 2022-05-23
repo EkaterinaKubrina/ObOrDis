@@ -6,7 +6,7 @@ import android.widget.TextView
 import androidx.appcompat.app.AppCompatActivity
 import ru.ekaterinakubrina.wordsen.R
 
-class SuccessRegistrationActivity() : AppCompatActivity() {
+class SuccessRegistrationActivity : AppCompatActivity() {
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
@@ -36,10 +36,7 @@ class SuccessRegistrationActivity() : AppCompatActivity() {
                 val intent = intent.setClass(this, RegistrationActivity::class.java)
                 startActivity(intent)
             }
-
         }
-
-
     }
 
 }

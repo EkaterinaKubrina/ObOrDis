@@ -12,43 +12,77 @@ import android.widget.PopupMenu
 import android.widget.TextView
 import androidx.appcompat.app.AlertDialog
 import androidx.appcompat.app.AppCompatActivity
-import ru.ekaterinakubrina.wordsen.notify.NotifyService
 import ru.ekaterinakubrina.wordsen.R
-import ru.ekaterinakubrina.wordsen.daoimpl.UserDaoImpl
-import ru.ekaterinakubrina.wordsen.daoimpl.WordDaoImpl
 import ru.ekaterinakubrina.wordsen.data.MyDbWordsEN
 import ru.ekaterinakubrina.wordsen.dto.WordDto
-import ru.ekaterinakubrina.wordsen.presenter.UserPresenter
-import ru.ekaterinakubrina.wordsen.presenter.WordPresenter
-import java.text.SimpleDateFormat
+import ru.ekaterinakubrina.wordsen.notify.NotifyService
+import ru.ekaterinakubrina.wordsen.presenter.MainEntryPresenter
 import java.util.*
 
 
-class MainEntryActivity : AppCompatActivity() {
-    private val userPresenter = UserPresenter(UserDaoImpl(this))
-    private val wordPresenter = WordPresenter(WordDaoImpl(this))
+class MainEntryActivity : AppCompatActivity(), MainEntryContractView {
+    private val mainEntryPresenter = MainEntryPresenter(this, this)
     private var tts: TextToSpeech? = null
     private var ttsEnabled = false
-    private val currentDate = SimpleDateFormat("yyyyMMdd", Locale.ENGLISH).format(Date()).toInt()
 
-
-    @SuppressLint("SetTextI18n")
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_main_entry)
 
-        val idUser: String = intent.getSerializableExtra("ID_USER") as String
-        val levelUser: Int = userPresenter.getLevelUser(idUser)!!
+        val uid: String = intent.getSerializableExtra("ID_USER") as String
+        val wordEn: TextView = findViewById(R.id.main_word)
+        mainEntryPresenter.loadData(uid)
 
         val dictionary: Button = findViewById(R.id.button4)
-        val tests: Button = findViewById(R.id.button3)
-        val alreadyKnow: Button = findViewById(R.id.button7)
-        val name: Button = findViewById(R.id.main_name)
-        val level: TextView = findViewById(R.id.main_level)
-        val wordEn: TextView = findViewById(R.id.main_word)
-        val sound: ImageView = findViewById(R.id.imageView10)
-        val soundSlow: ImageView = findViewById(R.id.imageView12)
+        dictionary.setOnClickListener {
+            val intent = Intent(this, DictionaryActivity::class.java)
+            intent.putExtra("ID_USER", uid)
+            startActivity(intent)
+        }
 
+        val alreadyKnow: Button = findViewById(R.id.button7)
+        alreadyKnow.setOnClickListener {
+            mainEntryPresenter.alreadyKnowWord(uid)
+        }
+
+        val sound: ImageView = findViewById(R.id.imageView10)
+        sound.setOnClickListener {
+            if (ttsEnabled) {
+                tts?.setSpeechRate(0.8F)
+                speakOut(wordEn.text.toString())
+            }
+        }
+
+        val soundSlow: ImageView = findViewById(R.id.imageView12)
+        soundSlow.setOnClickListener {
+            if (ttsEnabled) {
+                tts?.setSpeechRate(0.2F)
+                speakOut(wordEn.text.toString())
+            }
+        }
+
+        val tests: Button = findViewById(R.id.button3)
+        tests.setOnClickListener {
+            val intent = Intent(this, SelectTestActivity::class.java)
+            intent.putExtra("ID_USER", uid)
+            startActivity(intent)
+        }
+
+        val name: Button = findViewById(R.id.main_name)
+        name.setOnClickListener(viewClickListener)
+    }
+
+    override fun setWord(newWordDto: WordDto) {
+        val word: TextView = findViewById(R.id.main_word)
+        val transcription: TextView = findViewById(R.id.transcription)
+        val translate: TextView = findViewById(R.id.translate)
+
+        word.text = newWordDto.word
+        transcription.text = newWordDto.transcription
+        translate.text = newWordDto.translate
+    }
+
+    override fun initTextToSpeech() {
         tts = TextToSpeech(this) { status ->
             if (status == TextToSpeech.SUCCESS) {
                 val result: Int? = tts?.setLanguage(Locale.ENGLISH)
@@ -61,8 +95,30 @@ class MainEntryActivity : AppCompatActivity() {
                 println("Failed $status")
             }
         }
+    }
 
-        name.text = userPresenter.getNameUser(idUser)
+    override fun setName(newNameUser: String) {
+        val name: Button = findViewById(R.id.main_name)
+        name.text = newNameUser
+    }
+
+    override fun newLevel() {
+        val alertDialog: AlertDialog = AlertDialog.Builder(this).create()
+        alertDialog.setTitle("Поздравляем! Вы перешли на новый уровень")
+        alertDialog.setButton(
+            DialogInterface.BUTTON_NEUTRAL,
+            "Круто!",
+            DialogInterface.OnClickListener(fun(
+                _: DialogInterface, _: Int
+            ) {
+                alertDialog.cancel()
+            })
+        )
+    }
+
+    @SuppressLint("SetTextI18n")
+    override fun setLevel(levelUser: Int) {
+        val level: TextView = findViewById(R.id.main_level)
         when (levelUser) {
             MyDbWordsEN.Users.LEVEL_A0 -> level.text = "A0"
             MyDbWordsEN.Users.LEVEL_A1 -> level.text = "A1"
@@ -71,70 +127,13 @@ class MainEntryActivity : AppCompatActivity() {
             MyDbWordsEN.Users.LEVEL_B2 -> level.text = "B2"
             MyDbWordsEN.Users.LEVEL_C1 -> level.text = "C1"
         }
-
-        val lastDate = wordPresenter.getLastDateAddedWord(idUser)
-        if (lastDate?.equals(currentDate) == false) {
-            setWord(wordPresenter.addWord(idUser, levelUser))
-        } else {
-            setWord(wordPresenter.getWordByDate(idUser, currentDate))
-        }
-
-
-        dictionary.setOnClickListener {
-            val intent = Intent(this, DictionaryActivity::class.java)
-            intent.putExtra("ID_USER", idUser)
-            startActivity(intent)
-        }
-
-        alreadyKnow.setOnClickListener {
-            wordPresenter.alreadyKnowWord(
-                idUser,
-                wordPresenter.getWordByDate(idUser, currentDate).wordId,
-                currentDate - 1,
-                MyDbWordsEN.UsersWords.STUDIED
-            )
-            setWord(wordPresenter.addWord(idUser, levelUser))
-        }
-
-        sound.setOnClickListener {
-            if (ttsEnabled) {
-                tts?.setSpeechRate(0.8F)
-                speakOut(wordEn.text.toString())
-            }
-        }
-
-        soundSlow.setOnClickListener {
-            if (ttsEnabled) {
-                tts?.setSpeechRate(0.2F)
-                speakOut(wordEn.text.toString())
-            }
-        }
-
-        tests.setOnClickListener {
-            val intent = Intent(this, SelectTestActivity::class.java)
-            intent.putExtra("ID_USER", idUser)
-            startActivity(intent)
-        }
-
-        name.setOnClickListener(viewClickListener)
     }
-
 
     private fun speakOut(text: String) {
         if (!ttsEnabled) {
             return
         }
         tts?.speak(text, TextToSpeech.QUEUE_FLUSH, null)
-    }
-
-    private fun setWord(newWordDto: WordDto) {
-        val word: TextView = findViewById(R.id.main_word)
-        val transcription: TextView = findViewById(R.id.transcription)
-        val translate: TextView = findViewById(R.id.translate)
-
-        word.text = newWordDto.word
-        transcription.text = newWordDto.transcription
-        translate.text = newWordDto.translate
     }
 
     private var viewClickListener: View.OnClickListener =
@@ -181,7 +180,6 @@ class MainEntryActivity : AppCompatActivity() {
                     else -> false
                 }
             }
-
         popupMenu.show()
     }
 
@@ -207,7 +205,7 @@ class MainEntryActivity : AppCompatActivity() {
                 _: DialogInterface, _: Int
             ) {
                 val idUser: String = intent.getSerializableExtra("ID_USER") as String
-                val levelUser: Int = userPresenter.getLevelUser(idUser)!!
+                val levelUser: Int = mainEntryPresenter.getLevelUser(idUser)!!
                 val intent = Intent(this, NotifyService::class.java)
                 intent.putExtra("START_FLAG", false)
                 intent.putExtra("ID_USER", idUser)
@@ -239,10 +237,8 @@ class MainEntryActivity : AppCompatActivity() {
                 _: DialogInterface, _: Int
             ) {
                 val id: String = intent.getSerializableExtra("ID_USER") as String
-                userPresenter.setLevel(id, level)
-                wordPresenter.deleteNewAndBadStudiedWords(
-                    id
-                )
+                mainEntryPresenter.setLevel(id)
+                mainEntryPresenter.deleteNewAndBadStudiedWords(id)
                 val intent = Intent(this, MainEntryActivity::class.java)
                 intent.putExtra("ID_USER", id)
                 intent.putExtra("LEVEL_USER", level)
@@ -260,7 +256,6 @@ class MainEntryActivity : AppCompatActivity() {
         )
         alertDialog.show()
     }
-
 
 }
 
