@@ -30,7 +30,8 @@ object MyDbWordsEN {
                 + COLUMN_EMAIL + " TEXT NOT NULL, "
                 + COLUMN_PASSWORD + " TEXT NOT NULL, "
                 + COLUMN_LEVEL + " INTEGER, " +
-                "UNIQUE ($COLUMN_EMAIL));")
+                "UNIQUE ($COLUMN_EMAIL), " +
+                "UNIQUE ($COLUMN_UID));")
         const val SQL_DELETE_TABLE = "DROP TABLE IF EXISTS $TABLE_NAME"
     }
 
@@ -50,7 +51,6 @@ object MyDbWordsEN {
                 + COLUMN_LEVEL + "  INTEGER NOT NULL, " +
                 "UNIQUE ($COLUMN_WORD));")
         const val SQL_DELETE_TABLE = "DROP TABLE IF EXISTS ${Users.TABLE_NAME}"
-
     }
 
     object Dictionary : BaseColumns {
@@ -72,7 +72,6 @@ object MyDbWordsEN {
                 + DATE + " INTEGER NOT NULL, "
                 + STATUS + " INTEGER NOT NULL);")
         const val SQL_DELETE_TABLE = "DROP TABLE IF EXISTS ${Users.TABLE_NAME}"
-
     }
 
 

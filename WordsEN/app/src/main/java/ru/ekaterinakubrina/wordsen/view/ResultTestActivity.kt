@@ -10,21 +10,19 @@ import android.widget.ImageView
 import android.widget.TextView
 import androidx.appcompat.app.AppCompatActivity
 import ru.ekaterinakubrina.wordsen.R
+import ru.ekaterinakubrina.wordsen.contracts.ResultTestContract
+import ru.ekaterinakubrina.wordsen.presenter.ResultTestPresenter
 
-class ResultTestActivity : AppCompatActivity() {
+open class ResultTestActivity : AppCompatActivity(), ResultTestContract.View {
+    private val resultTestPresenter : ResultTestContract.Presenter = ResultTestPresenter(this, this)
+
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_result_test)
 
         val resCount: Int = intent.getSerializableExtra("RESULT") as Int
         val questionCount: Int = intent.getSerializableExtra("QUESTIONS") as Int
-        val str: String = if (resCount >= (questionCount / 2)) {
-            "Твой результат - $resCount/$questionCount. Молодец!"
-        } else {
-            "Твой результат - $resCount/$questionCount. Нужно поднажать!"
-        }
-        val resultText: TextView = findViewById(R.id.resultText)
-        resultText.text = str
+        resultTestPresenter.getResult(resCount, questionCount)
 
         val uid: String = intent.getSerializableExtra("ID_USER") as String
         val buttonOk: Button = findViewById(R.id.buttonOk)
@@ -43,4 +41,12 @@ class ResultTestActivity : AppCompatActivity() {
         objectAnimator.start()
     }
 
+    override fun showResult(str: String){
+        val resultText: TextView = findViewById(R.id.resultText)
+        resultText.text = str
+    }
+
+    override fun onBackPressed() {
+        moveTaskToBack(true)
+    }
 }

@@ -15,7 +15,7 @@
         android:layout_marginTop="15dp"
         android:layout_marginBottom="15dp"
         android:contentDescription="@string/logo"
-        app:layout_constraintBottom_toTopOf="@+id/registration"
+        app:layout_constraintBottom_toTopOf="@+id/buttonRegistrationOnMain"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
@@ -23,13 +23,13 @@
         app:srcCompat="@drawable/oneworday" />
 
     <Button
-        android:id="@+id/entry"
+        android:id="@+id/buttonEntryOnMain"
         android:layout_width="294dp"
         android:layout_height="69dp"
         android:fontFamily="@font/tenor_sans"
         android:text="@string/entry"
         android:textAppearance="@style/TextAppearance.AppCompat.Display1"
-        android:textSize="30dp"
+        android:textSize="30sp"
         app:backgroundTint="@color/black"
         app:cornerRadius="@android:dimen/notification_large_icon_height"
         app:iconTint="@color/myfon"
@@ -41,18 +41,18 @@
         app:layout_constraintVertical_bias="0.817" />
 
     <Button
-        android:id="@+id/registration"
+        android:id="@+id/buttonRegistrationOnMain"
         android:layout_width="291dp"
         android:layout_height="67dp"
         android:layout_marginBottom="20dp"
         android:fontFamily="@font/tenor_sans"
         android:text="@string/Registration"
         android:textAppearance="@style/TextAppearance.AppCompat.Display1"
-        android:textSize="30dp"
+        android:textSize="30sp"
         app:backgroundTint="@color/mypurpl"
         app:cornerRadius="@android:dimen/notification_large_icon_height"
         app:iconTint="@color/myfon"
-        app:layout_constraintBottom_toTopOf="@+id/entry"
+        app:layout_constraintBottom_toTopOf="@+id/buttonEntryOnMain"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.484"
         app:layout_constraintStart_toStartOf="parent" />

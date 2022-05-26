@@ -8,16 +8,22 @@ import com.google.firebase.database.DataSnapshot
 import com.google.firebase.database.DatabaseError
 import com.google.firebase.database.FirebaseDatabase
 import com.google.firebase.database.ValueEventListener
+import ru.ekaterinakubrina.wordsen.contracts.EntryContract
+import ru.ekaterinakubrina.wordsen.daoimpl.DictionaryDaoImpl
+import ru.ekaterinakubrina.wordsen.daoimpl.UserDaoImpl
+import ru.ekaterinakubrina.wordsen.daoimpl.WordDaoImpl
+import ru.ekaterinakubrina.wordsen.model.DictionaryModel
 import ru.ekaterinakubrina.wordsen.model.UsersModel
 import ru.ekaterinakubrina.wordsen.model.WordsModel
-import ru.ekaterinakubrina.wordsen.view.EntryContractView
 
-class EntryPresenter(var context: Context, var entryContractView: EntryContractView) {
-    private val userModel = UsersModel(context)
-    private val wordModel = WordsModel(context)
+open class EntryPresenter(var context: Context, var entryContractView: EntryContract.View) :
+    EntryContract.Presenter {
+    private val userModel = UsersModel(UserDaoImpl(context))
+    private val wordModel = WordsModel(WordDaoImpl(context))
+    private var dictionaryModel = DictionaryModel(DictionaryDaoImpl(context), wordModel)
 
     @RequiresApi(Build.VERSION_CODES.M)
-    fun trySignIn(email: String, password: String) {
+    override fun trySignIn(email: String, password: String) {
         val auth = FirebaseAuth.getInstance()
         auth.signInWithEmailAndPassword(email, password)
             .addOnCompleteListener { task ->
@@ -31,21 +37,21 @@ class EntryPresenter(var context: Context, var entryContractView: EntryContractV
 
     @RequiresApi(Build.VERSION_CODES.M)
     private fun signIn(auth: FirebaseAuth, email: String, password: String) {
-        var user = userModel.signIn(email, password)
+        var user = userModel.getUserByPasswordAndEmail(email, password)
 
         if (user == null) {
             val myRef = FirebaseDatabase.getInstance().getReference("users").child(auth.uid!!)
             myRef.addValueEventListener(object : ValueEventListener {
                 override fun onDataChange(dataSnapshot: DataSnapshot) {
-                    if (userModel.signIn(email, password) == null) {
-                        userModel.addUserLocalDB(
+                    if (userModel.getUserByPasswordAndEmail(email, password) == null) {
+                        userModel.addUser(
                             auth.uid!!,
-                            dataSnapshot.child("name").getValue(String::class.java),
+                            dataSnapshot.child("name").getValue(String::class.java)!!,
                             email,
                             password
                         )
 
-                        userModel.setLevelLocalDB(
+                        userModel.setLevel(
                             auth.uid,
                             dataSnapshot.child("level").getValue(Int::class.java)
                         )
@@ -54,17 +60,17 @@ class EntryPresenter(var context: Context, var entryContractView: EntryContractV
                             val idWord = Integer.parseInt(snapshot.key as String)
                             val date = snapshot.child("date").getValue(Int::class.java)
                             val status = snapshot.child("status").getValue(Int::class.java)
-                            wordModel.addWordFromFB(auth.uid!!, idWord, date!!, status!!)
+                            dictionaryModel.addWordFromFB(auth.uid!!, idWord, date!!, status!!)
                         }
 
                         for (snapshot in dataSnapshot.child("studied_words").children) {
                             val idWord = Integer.parseInt(snapshot.key as String)
                             val date = snapshot.child("date").getValue(Int::class.java)
                             val status = snapshot.child("status").getValue(Int::class.java)
-                            wordModel.addWordFromFB(auth.uid!!, idWord, date!!, status!!)
+                            dictionaryModel.addWordFromFB(auth.uid!!, idWord, date!!, status!!)
                         }
 
-                        user = userModel.signIn(email, password)
+                        user = userModel.getUserByPasswordAndEmail(email, password)
                         entryContractView.nextActivity(user!!)
                     }
                 }

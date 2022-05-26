@@ -6,14 +6,14 @@ import android.widget.TextView
 import androidx.appcompat.app.AppCompatActivity
 import ru.ekaterinakubrina.wordsen.R
 
-class SuccessRegistrationActivity : AppCompatActivity() {
+open class SuccessRegistrationActivity : AppCompatActivity() {
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_success_registration)
 
         val text: TextView = findViewById(R.id.textSuccess)
-        val buttonBack: Button = findViewById(R.id.button2)
+        val buttonBack: Button = findViewById(R.id.buttonBack)
 
         val flagSuccessRegistration: Boolean
         val nameUser: String? = intent.getSerializableExtra("NAME_USER") as String?
@@ -39,4 +39,7 @@ class SuccessRegistrationActivity : AppCompatActivity() {
         }
     }
 
+    override fun onBackPressed() {
+        moveTaskToBack(true)
+    }
 }

@@ -9,11 +9,12 @@ import android.widget.RadioGroup
 import androidx.appcompat.app.AlertDialog
 import androidx.appcompat.app.AppCompatActivity
 import ru.ekaterinakubrina.wordsen.R
+import ru.ekaterinakubrina.wordsen.contracts.SelectLevelContract
 import ru.ekaterinakubrina.wordsen.data.MyDbWordsEN
 import ru.ekaterinakubrina.wordsen.presenter.SelectLevelPresenter
 
-class SelectLevelActivity : AppCompatActivity(), SelectLevelContractView {
-    private val selectLevelPresenter = SelectLevelPresenter(this, this)
+open class SelectLevelActivity : AppCompatActivity(), SelectLevelContract.View {
+    private val selectLevelPresenter : SelectLevelContract.Presenter = SelectLevelPresenter(this, this)
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)

@@ -1,71 +1,74 @@
 package ru.ekaterinakubrina.wordsen.presenter
 
 import android.content.Context
-import ru.ekaterinakubrina.wordsen.data.MyDbWordsEN
+import ru.ekaterinakubrina.wordsen.contracts.MainEntryContract
+import ru.ekaterinakubrina.wordsen.daoimpl.DictionaryDaoImpl
+import ru.ekaterinakubrina.wordsen.daoimpl.UserDaoImpl
+import ru.ekaterinakubrina.wordsen.daoimpl.WordDaoImpl
+import ru.ekaterinakubrina.wordsen.model.DictionaryModel
 import ru.ekaterinakubrina.wordsen.model.UsersModel
 import ru.ekaterinakubrina.wordsen.model.WordsModel
 import ru.ekaterinakubrina.wordsen.notify.NotificationNewTest
-import ru.ekaterinakubrina.wordsen.view.MainEntryContractView
 import java.text.SimpleDateFormat
 import java.util.*
 
-class MainEntryPresenter(
+open class MainEntryPresenter(
     var context: Context,
-    private var mainEntryContractView: MainEntryContractView
-) {
-    private val userModel = UsersModel(context)
-    private val wordModel = WordsModel(context)
+    private var mainEntryContractView: MainEntryContract.View
+) : MainEntryContract.Presenter {
+    private val userModel = UsersModel(UserDaoImpl(context))
+    private val wordModel = WordsModel(WordDaoImpl(context))
+    private var dictionaryModel = DictionaryModel(DictionaryDaoImpl(context), wordModel)
     private val currentDate = SimpleDateFormat("yyyyMMdd", Locale.ENGLISH).format(Date()).toInt()
-    private var levelUser: Int? = null
 
-    fun loadData(uid: String) {
-        levelUser = userModel.getLevelUser(uid)!!
+    override fun loadData(uid: String) {
         mainEntryContractView.initTextToSpeech()
-        mainEntryContractView.setName(userModel.getNameUser(uid)!!)
+        mainEntryContractView.setName(mainEntryContractView.getName())
         setWordDay(uid)
-        mainEntryContractView.setLevel(levelUser!!)
+        mainEntryContractView.setLevel(getLevelUser(uid))
     }
 
-    fun setLevel(uid: String): Int {
-        return userModel.setLevel(uid, levelUser!!)
+    override fun setLevel(uid: String, newLevel: Int) {
+        mainEntryContractView.restartActivity(uid, newLevel)
+        userModel.setLevelLocalAndFirebase(uid, newLevel)
     }
 
-    fun getLevelUser(uid: String): Int? {
-        return userModel.getLevelUser(uid)
+    override fun getLevelUser(uid: String): Int {
+        return userModel.getLevelUser(uid)!!
     }
 
-    fun alreadyKnowWord(uid: String) {
-        wordModel.alreadyKnowWord(
+    override fun alreadyKnowWord(uid: String) {
+        dictionaryModel.alreadyKnowWord(
             uid,
-            wordModel.getWordByDate(uid, currentDate).wordId,
-            currentDate - 1,
-            MyDbWordsEN.Dictionary.STUDIED
+            dictionaryModel.getWordByDate(uid, currentDate).wordId,
+            currentDate - 1
         )
         setWordDay(uid)
     }
 
-    fun deleteNewAndBadStudiedWords(uid: String) {
-        wordModel.deleteNewAndBadStudiedWords(uid)
+    override fun deleteNewAndBadStudiedWords(uid: String) {
+        dictionaryModel.deleteNewAndBadStudiedWords(uid)
     }
 
-    private fun setWordDay(uid: String) {
-        val lastDate = wordModel.getLastDateAddedWord(uid)
+    open fun setWordDay(uid: String) {
+        val levelUser = getLevelUser(uid)
+        val lastDate = dictionaryModel.getLastDateAddedWord(uid)
         if (lastDate?.equals(currentDate) == false) {
-            var word = wordModel.getWord(uid, levelUser!!)
+            var word = dictionaryModel.getWord(uid, levelUser)
             if (word.wordId == 0) {
                 mainEntryContractView.newLevel()
-                userModel.setLevel(uid, levelUser!! + 1)
-                word = wordModel.getWord(uid, levelUser!! + 1)
-                mainEntryContractView.setLevel(levelUser!! + 1)
+                userModel.setLevelLocalAndFirebase(uid, levelUser + 1)
+                word = dictionaryModel.getWord(uid, levelUser + 1)
+                mainEntryContractView.setLevel(levelUser + 1)
             }
-            wordModel.addWordToUser(uid, word)
+            dictionaryModel.addWordToUser(uid, word)
             mainEntryContractView.setWord(word)
 
-            if (wordModel.getCountNewWord(uid)!! - 1 == 7) {
+            if (dictionaryModel.getCountNewWord(uid)!! - 1 == 7) {
                 NotificationNewTest.showNotification(context)
             }
         } else {
-            mainEntryContractView.setWord(wordModel.getWordByDate(uid, currentDate))
+            mainEntryContractView.setWord(dictionaryModel.getWordByDate(uid, currentDate))
         }
     }
 

@@ -1,29 +1,33 @@
 package ru.ekaterinakubrina.wordsen.presenter
 
 import android.content.Context
+import ru.ekaterinakubrina.wordsen.contracts.TestingWordContract
+import ru.ekaterinakubrina.wordsen.daoimpl.DictionaryDaoImpl
+import ru.ekaterinakubrina.wordsen.daoimpl.WordDaoImpl
 import ru.ekaterinakubrina.wordsen.data.MyDbWordsEN
 import ru.ekaterinakubrina.wordsen.dto.WordDto
+import ru.ekaterinakubrina.wordsen.model.DictionaryModel
 import ru.ekaterinakubrina.wordsen.model.WordsModel
-import ru.ekaterinakubrina.wordsen.view.TestingWordContractView
 
-class TestingWordPresenter(
+open class TestingWordPresenter(
     var context: Context,
-    var testingWordContractView: TestingWordContractView
-) {
-    private val wordModel = WordsModel(context)
+    var testingWordContractView: TestingWordContract.View
+) : TestingWordContract.Presenter {
+    private val wordModel = WordsModel(WordDaoImpl(context))
+    private var dictionaryModel = DictionaryModel(DictionaryDaoImpl(context), wordModel)
     private var type = ""
     private var uid = ""
     private var rightAnswers = 0
     private var indexWord = 0
     private lateinit var list: ArrayList<WordDto>
 
-    fun startTest(uid: String, type: String) {
+    override fun startTest(uid: String, type: String) {
         this.type = type
         this.uid = uid
         list = if (type == "all") {
-            wordModel.getUserStudiedWords(uid)
+            dictionaryModel.getUserStudiedWords(uid)
         } else {
-            wordModel.getUserNewWords(uid)
+            dictionaryModel.getUserNewWords(uid)
         }
         testingWordContractView.nextWord(
             list[indexWord].word,
@@ -34,15 +38,15 @@ class TestingWordPresenter(
     }
 
 
-    fun getTranslateForTest(rightTranslate: String): ArrayList<String> {
+    override fun getTranslateForTest(rightTranslate: String): ArrayList<String> {
         return wordModel.getTranslateForTest(rightTranslate)
     }
 
-    fun checkAnswer(checkedVar: String) {
+    override fun checkAnswer(checkedVar: String) {
         if (list[indexWord].translate == checkedVar) {
             testingWordContractView.rightAnswer()
             if (type == "week") {
-                wordModel.setStatusWord(
+                dictionaryModel.setStatusWord(
                     uid,
                     list[indexWord].wordId,
                     MyDbWordsEN.Dictionary.STUDIED,
@@ -53,9 +57,9 @@ class TestingWordPresenter(
         } else {
             testingWordContractView.wrongAnswer()
             if (list[indexWord].status == MyDbWordsEN.Dictionary.BAD_STUDIED) {
-                wordModel.deleteWord(uid, list[indexWord].wordId)
+                dictionaryModel.deleteWordFromUser(uid, list[indexWord].wordId)
             } else {
-                wordModel.setStatusWord(
+                dictionaryModel.setStatusWord(
                     uid,
                     list[indexWord].wordId,
                     MyDbWordsEN.Dictionary.BAD_STUDIED,

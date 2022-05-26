@@ -13,6 +13,7 @@ import android.widget.TextView
 import androidx.appcompat.app.AlertDialog
 import androidx.appcompat.app.AppCompatActivity
 import ru.ekaterinakubrina.wordsen.R
+import ru.ekaterinakubrina.wordsen.contracts.MainEntryContract
 import ru.ekaterinakubrina.wordsen.data.MyDbWordsEN
 import ru.ekaterinakubrina.wordsen.dto.WordDto
 import ru.ekaterinakubrina.wordsen.notify.NotifyService
@@ -20,8 +21,8 @@ import ru.ekaterinakubrina.wordsen.presenter.MainEntryPresenter
 import java.util.*
 
 
-class MainEntryActivity : AppCompatActivity(), MainEntryContractView {
-    private val mainEntryPresenter = MainEntryPresenter(this, this)
+open class MainEntryActivity : AppCompatActivity(), MainEntryContract.View {
+    private val mainEntryPresenter : MainEntryContract.Presenter = MainEntryPresenter(this, this)
     private var tts: TextToSpeech? = null
     private var ttsEnabled = false
 
@@ -33,19 +34,19 @@ class MainEntryActivity : AppCompatActivity(), MainEntryContractView {
         val wordEn: TextView = findViewById(R.id.main_word)
         mainEntryPresenter.loadData(uid)
 
-        val dictionary: Button = findViewById(R.id.button4)
+        val dictionary: Button = findViewById(R.id.buttonDictionary)
         dictionary.setOnClickListener {
             val intent = Intent(this, DictionaryActivity::class.java)
             intent.putExtra("ID_USER", uid)
             startActivity(intent)
         }
 
-        val alreadyKnow: Button = findViewById(R.id.button7)
+        val alreadyKnow: Button = findViewById(R.id.buttonAlreadyKnowWord)
         alreadyKnow.setOnClickListener {
             mainEntryPresenter.alreadyKnowWord(uid)
         }
 
-        val sound: ImageView = findViewById(R.id.imageView10)
+        val sound: ImageView = findViewById(R.id.imageViewSound)
         sound.setOnClickListener {
             if (ttsEnabled) {
                 tts?.setSpeechRate(0.8F)
@@ -53,7 +54,7 @@ class MainEntryActivity : AppCompatActivity(), MainEntryContractView {
             }
         }
 
-        val soundSlow: ImageView = findViewById(R.id.imageView12)
+        val soundSlow: ImageView = findViewById(R.id.imageViewSoundSlow)
         soundSlow.setOnClickListener {
             if (ttsEnabled) {
                 tts?.setSpeechRate(0.2F)
@@ -61,7 +62,7 @@ class MainEntryActivity : AppCompatActivity(), MainEntryContractView {
             }
         }
 
-        val tests: Button = findViewById(R.id.button3)
+        val tests: Button = findViewById(R.id.buttonTests)
         tests.setOnClickListener {
             val intent = Intent(this, SelectTestActivity::class.java)
             intent.putExtra("ID_USER", uid)
@@ -127,6 +128,11 @@ class MainEntryActivity : AppCompatActivity(), MainEntryContractView {
             MyDbWordsEN.Users.LEVEL_B2 -> level.text = "B2"
             MyDbWordsEN.Users.LEVEL_C1 -> level.text = "C1"
         }
+    }
+
+    override fun getName(): String {
+        val name: TextView = findViewById(R.id.main_name)
+        return name.text.toString()
     }
 
     private fun speakOut(text: String) {
@@ -237,12 +243,8 @@ class MainEntryActivity : AppCompatActivity(), MainEntryContractView {
                 _: DialogInterface, _: Int
             ) {
                 val id: String = intent.getSerializableExtra("ID_USER") as String
-                mainEntryPresenter.setLevel(id)
+                mainEntryPresenter.setLevel(id, level)
                 mainEntryPresenter.deleteNewAndBadStudiedWords(id)
-                val intent = Intent(this, MainEntryActivity::class.java)
-                intent.putExtra("ID_USER", id)
-                intent.putExtra("LEVEL_USER", level)
-                startActivity(intent)
             })
         )
         alertDialog.setButton(
@@ -257,6 +259,16 @@ class MainEntryActivity : AppCompatActivity(), MainEntryContractView {
         alertDialog.show()
     }
 
+    override fun restartActivity(id: String, level: Int) {
+        val intent = Intent(this, MainEntryActivity::class.java)
+        intent.putExtra("ID_USER", id)
+        intent.putExtra("LEVEL_USER", level)
+        startActivity(intent)
+    }
+
+    override fun onBackPressed() {
+        moveTaskToBack(true)
+    }
 }
 
 

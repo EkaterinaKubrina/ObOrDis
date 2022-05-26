@@ -10,7 +10,7 @@ import android.widget.ImageView
 import androidx.appcompat.app.AppCompatActivity
 import ru.ekaterinakubrina.wordsen.R
 
-class FirstInActivity : AppCompatActivity() {
+open class FirstInActivity : AppCompatActivity() {
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
@@ -39,5 +39,10 @@ class FirstInActivity : AppCompatActivity() {
         objectAnimator.repeatMode = ObjectAnimator.RESTART / REVERSE
         objectAnimator.interpolator = BounceInterpolator()
         objectAnimator.start()
+    }
+
+
+    override fun onBackPressed() {
+        moveTaskToBack(true)
     }
 }

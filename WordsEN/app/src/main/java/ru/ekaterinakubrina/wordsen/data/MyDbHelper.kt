@@ -26,13 +26,10 @@ class MyDbHelper(context: Context) : SQLiteOpenHelper(
 
         // Добавляем записи в таблицу
         val values = ContentValues()
-
         // Получим файл из ресурсов
         val res: Resources = fContext.resources
-
         // Открываем xml-файл
         val fxml: XmlResourceParser = res.getXml(R.xml.words_records)
-
         try {
             // Ищем конец документа
             var eventType = fxml.eventType
@@ -55,16 +52,46 @@ class MyDbHelper(context: Context) : SQLiteOpenHelper(
                 }
                 eventType = fxml.next()
             }
-        } // Catch errors
-        catch (e: XmlPullParserException) {
+        } catch (e: XmlPullParserException) {
             Log.e("Test", e.message, e)
         } catch (e: IOException) {
             Log.e("Test", e.message, e)
         } finally {
-            // Close the xml file
             fxml.close()
         }
+
+        val values1 = ContentValues()
+        val fxml1: XmlResourceParser = res.getXml(R.xml.test_user_record)
+        try {
+            var eventType1 = fxml1.eventType
+            while (eventType1 != XmlPullParser.END_DOCUMENT) {
+                if (eventType1 == XmlPullParser.START_TAG
+                    && fxml1.name == "record"
+                ) {
+                    val uid = fxml1.getAttributeValue(3)
+                    val userName = fxml1.getAttributeValue(4)
+                    val email = fxml1.getAttributeValue(0)
+                    val password = fxml1.getAttributeValue(2)
+                    val level = fxml1.getAttributeValue(1)
+                    values1.put("uid", uid)
+                    values1.put("userName", userName)
+                    values1.put("email", email)
+                    values1.put("password", password)
+                    values1.put("level", level)
+                    db!!.insert(MyDbWordsEN.Users.TABLE_NAME, null, values1)
+                }
+                eventType1 = fxml1.next()
+            }
+        } catch (e: XmlPullParserException) {
+            Log.e("Test", e.message, e)
+        } catch (e: IOException) {
+            Log.e("Test", e.message, e)
+        } finally {
+            fxml1.close()
+        }
+
     }
+
 
     override fun onUpgrade(db: SQLiteDatabase?, oldVersion: Int, newVersion: Int) {
         db?.execSQL(MyDbWordsEN.Users.SQL_DELETE_TABLE)

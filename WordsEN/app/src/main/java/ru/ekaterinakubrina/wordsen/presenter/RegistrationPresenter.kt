@@ -2,17 +2,18 @@ package ru.ekaterinakubrina.wordsen.presenter
 
 import android.content.Context
 import com.google.firebase.auth.FirebaseAuth
+import ru.ekaterinakubrina.wordsen.contracts.RegistrationContract
+import ru.ekaterinakubrina.wordsen.daoimpl.UserDaoImpl
 import ru.ekaterinakubrina.wordsen.model.UsersModel
-import ru.ekaterinakubrina.wordsen.view.RegistrationContractView
 import java.util.*
 
-class RegistrationPresenter(
+open class RegistrationPresenter(
     var context: Context,
-    var registrationContractView: RegistrationContractView
-) {
-    private val userModel = UsersModel(context)
+    var registrationContractView: RegistrationContract.View
+) : RegistrationContract.Presenter {
+    private val userModel = UsersModel(UserDaoImpl(context))
 
-    fun registration(name: String, email: String, password: String, password2: String) {
+    override fun registration(name: String, email: String, password: String, password2: String) {
         if (password == password2) {
             if (checkName(name.trim())) {
                 if (checkEmail(email.trim())) {
@@ -23,7 +24,7 @@ class RegistrationPresenter(
                                 if (task.isSuccessful) {
                                     val id: String =
                                         FirebaseAuth.getInstance().currentUser?.uid!!
-                                    userModel.addUser(
+                                    userModel.addUserLocalAndFirebase(
                                         id,
                                         name.trim().capitalize(Locale.ROOT),
                                         email,

@@ -10,13 +10,14 @@ import android.widget.TextView
 import androidx.annotation.RequiresApi
 import androidx.appcompat.app.AppCompatActivity
 import ru.ekaterinakubrina.wordsen.R
+import ru.ekaterinakubrina.wordsen.contracts.EntryContract
 import ru.ekaterinakubrina.wordsen.dto.UserDto
 import ru.ekaterinakubrina.wordsen.notify.NotifyService
 import ru.ekaterinakubrina.wordsen.presenter.EntryPresenter
 
 
-class EntryActivity : AppCompatActivity(), EntryContractView {
-    private var entryPresenter = EntryPresenter(this, this)
+open class EntryActivity : AppCompatActivity(), EntryContract.View {
+    private var entryPresenter : EntryContract.Presenter = EntryPresenter(this, this)
 
     @RequiresApi(Build.VERSION_CODES.M)
     override fun onCreate(savedInstanceState: Bundle?) {
@@ -32,7 +33,7 @@ class EntryActivity : AppCompatActivity(), EntryContractView {
             entryPresenter.trySignIn(email.text.toString(), password.text.toString())
         }
 
-        val forgotPassButton: Button = findViewById(R.id.button6)
+        val forgotPassButton: Button = findViewById(R.id.buttonForgotPass)
         forgotPassButton.setOnClickListener {
             val intent = Intent(this, ForgotPasswordActivity::class.java)
             startActivity(intent)
@@ -69,6 +70,8 @@ class EntryActivity : AppCompatActivity(), EntryContractView {
         startService(intent)
     }
 
-
+    override fun onBackPressed() {
+        moveTaskToBack(true)
+    }
 
 }

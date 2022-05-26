@@ -38,21 +38,21 @@
         app:srcCompat="@drawable/dog" />
 
     <Button
-        android:id="@+id/button3"
+        android:id="@+id/buttonTests"
         style="@style/Widget.AppCompat.Button.Borderless"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:fontFamily="@font/tenor_sans"
         android:text="@string/tests"
         app:layout_constraintBottom_toBottomOf="@+id/toolbar2"
-        app:layout_constraintEnd_toStartOf="@+id/button4"
+        app:layout_constraintEnd_toStartOf="@+id/buttonDictionary"
         app:layout_constraintHorizontal_bias="0.483"
         app:layout_constraintStart_toStartOf="@+id/toolbar2"
         app:layout_constraintTop_toTopOf="@+id/toolbar2"
         app:layout_constraintVertical_bias="0.41" />
 
     <Button
-        android:id="@+id/button4"
+        android:id="@+id/buttonDictionary"
         style="@style/Widget.AppCompat.Button.Borderless"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
@@ -190,28 +190,30 @@
             android:textSize="24sp" />
 
         <ImageView
-            android:id="@+id/imageView10"
+            android:id="@+id/imageViewSound"
             android:layout_width="95dp"
             android:layout_height="wrap_content"
             android:layout_marginStart="30dp"
             android:layout_marginTop="45dp"
             android:contentDescription="@string/sound"
             android:paddingStart="35dp"
-            app:srcCompat="@drawable/sound" />
+            app:srcCompat="@drawable/sound"
+            tools:ignore="RtlSymmetry" />
 
         <ImageView
-            android:id="@+id/imageView12"
+            android:id="@+id/imageViewSoundSlow"
             android:layout_width="99dp"
             android:layout_height="42dp"
             android:layout_marginStart="130dp"
             android:layout_marginTop="40dp"
-            android:paddingRight="35dp"
+            android:paddingEnd="35dp"
             app:srcCompat="@drawable/slow"
-            android:contentDescription="@string/slow_image" />
+            android:contentDescription="@string/slow_image"
+            tools:ignore="RtlSymmetry" />
     </androidx.cardview.widget.CardView>
 
     <Button
-        android:id="@+id/button7"
+        android:id="@+id/buttonAlreadyKnowWord"
         style="@style/Widget.MaterialComponents.TimePicker.Button"
         android:layout_width="0dp"
         android:layout_height="wrap_content"

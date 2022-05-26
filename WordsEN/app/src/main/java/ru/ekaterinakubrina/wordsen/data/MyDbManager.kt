@@ -4,6 +4,7 @@ import android.content.ContentValues
 import android.content.Context
 import android.database.sqlite.SQLiteDatabase
 import android.provider.BaseColumns
+import android.util.Log
 import ru.ekaterinakubrina.wordsen.dto.UserDto
 import ru.ekaterinakubrina.wordsen.dto.WordDto
 import java.text.SimpleDateFormat
@@ -26,6 +27,7 @@ class MyDbManager(context: Context) {
             put(MyDbWordsEN.Users.COLUMN_PASSWORD, password)
             put(MyDbWordsEN.Users.COLUMN_LEVEL, 0)
         }
+        Log.i("Insert", values.toString())
         db?.insert(MyDbWordsEN.Users.TABLE_NAME, null, values)
     }
 
@@ -36,30 +38,16 @@ class MyDbManager(context: Context) {
             put(MyDbWordsEN.Dictionary.DATE, date)
             put(MyDbWordsEN.Dictionary.STATUS, status)
         }
+        Log.i("Insert", values.toString())
         db?.insert(MyDbWordsEN.Dictionary.TABLE2_NAME, null, values)
     }
 
-    fun getUserName(uid: String): String? {
-        val projection = arrayOf(
-            MyDbWordsEN.Users.COLUMN_NAME
-        )
-        var name: String? = null
-        val selection: String = MyDbWordsEN.Users.COLUMN_UID + "=?"
-        val selectionArgs = arrayOf(uid)
-        val cursor = db?.query(
+    fun deleteUser(uid: String): Int {
+        return db!!.delete(
             MyDbWordsEN.Users.TABLE_NAME,
-            projection,
-            selection,
-            selectionArgs,
-            null,
-            null,
-            null
+            MyDbWordsEN.Users.COLUMN_UID+ " = ?",
+            arrayOf(uid)
         )
-        while (cursor?.moveToNext()!!) {
-            name = cursor.getString(cursor.getColumnIndexOrThrow(MyDbWordsEN.Users.COLUMN_NAME))
-        }
-        cursor.close()
-        return name
     }
 
     fun getLevelUser(uid: String): Int? {
@@ -69,6 +57,7 @@ class MyDbManager(context: Context) {
         var level: Int? = null
         val selection: String = MyDbWordsEN.Users.COLUMN_UID + "=?"
         val selectionArgs = arrayOf(uid)
+
         val cursor = db?.query(
             MyDbWordsEN.Users.TABLE_NAME,
             projection,
@@ -82,6 +71,7 @@ class MyDbManager(context: Context) {
             level = cursor.getInt(cursor.getColumnIndexOrThrow(MyDbWordsEN.Users.COLUMN_LEVEL))
         }
         cursor.close()
+
         return level
     }
 
@@ -97,6 +87,7 @@ class MyDbManager(context: Context) {
         val selection: String =
             MyDbWordsEN.Users.COLUMN_EMAIL + "=? AND " + MyDbWordsEN.Users.COLUMN_PASSWORD + "=?"
         val selectionArgs = arrayOf(email, password)
+
         val cursor = db?.query(
             MyDbWordsEN.Users.TABLE_NAME,
             projection,
@@ -116,6 +107,7 @@ class MyDbManager(context: Context) {
             )
         }
         cursor.close()
+
         return userDto
     }
 
@@ -148,58 +140,68 @@ class MyDbManager(context: Context) {
             )
         }
         cursor.close()
+
         return userDto
     }
 
-    fun getLastDate(uid: String): Int? {
+    fun getLastDateAddedWord(uid: String): Int? {
         var date: Int? = null
-        val query = ("SELECT " + "MAX(" + MyDbWordsEN.Dictionary.DATE + ")"
-                + " FROM " + MyDbWordsEN.Dictionary.TABLE2_NAME +
-                " WHERE " +
-                MyDbWordsEN.Dictionary.ID_USER + " =?")
         val selectionArgs = arrayOf(uid)
+        val query = ("SELECT " + "MAX(" + MyDbWordsEN.Dictionary.DATE + ")"
+                + " FROM " + MyDbWordsEN.Dictionary.TABLE2_NAME
+                + " WHERE " + MyDbWordsEN.Dictionary.ID_USER + " =?")
+        Log.i("Query", query)
+
         val cursor = db?.rawQuery(query, selectionArgs)
         while (cursor?.moveToNext()!!) {
             date =
                 cursor.getInt(cursor.getColumnIndexOrThrow("MAX(" + MyDbWordsEN.Dictionary.DATE + ")"))
         }
         cursor.close()
+
         return date
     }
 
     fun getCountNewWord(uid: String): Int? {
         var count: Int? = null
-        val query = ("SELECT " + "COUNT(" + MyDbWordsEN.Dictionary.ID_WORDS + ")"
-                + " FROM " + MyDbWordsEN.Dictionary.TABLE2_NAME +
-                " WHERE " +
-                MyDbWordsEN.Dictionary.ID_USER + " =? AND (" + MyDbWordsEN.Dictionary.STATUS + "=? OR " + MyDbWordsEN.Dictionary.STATUS + "=?)")
         val selectionArgs = arrayOf(
             uid,
             MyDbWordsEN.Dictionary.NEW.toString(),
             MyDbWordsEN.Dictionary.BAD_STUDIED.toString()
         )
+        val query = ("SELECT " + "COUNT(" + MyDbWordsEN.Dictionary.ID_WORDS + ")"
+                + " FROM " + MyDbWordsEN.Dictionary.TABLE2_NAME
+                + " WHERE " + MyDbWordsEN.Dictionary.ID_USER
+                + " =? AND (" + MyDbWordsEN.Dictionary.STATUS
+                + "=? OR " + MyDbWordsEN.Dictionary.STATUS + "=?)")
+        Log.i("Query", query)
+
         val cursor = db?.rawQuery(query, selectionArgs)
         while (cursor?.moveToNext()!!) {
             count =
                 cursor.getInt(cursor.getColumnIndexOrThrow("COUNT(" + MyDbWordsEN.Dictionary.ID_WORDS + ")"))
         }
         cursor.close()
+
         return count
     }
 
     fun getCountStudiedWord(uid: String): Int? {
         var count: Int? = null
-        val query = ("SELECT " + "COUNT(" + MyDbWordsEN.Dictionary.ID_WORDS + ")"
-                + " FROM " + MyDbWordsEN.Dictionary.TABLE2_NAME +
-                " WHERE " +
-                MyDbWordsEN.Dictionary.ID_USER + " =? AND " + MyDbWordsEN.Dictionary.STATUS + "=?")
         val selectionArgs = arrayOf(uid, MyDbWordsEN.Dictionary.STUDIED.toString())
+        val query = ("SELECT " + "COUNT(" + MyDbWordsEN.Dictionary.ID_WORDS + ")"
+                + " FROM " + MyDbWordsEN.Dictionary.TABLE2_NAME
+                + " WHERE " + MyDbWordsEN.Dictionary.ID_USER
+                + " =? AND " + MyDbWordsEN.Dictionary.STATUS + "=?")
+        Log.i("Query", query)
+
         val cursor = db?.rawQuery(query, selectionArgs)
         while (cursor?.moveToNext()!!) {
             count =
                 cursor.getInt(cursor.getColumnIndexOrThrow("COUNT(" + MyDbWordsEN.Dictionary.ID_WORDS + ")"))
         }
         cursor.close()
+
         return count
     }
 
@@ -207,16 +209,18 @@ class MyDbManager(context: Context) {
         var word: String
         var translate: String
         val list = ArrayList<String>()
+        val selectionArgs = arrayOf(uid)
         val query = ("SELECT " + BaseColumns._ID + ", "
                 + MyDbWordsEN.Words.COLUMN_WORD + ", "
-                + MyDbWordsEN.Words.COLUMN_TRANSLATE + " FROM " + MyDbWordsEN.Words.TABLE_NAME +
-                " LEFT OUTER JOIN " + MyDbWordsEN.Dictionary.TABLE2_NAME +
-                " ON " + MyDbWordsEN.Words.TABLE_NAME + "." + BaseColumns._ID + " = " + MyDbWordsEN.Dictionary.TABLE2_NAME + "." +
-                MyDbWordsEN.Dictionary.ID_WORDS + " WHERE " +
-                MyDbWordsEN.Dictionary.ID_USER + " = ? ")
-        val selectionArgs = arrayOf(uid)
-        val cursor = db?.rawQuery(query, selectionArgs)
+                + MyDbWordsEN.Words.COLUMN_TRANSLATE
+                + " FROM " + MyDbWordsEN.Words.TABLE_NAME
+                + " LEFT OUTER JOIN " + MyDbWordsEN.Dictionary.TABLE2_NAME
+                + " ON " + MyDbWordsEN.Words.TABLE_NAME + "." + BaseColumns._ID
+                + " = " + MyDbWordsEN.Dictionary.TABLE2_NAME + "." + MyDbWordsEN.Dictionary.ID_WORDS
+                + " WHERE " + MyDbWordsEN.Dictionary.ID_USER + " = ? ")
+        Log.i("Query", query)
 
+        val cursor = db?.rawQuery(query, selectionArgs)
         while (cursor?.moveToNext()!!) {
             word = cursor.getString(cursor.getColumnIndexOrThrow(MyDbWordsEN.Words.COLUMN_WORD))
             translate =
@@ -224,6 +228,7 @@ class MyDbManager(context: Context) {
             list.add("$word - $translate")
         }
         cursor.close()
+
         return list
     }
 
@@ -236,12 +241,16 @@ class MyDbManager(context: Context) {
         val query = ("SELECT " + BaseColumns._ID + ", "
                 + MyDbWordsEN.Words.COLUMN_WORD + ", "
                 + MyDbWordsEN.Words.COLUMN_TRANSLATE + ", "
-                + MyDbWordsEN.Dictionary.STATUS + " FROM " + MyDbWordsEN.Words.TABLE_NAME +
-                " LEFT OUTER JOIN " + MyDbWordsEN.Dictionary.TABLE2_NAME +
-                " ON " + MyDbWordsEN.Words.TABLE_NAME + "." + BaseColumns._ID + " = " + MyDbWordsEN.Dictionary.TABLE2_NAME + "." +
-                MyDbWordsEN.Dictionary.ID_WORDS + " WHERE " +
-                MyDbWordsEN.Dictionary.ID_USER + " = ? AND (" + MyDbWordsEN.Dictionary.STATUS +
-                "=? OR " + MyDbWordsEN.Dictionary.STATUS + "=?) AND " + MyDbWordsEN.Dictionary.DATE + "!= ?")
+                + MyDbWordsEN.Dictionary.STATUS
+                + " FROM " + MyDbWordsEN.Words.TABLE_NAME
+                + " LEFT OUTER JOIN " + MyDbWordsEN.Dictionary.TABLE2_NAME
+                + " ON " + MyDbWordsEN.Words.TABLE_NAME + "." + BaseColumns._ID
+                + " = " + MyDbWordsEN.Dictionary.TABLE2_NAME + "." + MyDbWordsEN.Dictionary.ID_WORDS
+                + " WHERE " + MyDbWordsEN.Dictionary.ID_USER
+                + " = ? AND (" + MyDbWordsEN.Dictionary.STATUS
+                + "=? OR " + MyDbWordsEN.Dictionary.STATUS
+                + "=?) AND " + MyDbWordsEN.Dictionary.DATE + "!= ?")
+        Log.i("Query", query)
         val selectionArgs = arrayOf(
             uid,
             MyDbWordsEN.Dictionary.NEW.toString(),
@@ -250,8 +259,8 @@ class MyDbManager(context: Context) {
                 Date()
             ).toInt().toString()
         )
-        val cursor = db?.rawQuery(query, selectionArgs)
 
+        val cursor = db?.rawQuery(query, selectionArgs)
         while (cursor?.moveToNext()!!) {
             wordId = cursor.getInt(cursor.getColumnIndexOrThrow(BaseColumns._ID))
             word = cursor.getString(cursor.getColumnIndexOrThrow(MyDbWordsEN.Words.COLUMN_WORD))
@@ -261,6 +270,7 @@ class MyDbManager(context: Context) {
             list.add(WordDto(wordId, word, translate, status))
         }
         cursor.close()
+
         return list
     }
 
@@ -270,17 +280,20 @@ class MyDbManager(context: Context) {
         var translate: String
         var status: Int
         val list = ArrayList<WordDto>()
+        val selectionArgs = arrayOf(uid, MyDbWordsEN.Dictionary.STUDIED.toString())
         val query = ("SELECT " + BaseColumns._ID + ", "
                 + MyDbWordsEN.Words.COLUMN_WORD + ", "
                 + MyDbWordsEN.Words.COLUMN_TRANSLATE + ", "
-                + MyDbWordsEN.Dictionary.STATUS + " FROM " + MyDbWordsEN.Words.TABLE_NAME +
-                " LEFT OUTER JOIN " + MyDbWordsEN.Dictionary.TABLE2_NAME +
-                " ON " + MyDbWordsEN.Words.TABLE_NAME + "." + BaseColumns._ID + " = " + MyDbWordsEN.Dictionary.TABLE2_NAME + "." +
-                MyDbWordsEN.Dictionary.ID_WORDS + " WHERE " +
-                MyDbWordsEN.Dictionary.ID_USER + " = ? AND " + MyDbWordsEN.Dictionary.STATUS + "=? ORDER BY RANDOM() LIMIT 14")
-        val selectionArgs = arrayOf(uid, MyDbWordsEN.Dictionary.STUDIED.toString())
-        val cursor = db?.rawQuery(query, selectionArgs)
+                + MyDbWordsEN.Dictionary.STATUS
+                + " FROM " + MyDbWordsEN.Words.TABLE_NAME
+                + " LEFT OUTER JOIN " + MyDbWordsEN.Dictionary.TABLE2_NAME
+                + " ON " + MyDbWordsEN.Words.TABLE_NAME + "." + BaseColumns._ID
+                + " = " + MyDbWordsEN.Dictionary.TABLE2_NAME + "." + MyDbWordsEN.Dictionary.ID_WORDS
+                + " WHERE " + MyDbWordsEN.Dictionary.ID_USER + " = ? AND "
+                + MyDbWordsEN.Dictionary.STATUS + "=? ORDER BY RANDOM() LIMIT 14")
+        Log.i("Query", query)
 
+        val cursor = db?.rawQuery(query, selectionArgs)
         while (cursor?.moveToNext()!!) {
             wordId = cursor.getInt(cursor.getColumnIndexOrThrow(BaseColumns._ID))
             word = cursor.getString(cursor.getColumnIndexOrThrow(MyDbWordsEN.Words.COLUMN_WORD))
@@ -290,42 +303,56 @@ class MyDbManager(context: Context) {
             list.add(WordDto(wordId, word, translate, status))
         }
         cursor.close()
+
         return list
     }
 
     fun getTranslateForTest(rightTranslate: String): ArrayList<String> {
         var translate: String
         val list = ArrayList<String>()
-        val query = ("SELECT " + MyDbWordsEN.Words.COLUMN_TRANSLATE + " FROM "
-                + MyDbWordsEN.Words.TABLE_NAME + " WHERE " + MyDbWordsEN.Words.COLUMN_TRANSLATE +
-                " NOT LIKE '%$rightTranslate%' " + " ORDER BY RANDOM() LIMIT 3")
-        val cursor = db?.rawQuery(query, null)
+        val query = ("SELECT " + MyDbWordsEN.Words.COLUMN_TRANSLATE
+                + " FROM " + MyDbWordsEN.Words.TABLE_NAME
+                + " WHERE " + MyDbWordsEN.Words.COLUMN_TRANSLATE +
+                " NOT LIKE '%$rightTranslate%' "
+                + " ORDER BY RANDOM() LIMIT 3")
+        Log.i("Query", query)
 
+        val cursor = db?.rawQuery(query, null)
         while (cursor?.moveToNext()!!) {
             translate =
                 cursor.getString(cursor.getColumnIndexOrThrow(MyDbWordsEN.Words.COLUMN_TRANSLATE))
             list.add(translate)
         }
         cursor.close()
+
         return list
     }
 
-    fun getWord(uid: String, level: Int): WordDto {
+    fun getWordForUserByLevel(uid: String, level: Int): WordDto {
         var word = ""
         var transcription = ""
         var translate = ""
         var idW = 0
+        val selectionArgs = arrayOf(uid)
         val query = ("SELECT " + BaseColumns._ID + ", "
                 + MyDbWordsEN.Words.COLUMN_WORD + ", "
                 + MyDbWordsEN.Words.COLUMN_TRANSCRIPTION + ", "
-                + MyDbWordsEN.Words.COLUMN_TRANSLATE + " FROM " + MyDbWordsEN.Words.TABLE_NAME +
+                + MyDbWordsEN.Words.COLUMN_TRANSLATE +
+                " FROM " + MyDbWordsEN.Words.TABLE_NAME +
                 " LEFT OUTER JOIN " + MyDbWordsEN.Dictionary.TABLE2_NAME +
-                " ON " + MyDbWordsEN.Words.TABLE_NAME + "." + BaseColumns._ID + " = " + MyDbWordsEN.Dictionary.TABLE2_NAME + "." +
-                MyDbWordsEN.Dictionary.ID_WORDS + " WHERE " + MyDbWordsEN.Words.COLUMN_LEVEL + " = " + level.toString() + " AND (" +
-                MyDbWordsEN.Dictionary.ID_USER + " != ?" + " OR " + MyDbWordsEN.Dictionary.ID_USER + " IS NULL)")
-        val selectionArgs = arrayOf(uid)
-        val cursor = db?.rawQuery(query, selectionArgs)
+                " ON " + MyDbWordsEN.Words.TABLE_NAME + "." + BaseColumns._ID
+                + " = " + MyDbWordsEN.Dictionary.TABLE2_NAME + "." + MyDbWordsEN.Dictionary.ID_WORDS +
+                " WHERE " + MyDbWordsEN.Words.COLUMN_LEVEL + " = " + level.toString() +
+                " AND " + BaseColumns._ID + " NOT IN " +
+                " (SELECT " + BaseColumns._ID +
+                " FROM " + MyDbWordsEN.Words.TABLE_NAME +
+                " LEFT OUTER JOIN " + MyDbWordsEN.Dictionary.TABLE2_NAME +
+                " ON " + MyDbWordsEN.Words.TABLE_NAME + "." + BaseColumns._ID +
+                " = " + MyDbWordsEN.Dictionary.TABLE2_NAME + "." + MyDbWordsEN.Dictionary.ID_WORDS +
+                " WHERE " + MyDbWordsEN.Dictionary.ID_USER + " = ? )")
+        Log.i("Query", query)
 
+        val cursor = db?.rawQuery(query, selectionArgs)
         while (cursor?.moveToNext()!!) {
             idW = cursor.getInt(cursor.getColumnIndexOrThrow(BaseColumns._ID))
             word = cursor.getString(cursor.getColumnIndexOrThrow(MyDbWordsEN.Words.COLUMN_WORD))
@@ -336,43 +363,73 @@ class MyDbManager(context: Context) {
             break
         }
         cursor.close()
+
         return WordDto(idW, word, transcription, translate)
     }
 
-
     fun getIdByWord(word: String): Int {
         var idW = -1
+        val selectionArgs = null
         val query = ("SELECT " + BaseColumns._ID +
                 " FROM " + MyDbWordsEN.Words.TABLE_NAME +
-                " WHERE " + MyDbWordsEN.Words.COLUMN_WORD + " = " + word )
-        val selectionArgs = arrayOf(word)
-        val cursor = db?.rawQuery(query, selectionArgs)
+                " WHERE " + MyDbWordsEN.Words.COLUMN_WORD + " = \"" + word + "\"")
+        Log.i("Query", query)
 
+        val cursor = db?.rawQuery(query, selectionArgs)
         while (cursor?.moveToNext()!!) {
             idW = cursor.getInt(cursor.getColumnIndexOrThrow(BaseColumns._ID))
             break
         }
         cursor.close()
+
         return idW
     }
 
-    fun getWordByDate(uid: String, date: Int): WordDto {
+    fun getWordById(wordId: Int): WordDto? {
+        var word : WordDto? = null
+        val selectionArgs = arrayOf(wordId.toString())
+        val query = ("SELECT " + BaseColumns._ID + ", "
+                + MyDbWordsEN.Words.COLUMN_WORD + ", "
+                + MyDbWordsEN.Words.COLUMN_TRANSCRIPTION + ", "
+                + MyDbWordsEN.Words.COLUMN_TRANSLATE +
+                " FROM " + MyDbWordsEN.Words.TABLE_NAME +
+                " WHERE " + BaseColumns._ID + " = ?")
+        Log.i("Query", query)
+
+        val cursor = db?.rawQuery(query, selectionArgs)
+        while (cursor?.moveToNext()!!) {
+            word = WordDto(cursor.getInt(cursor.getColumnIndexOrThrow(BaseColumns._ID)),
+                cursor.getString(cursor.getColumnIndexOrThrow(MyDbWordsEN.Words.COLUMN_WORD)),
+                cursor.getString(cursor.getColumnIndexOrThrow(MyDbWordsEN.Words.COLUMN_TRANSCRIPTION)),
+                cursor.getString(cursor.getColumnIndexOrThrow(MyDbWordsEN.Words.COLUMN_TRANSLATE))
+            )
+            break
+        }
+        cursor.close()
+
+        return word
+    }
+
+    fun getUsersWordByDate(uid: String, date: Int): WordDto {
         var idWord = 0
         var word = ""
         var transcription = ""
         var translate = ""
+        val selectionArgs = arrayOf(uid)
         val query = ("SELECT "
                 + MyDbWordsEN.Words.TABLE_NAME + "." + BaseColumns._ID + ", "
                 + MyDbWordsEN.Words.COLUMN_WORD + ", "
                 + MyDbWordsEN.Words.COLUMN_TRANSCRIPTION + ", "
-                + MyDbWordsEN.Words.COLUMN_TRANSLATE + " FROM " + MyDbWordsEN.Words.TABLE_NAME +
+                + MyDbWordsEN.Words.COLUMN_TRANSLATE
+                + " FROM " + MyDbWordsEN.Words.TABLE_NAME +
                 " LEFT OUTER JOIN " + MyDbWordsEN.Dictionary.TABLE2_NAME +
-                " ON " + MyDbWordsEN.Words.TABLE_NAME + "." + BaseColumns._ID + " = " + MyDbWordsEN.Dictionary.TABLE2_NAME + "." +
-                MyDbWordsEN.Dictionary.ID_WORDS + " WHERE " + MyDbWordsEN.Dictionary.DATE + " = " + date.toString() + " AND " +
-                MyDbWordsEN.Dictionary.ID_USER + " = ?")
-        val selectionArgs = arrayOf(uid)
-        val cursor = db?.rawQuery(query, selectionArgs)
+                " ON " + MyDbWordsEN.Words.TABLE_NAME + "." + BaseColumns._ID
+                + " = " + MyDbWordsEN.Dictionary.TABLE2_NAME + "." + MyDbWordsEN.Dictionary.ID_WORDS
+                + " WHERE " + MyDbWordsEN.Dictionary.DATE + " = " + date.toString()
+                + " AND " + MyDbWordsEN.Dictionary.ID_USER + " = ?")
+        Log.i("Query", query)
 
+        val cursor = db?.rawQuery(query, selectionArgs)
         while (cursor?.moveToNext()!!) {
             idWord = cursor.getInt(cursor.getColumnIndexOrThrow(BaseColumns._ID))
             word = cursor.getString(cursor.getColumnIndexOrThrow(MyDbWordsEN.Words.COLUMN_WORD))
@@ -383,6 +440,7 @@ class MyDbManager(context: Context) {
             break
         }
         cursor.close()
+
         return WordDto(idWord, word, transcription, translate)
     }
 
@@ -393,6 +451,7 @@ class MyDbManager(context: Context) {
             put(MyDbWordsEN.Words.COLUMN_TRANSCRIPTION, wordDto.transcription)
             put(MyDbWordsEN.Words.COLUMN_LEVEL, level)
         }
+        Log.i("Insert", values.toString())
         return db?.insert(MyDbWordsEN.Words.TABLE_NAME, null, values)
     }
 
@@ -405,10 +464,10 @@ class MyDbManager(context: Context) {
         )
     }
 
-    fun alreadyKnowWord(uid: String, idWord: Int, date: Int, status: Int): Int {
+    fun alreadyKnowWord(uid: String, idWord: Int, date: Int): Int {
         val values = ContentValues()
         values.put(MyDbWordsEN.Dictionary.DATE, date)
-        values.put(MyDbWordsEN.Dictionary.STATUS, status)
+        values.put(MyDbWordsEN.Dictionary.STATUS, MyDbWordsEN.Dictionary.STUDIED)
         return db!!.update(
             MyDbWordsEN.Dictionary.TABLE2_NAME,
             values,
@@ -440,11 +499,19 @@ class MyDbManager(context: Context) {
         )
     }
 
-    fun deleteWord(uid: String, idWord: Int): Int {
+    fun deleteWordFromUser(uid: String, idWord: Int): Int {
         return db!!.delete(
             MyDbWordsEN.Dictionary.TABLE2_NAME,
             MyDbWordsEN.Dictionary.ID_USER + "= ? AND " + MyDbWordsEN.Dictionary.ID_WORDS + "= ?",
             arrayOf(uid, idWord.toString())
+        )
+    }
+
+    fun deleteWord(idWord: Int): Int {
+        return db!!.delete(
+            MyDbWordsEN.Words.TABLE_NAME,
+            BaseColumns._ID + "= ?",
+            arrayOf(idWord.toString())
         )
     }
 

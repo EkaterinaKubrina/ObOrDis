@@ -68,7 +68,7 @@
         android:textColorLink="@color/mypurpl"
         android:textCursorDrawable="@color/mypurpl"
         android:textSize="24sp"
-        app:layout_constraintBottom_toTopOf="@+id/button6"
+        app:layout_constraintBottom_toTopOf="@+id/buttonForgotPass"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/TextEmail"
@@ -83,7 +83,7 @@
         android:text="@string/entry"
         android:textAppearance="@style/TextAppearance.AppCompat.Display1"
         android:textColor="@color/myfon"
-        android:textSize="30dp"
+        android:textSize="30sp"
         app:backgroundTint="@color/mypurpl"
         app:cornerRadius="@android:dimen/notification_large_icon_height"
         app:layout_constraintBottom_toBottomOf="parent"
@@ -106,16 +106,16 @@
         app:layout_constraintBottom_toTopOf="@+id/buttonEntry"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/button6" />
+        app:layout_constraintTop_toBottomOf="@+id/buttonForgotPass" />
 
     <Button
-        android:id="@+id/button6"
+        android:id="@+id/buttonForgotPass"
         style="@style/Widget.MaterialComponents.Button.UnelevatedButton"
         android:layout_width="177dp"
         android:layout_height="48dp"
         android:layout_marginBottom="27dp"
         android:text="@string/forgot_pass"
-        android:textSize="13dp"
+        android:textSize="13sp"
         app:backgroundTint="@color/cardview_shadow_end_color"
         app:iconTint="@color/material_on_surface_stroke"
         app:layout_constraintBottom_toTopOf="@+id/error"
@@ -132,5 +132,5 @@
         app:layout_constraintBottom_toTopOf="@+id/buttonEntry"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/button6" />
+        app:layout_constraintTop_toBottomOf="@+id/buttonForgotPass" />
 </androidx.constraintlayout.widget.ConstraintLayout>

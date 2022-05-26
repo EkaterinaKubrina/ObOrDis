@@ -7,10 +7,11 @@ import android.widget.Button
 import androidx.annotation.RequiresApi
 import androidx.appcompat.app.AppCompatActivity
 import ru.ekaterinakubrina.wordsen.R
+import ru.ekaterinakubrina.wordsen.contracts.SelectTestContract
 import ru.ekaterinakubrina.wordsen.presenter.SelectTestPresenter
 
-class SelectTestActivity : AppCompatActivity(), SelectTestContractView {
-    private val selectTestPresenter = SelectTestPresenter(this, this)
+open class SelectTestActivity : AppCompatActivity(), SelectTestContract.View {
+    private val selectTestPresenter : SelectTestContract.Presenter = SelectTestPresenter(this, this)
 
     @RequiresApi(Build.VERSION_CODES.M)
     override fun onCreate(savedInstanceState: Bundle?) {

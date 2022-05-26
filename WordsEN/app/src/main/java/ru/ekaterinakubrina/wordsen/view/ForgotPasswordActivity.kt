@@ -6,10 +6,11 @@ import android.widget.EditText
 import android.widget.Toast
 import androidx.appcompat.app.AppCompatActivity
 import ru.ekaterinakubrina.wordsen.R
+import ru.ekaterinakubrina.wordsen.contracts.ForgotPasswordContract
 import ru.ekaterinakubrina.wordsen.presenter.ForgotPasswordPresenter
 
-class ForgotPasswordActivity : AppCompatActivity(), ForgotPasswordContractView {
-    private var forgotPasswordPresenter = ForgotPasswordPresenter(this)
+open class ForgotPasswordActivity : AppCompatActivity(), ForgotPasswordContract.View {
+    private var forgotPasswordPresenter : ForgotPasswordContract.Presenter = ForgotPasswordPresenter(this)
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)

@@ -1,0 +1,4 @@
+<?xml version="1.0" encoding="utf-8"?>
+<users>
+    <record uid="1" userName="test" email="test@ru" password="111111" level="1" />
+</users>

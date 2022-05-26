@@ -1,17 +1,19 @@
 package ru.ekaterinakubrina.wordsen.presenter
 
 import android.content.Context
+import ru.ekaterinakubrina.wordsen.contracts.SelectLevelContract
+import ru.ekaterinakubrina.wordsen.daoimpl.UserDaoImpl
 import ru.ekaterinakubrina.wordsen.model.UsersModel
-import ru.ekaterinakubrina.wordsen.view.SelectLevelContractView
 
-class SelectLevelPresenter(
+open class SelectLevelPresenter(
     var context: Context,
-    var selectLevelContractView: SelectLevelContractView
-) {
-    private val userModel = UsersModel(context)
+    var selectLevelContractView: SelectLevelContract.View
+) : SelectLevelContract.Presenter {
+    private val userModel = UsersModel(UserDaoImpl(context))
 
-    fun selectLevel(id: String, level: Int) {
-        userModel.setLevel(id, level)
+    override fun selectLevel(id: String, level: Int) {
+        userModel.setLevelLocalAndFirebase(id, level)
         selectLevelContractView.nextActivity(id, level)
     }
+
 }

@@ -1,11 +1,12 @@
 package ru.ekaterinakubrina.wordsen.presenter
 
 import com.google.firebase.auth.FirebaseAuth
-import ru.ekaterinakubrina.wordsen.view.ForgotPasswordContractView
+import ru.ekaterinakubrina.wordsen.contracts.ForgotPasswordContract
 
-class ForgotPasswordPresenter(var forgotPasswordContractView: ForgotPasswordContractView) {
+open class ForgotPasswordPresenter(var forgotPasswordContractView: ForgotPasswordContract.View) :
+    ForgotPasswordContract.Presenter {
 
-    fun sendLetterChangePassword(email: String) {
+    override fun sendLetterChangePassword(email: String) {
         val auth = FirebaseAuth.getInstance()
         auth.sendPasswordResetEmail(email)
             .addOnCompleteListener { task ->

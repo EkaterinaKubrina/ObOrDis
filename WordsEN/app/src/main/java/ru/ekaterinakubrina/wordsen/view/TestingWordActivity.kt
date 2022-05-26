@@ -5,10 +5,11 @@ import android.os.Bundle
 import android.widget.*
 import androidx.appcompat.app.AppCompatActivity
 import ru.ekaterinakubrina.wordsen.R
+import ru.ekaterinakubrina.wordsen.contracts.TestingWordContract
 import ru.ekaterinakubrina.wordsen.presenter.TestingWordPresenter
 
-class TestingWordActivity : AppCompatActivity(), TestingWordContractView {
-    private val testPresenter = TestingWordPresenter(this, this)
+open class TestingWordActivity : AppCompatActivity(), TestingWordContract.View {
+    private val testingWordPresenter : TestingWordContract.Presenter = TestingWordPresenter(this, this)
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
@@ -16,7 +17,7 @@ class TestingWordActivity : AppCompatActivity(), TestingWordContractView {
 
         val uid: String = intent.getSerializableExtra("ID_USER") as String
         val type: String = intent.getSerializableExtra("TEST_TYPE") as String
-        testPresenter.startTest(uid, type)
+        testingWordPresenter.startTest(uid, type)
 
         var checkedVar = ""
         val radioGroup = findViewById<RadioGroup>(R.id.radioGroup)
@@ -29,7 +30,7 @@ class TestingWordActivity : AppCompatActivity(), TestingWordContractView {
         val toAnswer: Button = findViewById(R.id.toAnswer)
         toAnswer.setOnClickListener {
             radioGroup.clearCheck()
-            testPresenter.checkAnswer(checkedVar)
+            testingWordPresenter.checkAnswer(checkedVar)
         }
 
     }
@@ -65,7 +66,7 @@ class TestingWordActivity : AppCompatActivity(), TestingWordContractView {
         val answer3: RadioButton = findViewById(R.id.answer3)
         val answer4: RadioButton = findViewById(R.id.answer4)
 
-        val randomTranslates = testPresenter.getTranslateForTest(s)
+        val randomTranslates = testingWordPresenter.getTranslateForTest(s)
 
         when (pos) {
             1 -> {

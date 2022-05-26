@@ -7,8 +7,6 @@ interface UserDao {
 
     fun getUser(uid: String): UserDto?
 
-    fun getNameUser(uid: String): String?
-
     fun addUser(uid: String, name: String, email: String, password: String)
 
     fun setLevel(uid: String, level: Int): Int
@@ -16,4 +14,6 @@ interface UserDao {
     fun getDictionary(uid: String): ArrayList<String>
 
     fun getLevelUser(uid: String): Int?
+
+    fun deleteUser(uid: String): Int
 }

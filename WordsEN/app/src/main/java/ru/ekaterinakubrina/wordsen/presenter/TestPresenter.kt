@@ -1,14 +1,16 @@
 package ru.ekaterinakubrina.wordsen.presenter
 
 import android.content.Context
+import ru.ekaterinakubrina.wordsen.contracts.TestContract
+import ru.ekaterinakubrina.wordsen.daoimpl.UserDaoImpl
 import ru.ekaterinakubrina.wordsen.data.MyDbWordsEN
 import ru.ekaterinakubrina.wordsen.model.UsersModel
-import ru.ekaterinakubrina.wordsen.view.TestContractView
 
-class TestPresenter(var context: Context, var testContractView: TestContractView) {
-    private val usersModel = UsersModel(context)
+open class TestPresenter(var context: Context, var testContractView: TestContract.View) :
+    TestContract.Presenter {
+    private val usersModel = UsersModel(UserDaoImpl(context))
 
-    fun setLevel(count: Int, id: String) {
+    override fun setLevel(count: Int, id: String) {
         val level: Int = when {
             count < 1 -> MyDbWordsEN.Users.LEVEL_A0
             count < 3 -> MyDbWordsEN.Users.LEVEL_A1
@@ -17,7 +19,7 @@ class TestPresenter(var context: Context, var testContractView: TestContractView
             count < 11 -> MyDbWordsEN.Users.LEVEL_B2
             else -> MyDbWordsEN.Users.LEVEL_C1
         }
-        usersModel.setLevel(id, level)
+        usersModel.setLevelLocalAndFirebase(id, level)
         testContractView.nextActivity(id, level)
     }
 

@@ -15,20 +15,11 @@ class UserDaoImpl(context: Context) : UserDao {
         return user
     }
 
-
     override fun getUser(uid: String): UserDto? {
         myDbManager.openDb()
         val user = myDbManager.getUserById(uid)
         myDbManager.closeDb()
         return user
-    }
-
-
-    override fun getNameUser(uid: String): String? {
-        myDbManager.openDb()
-        val name = myDbManager.getUserName(uid)
-        myDbManager.closeDb()
-        return name
     }
 
 
@@ -38,14 +29,12 @@ class UserDaoImpl(context: Context) : UserDao {
         myDbManager.closeDb()
     }
 
-
     override fun setLevel(uid: String, level: Int): Int {
         myDbManager.openDb()
         val ans = myDbManager.setLevelUser(uid, level)
         myDbManager.closeDb()
         return ans
     }
-
 
     override fun getDictionary(uid: String): ArrayList<String> {
         myDbManager.openDb()
@@ -57,6 +46,13 @@ class UserDaoImpl(context: Context) : UserDao {
     override fun getLevelUser(uid: String): Int? {
         myDbManager.openDb()
         val ans = myDbManager.getLevelUser(uid)
+        myDbManager.closeDb()
+        return ans
+    }
+
+    override fun deleteUser(uid: String): Int {
+        myDbManager.openDb()
+        val ans = myDbManager.deleteUser(uid)
         myDbManager.closeDb()
         return ans
     }

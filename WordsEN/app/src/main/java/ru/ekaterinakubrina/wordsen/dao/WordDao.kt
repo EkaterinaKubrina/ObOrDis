@@ -3,35 +3,13 @@ package ru.ekaterinakubrina.wordsen.dao
 import ru.ekaterinakubrina.wordsen.dto.WordDto
 
 interface WordDao {
-    fun getLastDateAddedWord(uid: String): Int?
-
-    fun getWordByDate(uid: String, date: Int): WordDto
-
-    fun getWord(uid: String, lvl: Int): WordDto
-
     fun getIdByWord(word: String): Int
 
     fun addWord(wordDto: WordDto, level: Int): Long?
 
-    fun addWordToUser(uid: String, wordDto: WordDto)
-
-    fun alreadyKnowWord(uid: String, idWord: Int, date: Int, status: Int)
-
-    fun deleteNewAndBadStudiedWords(uid: String)
-
-    fun addWordToUserFromFB(uid: String, idWord: Int, date: Int, status: Int)
-
-    fun getCountNewWord(uid: String): Int?
-
-    fun getCountStudiedWord(uid: String): Int?
-
-    fun getUserNewWords(uid: String): ArrayList<WordDto>
-
-    fun getUserStudiedWords(uid: String): ArrayList<WordDto>
-
     fun getTranslateForTest(rightTranslate: String): ArrayList<String>
 
-    fun setStatusWord(uid: String, idWord: Int, status: Int)
+    fun deleteWord(idWord: Int)
 
-    fun deleteWord(uid: String, idWord: Int)
+    fun getWordById(wordId: Int): WordDto?
 }

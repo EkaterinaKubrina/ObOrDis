@@ -3,10 +3,11 @@ package ru.ekaterinakubrina.wordsen.view
 import android.content.Intent
 import android.os.Bundle
 import androidx.appcompat.app.AppCompatActivity
+import ru.ekaterinakubrina.wordsen.contracts.SplashContract
 import ru.ekaterinakubrina.wordsen.presenter.SplashPresenter
 
-class SplashActivity : AppCompatActivity(), SplashContractView {
-    private val splashPresenter = SplashPresenter(this, this)
+open class SplashActivity : AppCompatActivity(), SplashContract.View {
+    private val splashPresenter : SplashContract.Presenter = SplashPresenter(this, this)
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)

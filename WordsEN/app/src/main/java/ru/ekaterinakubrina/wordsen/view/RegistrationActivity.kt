@@ -8,19 +8,20 @@ import android.widget.TextView
 import androidx.appcompat.app.AppCompatActivity
 import androidx.appcompat.content.res.AppCompatResources
 import ru.ekaterinakubrina.wordsen.R
+import ru.ekaterinakubrina.wordsen.contracts.RegistrationContract
 import ru.ekaterinakubrina.wordsen.presenter.RegistrationPresenter
 import java.util.*
 
 
-class RegistrationActivity : AppCompatActivity(), RegistrationContractView {
-    private val registrationPresenter = RegistrationPresenter(this, this)
+open class RegistrationActivity : AppCompatActivity(), RegistrationContract.View {
+    private val registrationPresenter : RegistrationContract.Presenter = RegistrationPresenter(this, this)
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_registration)
 
-        val button: Button = findViewById(R.id.button)
-        button.setOnClickListener {
+        val buttonRegistration: Button = findViewById(R.id.buttonRegistration)
+        buttonRegistration.setOnClickListener {
             val name: EditText = findViewById(R.id.textPersonName)
             val email: EditText = findViewById(R.id.textEmailAddress)
             val password: EditText = findViewById(R.id.textPassword)
@@ -46,7 +47,7 @@ class RegistrationActivity : AppCompatActivity(), RegistrationContractView {
     }
 
     override fun setTextError(text: String) {
-        val textError: TextView = findViewById(R.id.error2)
+        val textError: TextView = findViewById(R.id.textError)
         textError.text = text
     }
 

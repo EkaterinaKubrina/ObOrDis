@@ -1,22 +1,19 @@
 package ru.ekaterinakubrina.wordsen.model
 
-import android.content.Context
 import com.google.firebase.database.FirebaseDatabase
-import ru.ekaterinakubrina.wordsen.daoimpl.UserDaoImpl
+import ru.ekaterinakubrina.wordsen.dao.UserDao
 import ru.ekaterinakubrina.wordsen.dto.UserDto
 import java.util.*
 
-class UsersModel(context: Context) {
-    private val userDao = UserDaoImpl(context)
+open class UsersModel(private val userDao: UserDao) {
 
     fun getDictionary(uid: String): ArrayList<String> {
         return userDao.getDictionary(uid)
     }
 
-    fun signIn(email: String, password: String): UserDto? {
+    fun getUserByPasswordAndEmail(email: String, password: String): UserDto? {
         return userDao.getUser(email, password)
     }
-
 
     fun getUser(uid: String): UserDto? {
         return userDao.getUser(uid)
@@ -26,33 +23,31 @@ class UsersModel(context: Context) {
         return userDao.getLevelUser(uid)
     }
 
-    fun getNameUser(uid: String): String? {
-        return userDao.getNameUser(uid)
+    fun addUserLocalAndFirebase(uid: String, name: String, email: String, password: String) {
+        saveNameUserToFirebase(uid, name)
+        addUser(uid, name, email, password)
     }
 
     fun addUser(uid: String, name: String, email: String, password: String) {
-        saveNameUserToFirebase(uid, name)
         userDao.addUser(uid, name, email, password)
     }
 
-    fun addUserLocalDB(uid: String, name: String?, email: String, password: String) {
-        if (name != null) {
-            userDao.addUser(uid, name, email, password)
-        }
+    fun deleteUser(uid: String) {
+        userDao.deleteUser(uid)
     }
 
-    fun setLevel(uid: String, level: Int): Int {
+    fun setLevelLocalAndFirebase(uid: String, level: Int){
         saveLevelUserToFirebase(uid, level)
-        return userDao.setLevel(uid, level)
+        setLevel(uid, level)
     }
 
-    fun setLevelLocalDB(uid: String?, level: Int?) {
+    fun setLevel(uid: String?, level: Int?) {
         if (uid != null && level != null) {
             userDao.setLevel(uid, level)
         }
     }
 
-    private fun saveNameUserToFirebase(uid: String, name: String) {
+    open fun saveNameUserToFirebase(uid: String, name: String) {
         val db = FirebaseDatabase.getInstance()
         val ref = db.getReference("users") //key
 
@@ -62,7 +57,7 @@ class UsersModel(context: Context) {
         ref.child(uid).updateChildren(hopperUpdates)
     }
 
-    private fun saveLevelUserToFirebase(uid: String, level: Int) {
+    open fun saveLevelUserToFirebase(uid: String, level: Int) {
         val db = FirebaseDatabase.getInstance()
         val ref = db.getReference("users") //key
 

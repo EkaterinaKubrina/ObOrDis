@@ -14,6 +14,10 @@ import androidx.core.app.NotificationManagerCompat
 import com.google.firebase.FirebaseApp
 import com.google.firebase.auth.FirebaseAuth
 import ru.ekaterinakubrina.wordsen.R
+import ru.ekaterinakubrina.wordsen.daoimpl.DictionaryDaoImpl
+import ru.ekaterinakubrina.wordsen.daoimpl.UserDaoImpl
+import ru.ekaterinakubrina.wordsen.daoimpl.WordDaoImpl
+import ru.ekaterinakubrina.wordsen.model.DictionaryModel
 import ru.ekaterinakubrina.wordsen.model.UsersModel
 import ru.ekaterinakubrina.wordsen.model.WordsModel
 import ru.ekaterinakubrina.wordsen.view.SplashActivity
@@ -29,8 +33,9 @@ class NotificationNewWordReceiver : BroadcastReceiver() {
     override fun onReceive(context: Context, intent: Intent?) {
         FirebaseApp.initializeApp(context)
         if (FirebaseAuth.getInstance().currentUser != null) {
-            val wordsModel = WordsModel(context)
-            val usersModel = UsersModel(context)
+            val wordsModel = WordsModel(WordDaoImpl(context))
+            val usersModel = UsersModel(UserDaoImpl(context))
+            val dictionaryModel = DictionaryModel(DictionaryDaoImpl(context), wordsModel)
             val idUser: String = intent?.getSerializableExtra("ID_USER") as String
             val levelUser: Int = intent.getSerializableExtra("LEVEL_USER") as Int
 
@@ -40,13 +45,13 @@ class NotificationNewWordReceiver : BroadcastReceiver() {
             }
             val pendingIntent = PendingIntent.getActivity(context, 0, intent1, 0)
 
-            val lastDate = wordsModel.getLastDateAddedWord(idUser)
+            val lastDate = dictionaryModel.getLastDateAddedWord(idUser)
             if (lastDate != SimpleDateFormat("yyyyMMdd", Locale.ENGLISH).format(Date()).toInt()) {
-                var word = wordsModel.getWord(idUser, levelUser)
+                var word = dictionaryModel.getWord(idUser, levelUser)
                 var builder1: NotificationCompat.Builder? = null
                 if (word.wordId == 0) {
-                    usersModel.setLevel(idUser, levelUser + 1)
-                    word = wordsModel.getWord(idUser, levelUser + 1)
+                    usersModel.setLevelLocalAndFirebase(idUser, levelUser + 1)
+                    word = dictionaryModel.getWord(idUser, levelUser + 1)
                     builder1 = NotificationCompat.Builder(context, CHANNEL_ID)
                         .setSmallIcon(R.drawable.dog)
                         .setContentTitle("Новый уровень")
@@ -56,9 +61,9 @@ class NotificationNewWordReceiver : BroadcastReceiver() {
                         .setContentIntent(pendingIntent)
                         .setDefaults(Notification.DEFAULT_SOUND or Notification.DEFAULT_VIBRATE)
                 }
-                wordsModel.addWordToUser(idUser, word)
+                dictionaryModel.addWordToUser(idUser, word)
 
-                if (wordsModel.getCountNewWord(idUser)!! - 1 == 7) {
+                if (dictionaryModel.getCountNewWord(idUser)!! - 1 == 7) {
                     NotificationNewTest.showNotification(context)
                 }
 
@@ -92,7 +97,7 @@ class NotificationNewWordReceiver : BroadcastReceiver() {
                     notify(NOTIFICATION_ID, builder.build())
                 }
             } else {
-                val word = wordsModel.getWordByDate(
+                val word = dictionaryModel.getWordByDate(
                     idUser, SimpleDateFormat(
                         "yyyyMMdd",
                         Locale.ENGLISH

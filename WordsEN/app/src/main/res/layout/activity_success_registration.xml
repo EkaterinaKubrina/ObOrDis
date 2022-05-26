@@ -38,7 +38,7 @@
         tools:targetApi="m" />
 
     <Button
-        android:id="@+id/button2"
+        android:id="@+id/buttonBack"
         android:layout_width="207dp"
         android:layout_height="82dp"
         android:fontFamily="@font/tenor_sans"

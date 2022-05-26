@@ -6,10 +6,11 @@ import android.widget.Button
 import android.widget.RadioButton
 import androidx.appcompat.app.AppCompatActivity
 import ru.ekaterinakubrina.wordsen.R
+import ru.ekaterinakubrina.wordsen.contracts.TestContract
 import ru.ekaterinakubrina.wordsen.presenter.TestPresenter
 
-class TestActivity : AppCompatActivity(), TestContractView {
-    private val testPresenter = TestPresenter(this, this)
+open class TestActivity : AppCompatActivity(), TestContract.View {
+    private val testPresenter : TestContract.Presenter = TestPresenter(this, this)
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
