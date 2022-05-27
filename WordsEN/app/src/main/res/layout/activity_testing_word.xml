@@ -13,7 +13,7 @@
         android:layout_height="wrap_content"
         android:layout_marginTop="132dp"
         android:fontFamily="@font/tenor_sans"
-        android:text="Слово"
+        android:text="@string/test_word"
         android:textColor="@color/myfon"
         android:textSize="36sp"
         app:layout_constraintBottom_toTopOf="@+id/radioGroup"
@@ -42,13 +42,14 @@
             android:layout_marginBottom="10dp"
             android:buttonTint="@color/myfon"
             android:checked="false"
-            android:paddingLeft="10dp"
-            android:text="RadioButton"
+            android:paddingStart="10dp"
+            android:text="@string/radiobutton2"
             android:textColor="@color/myfon"
             android:textColorHighlight="@color/mypurpl"
             android:textColorHint="@color/dark"
             android:textColorLink="@color/mypurpl"
-            android:textSize="20sp" />
+            android:textSize="20sp"
+            tools:ignore="RtlSymmetry" />
 
         <RadioButton
             android:id="@+id/answer2"
@@ -57,13 +58,14 @@
             android:layout_height="wrap_content"
             android:layout_marginBottom="10dp"
             android:buttonTint="@color/myfon"
-            android:paddingLeft="10dp"
-            android:text="RadioButton"
+            android:paddingStart="10dp"
+            android:text="@string/radiobutton1"
             android:textColor="@color/myfon"
             android:textColorHighlight="@color/mypurpl"
             android:textColorHint="@color/dark"
             android:textColorLink="@color/mypurpl"
-            android:textSize="20sp" />
+            android:textSize="20sp"
+            tools:ignore="RtlSymmetry" />
 
         <RadioButton
             android:id="@+id/answer3"
@@ -72,13 +74,14 @@
             android:layout_height="wrap_content"
             android:layout_marginBottom="10dp"
             android:buttonTint="@color/myfon"
-            android:paddingLeft="10dp"
-            android:text="RadioButton"
+            android:paddingStart="10dp"
+            android:text="@string/radiobutton3"
             android:textColor="@color/myfon"
             android:textColorHighlight="@color/mypurpl"
             android:textColorHint="@color/dark"
             android:textColorLink="@color/mypurpl"
-            android:textSize="20sp" />
+            android:textSize="20sp"
+            tools:ignore="RtlSymmetry" />
 
         <RadioButton
             android:id="@+id/answer4"
@@ -87,13 +90,14 @@
             android:layout_height="wrap_content"
             android:layout_marginBottom="10dp"
             android:buttonTint="@color/myfon"
-            android:paddingLeft="10dp"
-            android:text="RadioButton"
+            android:paddingStart="10dp"
+            android:text="@string/radiobutton4"
             android:textColor="@color/myfon"
             android:textColorHighlight="@color/mypurpl"
             android:textColorHint="@color/dark1"
             android:textColorLink="@color/mypurpl"
-            android:textSize="20sp" />
+            android:textSize="20sp"
+            tools:ignore="RtlSymmetry" />
     </RadioGroup>
 
     <Button
@@ -105,7 +109,7 @@
         android:fontFamily="@font/tenor_sans"
         android:paddingLeft="30dp"
         android:paddingRight="30dp"
-        android:text="Ответить"
+        android:text="@string/to_answer"
         android:textColor="@color/myfon"
         android:textColorHighlight="@color/darkpurpl"
         android:textColorHint="@color/mypurpl"

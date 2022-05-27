@@ -13,7 +13,7 @@ import java.util.*
 
 open class DictionaryModel(
     private val dictionaryDao: DictionaryDao,
-    private val wordsModel: WordsModel
+    private val wordModel: WordModel
 ) {
 
     fun getWord(uid: String, lvl: Int): WordDto {
@@ -41,13 +41,13 @@ open class DictionaryModel(
 
     fun addUsersWord(word: WordDto, level: Int, uid: String): Boolean {
         try {
-            val id = wordsModel.addWord(word, level)
+            val id = wordModel.addWord(word, level)
             if (id != null && id.compareTo(-1) != 0) {
                 dictionaryDao.addWordToUser(uid, word, MyDbWordsEN.Dictionary.STUDIED)
                 return true
             }
         } catch (e: SQLiteConstraintException) {
-            val id1 = wordsModel.getIdByWord(word.word)
+            val id1 = wordModel.getIdByWord(word.word)
             if (id1.compareTo(-1) != 0) {
                 dictionaryDao.addWordToUser(uid, word, MyDbWordsEN.Dictionary.STUDIED)
                 return true

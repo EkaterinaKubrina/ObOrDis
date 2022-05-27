@@ -3,13 +3,11 @@ package ru.ekaterinakubrina.wordsen.daoimpl
 import android.content.Context
 import ru.ekaterinakubrina.wordsen.dao.DictionaryDao
 import ru.ekaterinakubrina.wordsen.data.MyDbManager
-import ru.ekaterinakubrina.wordsen.data.MyDbWordsEN
 import ru.ekaterinakubrina.wordsen.dto.WordDto
 import java.text.SimpleDateFormat
 import java.util.*
 
-class DictionaryDaoImpl(context: Context) : DictionaryDao {
-    private val myDbManager = MyDbManager(context)
+class DictionaryDaoImpl(private val myDbManager: MyDbManager) : DictionaryDao {
 
     override fun getLastDateAddedWord(uid: String): Int? {
         myDbManager.openDb()

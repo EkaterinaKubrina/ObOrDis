@@ -20,7 +20,7 @@ import java.util.*
 @RunWith(AndroidJUnit4::class)
 @Config(sdk = [Build.VERSION_CODES.Q])
 class DictionaryModelTest : TestCase() {
-    private val wordsModel = WordsModel(WordDaoImpl(ApplicationProvider.getApplicationContext()))
+    private val wordsModel = WordModel(WordDaoImpl(ApplicationProvider.getApplicationContext()))
     private val dictionaryModel =
         DictionaryModel(DictionaryDaoImpl(ApplicationProvider.getApplicationContext()), wordsModel)
     private val dictionaryModelSpy = Mockito.spy(dictionaryModel)

@@ -16,4 +16,10 @@ interface DictionaryContract {
         fun getDictionary(uid: String)
         fun addUsersWord(uid: String, word: String, translate: String, transcription: String)
     }
+
+    interface Model {
+        fun getDictionary(uid: String)
+        fun addUsersWord(uid: String, word: String, translate: String, transcription: String)
+        fun getLevelUser(uid: String)
+    }
 }

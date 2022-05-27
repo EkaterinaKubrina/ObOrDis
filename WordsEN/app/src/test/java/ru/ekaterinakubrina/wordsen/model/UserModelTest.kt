@@ -14,8 +14,8 @@ import ru.ekaterinakubrina.wordsen.data.MyDbWordsEN
 
 @RunWith(AndroidJUnit4::class)
 @Config(sdk = [Build.VERSION_CODES.Q])
-class UsersModelTest : TestCase() {
-    private val usersModel = UsersModel(UserDaoImpl(ApplicationProvider.getApplicationContext()))
+class UserModelTest : TestCase() {
+    private val usersModel = UserModel(UserDaoImpl(ApplicationProvider.getApplicationContext()))
 
     @Test
     fun getUserByPasswordAndEmail() {

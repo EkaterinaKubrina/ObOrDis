@@ -9,13 +9,32 @@ import org.junit.runner.RunWith
 import org.mockito.Mockito
 import org.mockito.kotlin.anyOrNull
 import org.robolectric.annotation.Config
-import ru.ekaterinakubrina.wordsen.view.MainEntryActivity
+import ru.ekaterinakubrina.wordsen.contracts.MainEntryContract
+import ru.ekaterinakubrina.wordsen.dto.WordDto
 
 
 @RunWith(AndroidJUnit4::class)
 @Config(sdk = [Build.VERSION_CODES.Q])
 class MainEntryPresenterTest : TestCase() {
-    private var mainEntryActivity = Mockito.mock(MainEntryActivity::class.java)
+    open class MainEntryActivityMock : MainEntryContract.View {
+        override fun setWord(newWordDto: WordDto) {}
+
+        override fun setLevel(levelUser: Int) {}
+
+        override fun getName(): String {
+            return ""
+        }
+
+        override fun setName(newNameUser: String) {}
+
+        override fun newLevel() {}
+
+        override fun restartActivity(id: String, level: Int) {}
+
+        override fun initTextToSpeech() {}
+    }
+
+    private var mainEntryActivity = Mockito.mock(MainEntryActivityMock::class.java)
     private var mainEntryPresenter = MainEntryPresenter(
         ApplicationProvider.getApplicationContext(),
         mainEntryActivity
@@ -23,9 +42,7 @@ class MainEntryPresenterTest : TestCase() {
 
     @Test
     fun testCreated() {
-        val presenter =
-            MainEntryPresenter(ApplicationProvider.getApplicationContext(), mainEntryActivity)
-        assertNotNull(presenter)
+        assertNotNull(mainEntryPresenter)
     }
 
     @Test

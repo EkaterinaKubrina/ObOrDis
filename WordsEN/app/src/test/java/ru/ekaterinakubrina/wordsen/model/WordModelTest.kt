@@ -7,18 +7,16 @@ import junit.framework.TestCase
 
 import org.junit.Test
 
-import org.junit.Assert.*
 import org.junit.runner.RunWith
 import org.robolectric.annotation.Config
 import ru.ekaterinakubrina.wordsen.daoimpl.WordDaoImpl
 import ru.ekaterinakubrina.wordsen.data.MyDbWordsEN
 import ru.ekaterinakubrina.wordsen.dto.WordDto
-import java.util.ArrayList
 
 @RunWith(AndroidJUnit4::class)
 @Config(sdk = [Build.VERSION_CODES.Q])
-class WordsModelTest : TestCase() {
-    private val wordsModel = WordsModel(WordDaoImpl(ApplicationProvider.getApplicationContext()))
+class WordModelTest : TestCase() {
+    private val wordsModel = WordModel(WordDaoImpl(ApplicationProvider.getApplicationContext()))
 
     @Test
     fun getTranslateForTest() {

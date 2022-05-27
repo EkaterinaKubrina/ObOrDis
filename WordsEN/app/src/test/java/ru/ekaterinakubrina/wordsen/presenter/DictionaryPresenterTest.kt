@@ -9,13 +9,26 @@ import org.junit.runner.RunWith
 import org.mockito.Mockito.mock
 import org.mockito.Mockito.verify
 import org.robolectric.annotation.Config
-import ru.ekaterinakubrina.wordsen.view.DictionaryActivity
+import ru.ekaterinakubrina.wordsen.contracts.DictionaryContract
 
 @RunWith(AndroidJUnit4::class)
 @Config(sdk = [Q])
 internal class DictionaryPresenterTest : TestCase() {
+    open class DictionaryActivityMock : DictionaryContract.View {
+        override fun showWords(list: java.util.ArrayList<String>) {}
 
-    private var dictionaryActivity = mock(DictionaryActivity::class.java)
+        override fun showText(text: String) {}
+
+        override fun underlineRedWord() {}
+
+        override fun underlineRedTranslate() {}
+
+        override fun clearTextView() {}
+
+        override fun removeUnderline() {}
+    }
+
+    private var dictionaryActivity = mock(DictionaryActivityMock::class.java)
     private var dictionaryPresenter = DictionaryPresenter(
         ApplicationProvider.getApplicationContext(),
         dictionaryActivity
@@ -23,9 +36,7 @@ internal class DictionaryPresenterTest : TestCase() {
 
     @Test
     fun testCreated() {
-        val presenter =
-            DictionaryPresenter(ApplicationProvider.getApplicationContext(), dictionaryActivity)
-        assertNotNull(presenter)
+        assertNotNull(dictionaryPresenter)
     }
 
     @Test

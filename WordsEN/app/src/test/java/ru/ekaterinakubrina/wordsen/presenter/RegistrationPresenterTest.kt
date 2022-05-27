@@ -8,12 +8,26 @@ import org.junit.Test
 import org.junit.runner.RunWith
 import org.mockito.Mockito
 import org.robolectric.annotation.Config
-import ru.ekaterinakubrina.wordsen.view.RegistrationActivity
+import ru.ekaterinakubrina.wordsen.contracts.RegistrationContract
 
 @RunWith(AndroidJUnit4::class)
 @Config(sdk = [Build.VERSION_CODES.Q])
 class RegistrationPresenterTest : TestCase() {
-    private var registrationActivity = Mockito.mock(RegistrationActivity::class.java)
+    open class RegistrationActivityMock : RegistrationContract.View {
+        override fun setTextError(text: String) {}
+
+        override fun underlineRedName() {}
+
+        override fun underlineRedPassword() {}
+
+        override fun underlineRedRepeatPassword() {}
+
+        override fun underlineRedEmail() {}
+
+        override fun successRegistration() {}
+    }
+
+    private var registrationActivity = Mockito.mock(RegistrationActivityMock::class.java)
     private var registrationPresenter = RegistrationPresenter(
         ApplicationProvider.getApplicationContext(),
         registrationActivity
@@ -21,9 +35,7 @@ class RegistrationPresenterTest : TestCase() {
 
     @Test
     fun testCreated() {
-        val presenter =
-            RegistrationPresenter(ApplicationProvider.getApplicationContext(), registrationActivity)
-        assertNotNull(presenter)
+        assertNotNull(registrationPresenter)
     }
 
     @Test

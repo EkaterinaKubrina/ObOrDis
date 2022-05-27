@@ -4,20 +4,21 @@ import android.os.Build
 import androidx.test.core.app.ApplicationProvider
 import androidx.test.ext.junit.runners.AndroidJUnit4
 import junit.framework.TestCase
-
 import org.junit.Test
-
-import org.junit.Assert.*
 import org.junit.runner.RunWith
 import org.mockito.Mockito
 import org.robolectric.annotation.Config
-import ru.ekaterinakubrina.wordsen.view.RegistrationActivity
-import ru.ekaterinakubrina.wordsen.view.ResultTestActivity
+import ru.ekaterinakubrina.wordsen.contracts.ResultTestContract
 
 @RunWith(AndroidJUnit4::class)
 @Config(sdk = [Build.VERSION_CODES.Q])
 class ResultTestPresenterTest : TestCase() {
-    private var resultTestActivity = Mockito.mock(ResultTestActivity::class.java)
+    open class ResultTestActivityMock : ResultTestContract.View {
+        override fun showResult(str: String) {
+        }
+    }
+
+    private var resultTestActivity = Mockito.mock(ResultTestActivityMock::class.java)
     private var resultTestPresenter = ResultTestPresenter(
         ApplicationProvider.getApplicationContext(),
         resultTestActivity
@@ -25,9 +26,7 @@ class ResultTestPresenterTest : TestCase() {
 
     @Test
     fun testCreated() {
-        val presenter =
-            ResultTestPresenter(ApplicationProvider.getApplicationContext(), resultTestActivity)
-        assertNotNull(presenter)
+        assertNotNull(resultTestPresenter)
     }
 
     @Test
