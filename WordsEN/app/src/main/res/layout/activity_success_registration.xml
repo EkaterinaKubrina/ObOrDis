@@ -44,6 +44,7 @@
         android:fontFamily="@font/tenor_sans"
         android:text="@string/let_s_go"
         android:textAppearance="@style/TextAppearance.AppCompat.Large"
+        android:textSize="22sp"
         app:backgroundTint="@color/mypurpl"
         app:cornerRadius="@android:dimen/notification_large_icon_height"
         app:layout_constraintBottom_toBottomOf="parent"

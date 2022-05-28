@@ -6,7 +6,7 @@
     android:layout_height="match_parent"
     android:background="@drawable/fon2"
     android:fitsSystemWindows="true"
-    tools:context=".view.TestActivity">
+    tools:context=".mvp.view.TestActivity">
 
     <ScrollView
         android:layout_width="match_parent"
@@ -70,7 +70,8 @@
                     android:fontFamily="@font/tenor_sans"
                     android:gravity="center|left"
                     android:text="@string/notes"
-                    android:textSize="14sp" />
+                    android:textSize="14sp"
+                    tools:ignore="RtlHardcoded" />
 
             </RelativeLayout>
 

@@ -1,6 +1,5 @@
 package ru.ekaterinakubrina.wordsen.daoimpl
 
-import android.content.Context
 import ru.ekaterinakubrina.wordsen.dao.DictionaryDao
 import ru.ekaterinakubrina.wordsen.data.MyDbManager
 import ru.ekaterinakubrina.wordsen.dto.WordDto
@@ -40,6 +39,7 @@ class DictionaryDaoImpl(private val myDbManager: MyDbManager) : DictionaryDao {
         myDbManager.closeDb()
         return wordDto
     }
+
     override fun addWordToUserFromFB(uid: String, idWord: Int, date: Int, status: Int) {
         myDbManager.openDb()
         myDbManager.insertWordToUser(uid, idWord, date, status)

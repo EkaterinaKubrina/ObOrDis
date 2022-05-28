@@ -5,7 +5,7 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:background="@drawable/purple_fon"
-    tools:context=".view.ResultTestActivity">
+    tools:context=".mvp.view.ResultTestActivity">
 
     <Button
         android:id="@+id/buttonOk"
@@ -15,16 +15,17 @@
         android:layout_marginRight="120dp"
         android:layout_marginBottom="100dp"
         android:fontFamily="@font/tenor_sans"
-        android:text="Ok"
+        android:text="@string/ok"
         android:textAppearance="@style/TextAppearance.AppCompat.Display1"
         android:textColor="@color/myfon"
-        android:textSize="30dp"
+        android:textSize="26sp"
         app:backgroundTint="@color/mygold"
         app:cornerRadius="@android:dimen/notification_large_icon_height"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/error" />
+        app:layout_constraintTop_toBottomOf="@+id/error"
+        tools:ignore="UnknownIdInLayout" />
 
     <ImageView
         android:id="@+id/imageView16"

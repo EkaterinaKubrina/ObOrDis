@@ -5,7 +5,7 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:background="@drawable/fffon"
-    tools:context=".view.SelectTestActivity">
+    tools:context=".mvp.view.SelectTestActivity">
 
     <androidx.cardview.widget.CardView
         android:id="@+id/cardView2"
@@ -130,7 +130,7 @@
         android:layout_marginLeft="20dp"
         android:layout_marginRight="20dp"
         android:fontFamily="@font/tenor_sans"
-        android:text="* Тесты могут быть недоступны при недостаточном колличестве слов в словаре"
+        android:text="@string/notice_dictionary"
         android:textColor="@color/dark1"
         android:textSize="12sp"
         app:layout_constraintEnd_toEndOf="parent"

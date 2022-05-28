@@ -6,7 +6,7 @@
     android:layout_height="match_parent"
     android:background="@color/myfon"
     android:fitsSystemWindows="true"
-    tools:context=".view.DictionaryActivity">
+    tools:context=".mvp.view.DictionaryActivity">
 
     <ScrollView
         android:id="@+id/scroll1"

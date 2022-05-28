@@ -6,7 +6,7 @@
     android:layout_height="match_parent"
     android:background="@drawable/fonblure2"
     android:fontFamily="@font/tenor_sans"
-    tools:context=".view.MainActivity">
+    tools:context=".mvp.view.MainActivity">
 
     <ImageView
         android:id="@+id/imageView"
@@ -29,7 +29,7 @@
         android:fontFamily="@font/tenor_sans"
         android:text="@string/entry"
         android:textAppearance="@style/TextAppearance.AppCompat.Display1"
-        android:textSize="30sp"
+        android:textSize="24sp"
         app:backgroundTint="@color/black"
         app:cornerRadius="@android:dimen/notification_large_icon_height"
         app:iconTint="@color/myfon"
@@ -48,7 +48,7 @@
         android:fontFamily="@font/tenor_sans"
         android:text="@string/Registration"
         android:textAppearance="@style/TextAppearance.AppCompat.Display1"
-        android:textSize="30sp"
+        android:textSize="24sp"
         app:backgroundTint="@color/mypurpl"
         app:cornerRadius="@android:dimen/notification_large_icon_height"
         app:iconTint="@color/myfon"

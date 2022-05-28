@@ -22,19 +22,19 @@
             android:process=":service"  />
 
         <activity
-            android:name=".view.ResultTestActivity"
+            android:name="ru.ekaterinakubrina.wordsen.mvp.view.ResultTestActivity"
             android:screenOrientation="portrait" />
         <activity
-            android:name=".view.TestingWordActivity"
+            android:name="ru.ekaterinakubrina.wordsen.mvp.view.TestingWordActivity"
             android:screenOrientation="portrait" />
         <activity
-            android:name=".view.SelectTestActivity"
+            android:name="ru.ekaterinakubrina.wordsen.mvp.view.SelectTestActivity"
             android:screenOrientation="portrait" />
         <activity
-            android:name=".view.ForgotPasswordActivity"
+            android:name="ru.ekaterinakubrina.wordsen.mvp.view.ForgotPasswordActivity"
             android:screenOrientation="portrait" />
         <activity
-            android:name=".view.SplashActivity"
+            android:name="ru.ekaterinakubrina.wordsen.mvp.view.SplashActivity"
             android:screenOrientation="portrait"
             android:theme="@style/SplashTheme">
             <intent-filter>
@@ -44,36 +44,36 @@
             </intent-filter>
         </activity>
         <activity
-            android:name=".view.MainActivity"
+            android:name="ru.ekaterinakubrina.wordsen.mvp.view.MainActivity"
             android:screenOrientation="portrait" />
         <activity
-            android:name=".view.DictionaryActivity"
+            android:name="ru.ekaterinakubrina.wordsen.mvp.view.DictionaryActivity"
             android:label="@string/title_activity_dictionary"
             android:screenOrientation="portrait"
             android:theme="@style/Theme.WordsEN.NoActionBar" />
         <activity
-            android:name=".view.MainEntryActivity"
+            android:name="ru.ekaterinakubrina.wordsen.mvp.view.MainEntryActivity"
             android:screenOrientation="portrait" />
         <activity
-            android:name=".view.TestActivity"
+            android:name="ru.ekaterinakubrina.wordsen.mvp.view.TestActivity"
             android:allowBackup="false"
             android:label="@string/title_activity_test"
             android:screenOrientation="portrait"
             android:theme="@style/Theme.WordsEN.NoActionBar" />
         <activity
-            android:name=".view.SelectLevelActivity"
+            android:name="ru.ekaterinakubrina.wordsen.mvp.view.SelectLevelActivity"
             android:screenOrientation="portrait" />
         <activity
-            android:name=".view.EntryActivity"
+            android:name="ru.ekaterinakubrina.wordsen.mvp.view.EntryActivity"
             android:screenOrientation="portrait" />
         <activity
-            android:name=".view.RegistrationActivity"
+            android:name="ru.ekaterinakubrina.wordsen.mvp.view.RegistrationActivity"
             android:screenOrientation="portrait" />
         <activity
-            android:name=".view.SuccessRegistrationActivity"
+            android:name="ru.ekaterinakubrina.wordsen.mvp.view.SuccessRegistrationActivity"
             android:screenOrientation="portrait" />
         <activity
-            android:name=".view.FirstInActivity"
+            android:name="ru.ekaterinakubrina.wordsen.mvp.view.FirstInActivity"
             android:screenOrientation="portrait" />
 
         <receiver

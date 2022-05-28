@@ -10,7 +10,7 @@ import android.os.Build
 import androidx.core.app.NotificationCompat
 import androidx.core.app.NotificationManagerCompat
 import ru.ekaterinakubrina.wordsen.R
-import ru.ekaterinakubrina.wordsen.view.SplashActivity
+import ru.ekaterinakubrina.wordsen.mvp.view.SplashActivity
 
 class NotificationNewTest {
 

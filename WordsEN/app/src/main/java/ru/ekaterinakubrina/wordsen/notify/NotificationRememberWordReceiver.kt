@@ -14,11 +14,8 @@ import androidx.core.app.NotificationManagerCompat
 import com.google.firebase.FirebaseApp
 import com.google.firebase.auth.FirebaseAuth
 import ru.ekaterinakubrina.wordsen.R
-import ru.ekaterinakubrina.wordsen.daoimpl.DictionaryDaoImpl
-import ru.ekaterinakubrina.wordsen.daoimpl.WordDaoImpl
-import ru.ekaterinakubrina.wordsen.model.DictionaryModel
-import ru.ekaterinakubrina.wordsen.model.WordModel
-import ru.ekaterinakubrina.wordsen.view.SplashActivity
+import ru.ekaterinakubrina.wordsen.mvp.model.Repository
+import ru.ekaterinakubrina.wordsen.mvp.view.SplashActivity
 import java.text.SimpleDateFormat
 import java.util.*
 
@@ -30,8 +27,7 @@ class NotificationRememberWordReceiver : BroadcastReceiver() {
     override fun onReceive(context: Context, intent: Intent?) {
         FirebaseApp.initializeApp(context)
         if (FirebaseAuth.getInstance().currentUser != null) {
-            val wordsModel = WordModel(WordDaoImpl(context))
-            val dictionaryModel = DictionaryModel(DictionaryDaoImpl(context), wordsModel)
+            val repository: Repository = Repository.getRepository(context)
             val idUser: String = intent?.getSerializableExtra("ID_USER") as String
 
             val intent1 = Intent(context, SplashActivity::class.java)
@@ -41,7 +37,7 @@ class NotificationRememberWordReceiver : BroadcastReceiver() {
             val pendingIntent = PendingIntent.getActivity(context, 0, intent1, 0)
 
             val currentDate = SimpleDateFormat("yyyyMMdd", Locale.ENGLISH).format(Date()).toInt()
-            val word = dictionaryModel.getWordByDate(idUser, currentDate)
+            val word = repository.getWordByDate(idUser, currentDate)
 
             val builder = NotificationCompat.Builder(context, CHANNEL_ID)
                 .setSmallIcon(R.drawable.dog)
