@@ -1,14 +1,12 @@
 package ru.ekaterinakubrina.wordsen.daoimpl
 
-import android.content.Context
 import ru.ekaterinakubrina.wordsen.dao.WordDao
 import ru.ekaterinakubrina.wordsen.data.MyDbManager
 import ru.ekaterinakubrina.wordsen.dto.WordDto
 import java.util.*
 
 
-class WordDaoImpl(context: Context) : WordDao {
-    private val myDbManager = MyDbManager(context)
+class WordDaoImpl(private val myDbManager: MyDbManager) : WordDao {
 
     override fun getIdByWord(word: String): Int {
         myDbManager.openDb()

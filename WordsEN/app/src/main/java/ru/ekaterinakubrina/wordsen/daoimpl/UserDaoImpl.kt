@@ -1,12 +1,10 @@
 package ru.ekaterinakubrina.wordsen.daoimpl
 
-import android.content.Context
 import ru.ekaterinakubrina.wordsen.dao.UserDao
 import ru.ekaterinakubrina.wordsen.data.MyDbManager
 import ru.ekaterinakubrina.wordsen.dto.UserDto
 
-class UserDaoImpl(context: Context) : UserDao {
-    private val myDbManager = MyDbManager(context)
+class UserDaoImpl(private val myDbManager: MyDbManager) : UserDao {
 
     override fun getUser(email: String, password: String): UserDto? {
         myDbManager.openDb()

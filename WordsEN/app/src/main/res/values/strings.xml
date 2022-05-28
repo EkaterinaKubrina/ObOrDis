@@ -86,4 +86,14 @@
     <string name="word">Слово</string>
     <string name="close">close</string>
     <string name="transcription">Транскрипция</string>
+    <string name="send_letter_with_password">Отправить письмо</string>
+    <string name="description_send_password">Введите email, указанный при регистрации и мы направим на него письмо для восстановления пароля</string>
+    <string name="test_word">Слово</string>
+    <string name="radiobutton1">RadioButton</string>
+    <string name="radiobutton2">RadioButton</string>
+    <string name="radiobutton3">RadioButton</string>
+    <string name="radiobutton4">RadioButton</string>
+    <string name="to_answer">Ответить</string>
+    <string name="ok">Ok</string>
+    <string name="notice_dictionary">* Тесты могут быть недоступны при недостаточном колличестве слов в словаре</string>
 </resources>
