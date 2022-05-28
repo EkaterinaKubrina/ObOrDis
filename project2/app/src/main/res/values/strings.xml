@@ -1,7 +1,0 @@
-<resources>
-    <string name="app_name">My Application 2</string>
-    <string name="String">Поздороваться</string>
-    <string name="string">Считаем клики</string>
-    <string name="Поздороваться">Поздороваться</string>
-    <string name="Считаем_клики">Считаем клики</string>
-</resources>
