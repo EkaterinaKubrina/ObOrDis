@@ -94,6 +94,19 @@
     <string name="radiobutton3">RadioButton</string>
     <string name="radiobutton4">RadioButton</string>
     <string name="to_answer">Ответить</string>
-    <string name="ok">Ok</string>
+    <string name="ok">OK</string>
     <string name="notice_dictionary">* Тесты могут быть недоступны при недостаточном колличестве слов в словаре</string>
+    <string name="select_language">Для продолжения выбери язык из списка:</string>
+    <string name="next">Далее</string>
+    <string name="set_level">Изменить уровень</string>
+    <string name="A0">A0</string>
+    <string name="a1">A1</string>
+    <string name="a2">A2</string>
+    <string name="b1">B1</string>
+    <string name="b2">B2</string>
+    <string name="c1">C1</string>
+    <string name="exit">Выйти из аккаунта</string>
+    <string name="set_language">Изменить язык</string>
+    <string name="eng">английский</string>
+    <string name="frch">французский</string>
 </resources>

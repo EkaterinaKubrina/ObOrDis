@@ -3,38 +3,50 @@
 
     <group android:id="@+id/menugroup1">
         <item
+            android:id="@+id/menu3"
+            android:title="@string/set_language" >
+            <menu >
+                <item
+                    android:id="@+id/english"
+                    android:title="@string/eng" />
+                <item
+                    android:id="@+id/french"
+                    android:title="@string/frch" />
+            </menu>
+        </item>
+        <item
             android:id="@+id/menu1"
-            android:title="Изменить уровень">
+            android:title="@string/set_level">
             <menu>
 
                 <item
                     android:id="@+id/A0"
-                    android:title="A0" />
+                    android:title="@string/A0" />
                 <item
                     android:id="@+id/A1"
-                    android:title="A1" />
+                    android:title="@string/a1" />
 
                 <item
                     android:id="@+id/A2"
-                    android:title="A2" />
+                    android:title="@string/a2" />
 
                 <item
                     android:id="@+id/B1"
-                    android:title="B1" />
+                    android:title="@string/b1" />
 
                 <item
                     android:id="@+id/B2"
-                    android:title="B2" />
+                    android:title="@string/b2" />
 
                 <item
                     android:id="@+id/C1"
-                    android:title="C1" />
+                    android:title="@string/c1" />
             </menu>
         </item>
         <item
             android:id="@+id/menu2"
             android:icon="@mipmap/ic_launcher"
-            android:title="Выйти из аккаунта" />
+            android:title="@string/exit" />
     </group>
 
 

@@ -1,165 +1,201 @@
 <?xml version="1.0" encoding="utf-8"?>
 <words>
-    <record word="to be" translate="быть" transcription="[tə biː]" level="1" />
-    <record word="to do" translate="делать" transcription="[du]" level="1" />
-    <record word="to feel" translate="чувствовать" transcription="[fiːl]" level="1" />
-    <record word="to see" translate="видеть" transcription="[siː]"  level="1" />
-    <record word="to hear" translate="слышать" transcription="[hɪər]"  level="1" />
-    <record word="air" translate="воздух" transcription="[ən eə(r)]"  level="1" />
-    <record word="wind" translate="ветер" transcription="[wɪnd]"  level="1" />
-    <record word="water" translate="вода" transcription="[ˈwɔːtə(r)]"  level="1" />
-    <record word="tree" translate="дерево" transcription="[triː]"  level="1" />
-    <record word="sea" translate="море" transcription="[siː]"  level="1" />
-    <record word="rock" translate="скала" transcription="[rɒk]"  level="1" />
-    <record word="life" translate="жизнь" transcription="[laɪf]"  level="1" />
-    <record word="country" translate="страна" transcription="[ˈkʌntri]"  level="1" />
-    <record word="house" translate="дом" transcription="[haʊs]"  level="1" />
-    <record word="animal" translate="животное" transcription="[ˈænɪml]"  level="1" />
-    <record word="world" translate="мир" transcription="[wɜːld]"  level="1" />
-    <record word="mother" translate="мама" transcription="[ˈmʌðə(r)]"  level="1" />
-    <record word="father" translate="папа" transcription="[ˈfɑːðə(r)]"  level="1" />
-    <record word="son" translate="сын" transcription="[sʌn]"  level="1" />
-    <record word="baby" translate="малыш" transcription="[ˈbeɪbi]"  level="1" />
-    <record word="family" translate="семья" transcription="[ˈfæməli]"  level="1" />
-    <record word="grand mother" translate="бабушка" transcription="[ɡrænd ˈfæməli]"  level="1" />
-    <record word="grand father" translate="дедушка" transcription="[ɡrænd [ˈfɑːðə(r)]"  level="1" />
-    <record word="сhildren" translate="дети" transcription="[ˈtʃɪl.drən]"  level="1" />
-    <record word="love" translate="любовь" transcription="[lʌv]"  level="1" />
-    <record word="joy" translate="радость" transcription="[dʒɔɪ]"  level="1" />
-    <record word="man" translate="мужчина" transcription="[mæn]"  level="1" />
-    <record word="woman" translate="женщина" transcription="[ˈwʊmən]"  level="1" />
-    <record word="sister" translate="сестра" transcription="[ˈsɪstə(r)]"  level="1" />
-    <record word="brother" translate="брат" transcription="[ˈbrʌðə(r)]"  level="1" />
-    <record word="relatives" translate="родственники" transcription="[ˈrel.ə.tɪv]"  level="1" />
-    <record word="friend" translate="друг" transcription="[frend]"  level="1" />
-    <record word="people" translate="люди" transcription="[ˈpiːpl]"  level="1" />
-    <record word="happiness" translate="счастье" transcription="[ˈhæp.i.nəs]"  level="1" />
+    <record word="to be" translate="быть" transcription="[tə biː]" level="1" language="0" />
+    <record word="to do" translate="делать" transcription="[du]" level="1" language="0" />
+    <record word="to feel" translate="чувствовать" transcription="[fiːl]" level="1" language="0" />
+    <record word="to see" translate="видеть" transcription="[siː]"  level="1" language="0" />
+    <record word="to hear" translate="слышать" transcription="[hɪər]"  level="1" language="0" />
+    <record word="air" translate="воздух" transcription="[ən eə(r)]"  level="1" language="0" />
+    <record word="wind" translate="ветер" transcription="[wɪnd]"  level="1" language="0" />
+    <record word="water" translate="вода" transcription="[ˈwɔːtə(r)]"  level="1" language="0" />
+    <record word="tree" translate="дерево" transcription="[triː]"  level="1" language="0" />
+    <record word="sea" translate="море" transcription="[siː]"  level="1" language="0" />
+    <record word="rock" translate="скала" transcription="[rɒk]"  level="1" language="0" />
+    <record word="life" translate="жизнь" transcription="[laɪf]"  level="1" language="0" />
+    <record word="country" translate="страна" transcription="[ˈkʌntri]"  level="1" language="0" />
+    <record word="house" translate="дом" transcription="[haʊs]"  level="1" language="0" />
+    <record word="animal" translate="животное" transcription="[ˈænɪml]"  level="1" language="0" />
+    <record word="world" translate="мир" transcription="[wɜːld]"  level="1" language="0" />
+    <record word="mother" translate="мама" transcription="[ˈmʌðə(r)]"  level="1" language="0" />
+    <record word="father" translate="папа" transcription="[ˈfɑːðə(r)]"  level="1" language="0" />
+    <record word="son" translate="сын" transcription="[sʌn]"  level="1" language="0" />
+    <record word="baby" translate="малыш" transcription="[ˈbeɪbi]"  level="1" language="0" />
+    <record word="family" translate="семья" transcription="[ˈfæməli]"  level="1" language="0" />
+    <record word="grand mother" translate="бабушка" transcription="[ɡrænd ˈfæməli]"  level="1" language="0" />
+    <record word="grand father" translate="дедушка" transcription="[ɡrænd [ˈfɑːðə(r)]"  level="1" language="0" />
+    <record word="сhildren" translate="дети" transcription="[ˈtʃɪl.drən]"  level="1" language="0" />
+    <record word="love" translate="любовь" transcription="[lʌv]"  level="1" language="0" />
+    <record word="joy" translate="радость" transcription="[dʒɔɪ]"  level="1" language="0" />
+    <record word="man" translate="мужчина" transcription="[mæn]"  level="1" language="0" />
+    <record word="woman" translate="женщина" transcription="[ˈwʊmən]"  level="1" language="0" />
+    <record word="sister" translate="сестра" transcription="[ˈsɪstə(r)]"  level="1" language="0" />
+    <record word="brother" translate="брат" transcription="[ˈbrʌðə(r)]"  level="1" language="0" />
+    <record word="relatives" translate="родственники" transcription="[ˈrel.ə.tɪv]"  level="1" language="0" />
+    <record word="friend" translate="друг" transcription="[frend]"  level="1" language="0" />
+    <record word="people" translate="люди" transcription="[ˈpiːpl]"  level="1" language="0" />
+    <record word="happiness" translate="счастье" transcription="[ˈhæp.i.nəs]"  level="1" language="0" />
 
-    <record word="to appear" translate="появляться" transcription="[əˈpɪə]"  level="2" />
-    <record word="to cancel" translate="отменять" transcription="[ˈkænsəl]"  level="2" />
-    <record word="to bite" translate="кусать, укусить" transcription="[baɪt]"  level="2" />
-    <record word="to regret" translate="сожалеть" transcription="[rɪˈgrɛt]"  level="2" />
-    <record word="to blow" translate="дуть (о ветре), развеять, раздувать" transcription="[bləʊ]"  level="2" />
-    <record word="to compose" translate="составлять" transcription="[kəmˈpəʊz]"  level="2" />
-    <record word="to congratulate" translate="поздравлять" transcription="[kənˈgrætjʊleɪt]"  level="2" />
-    <record word="activity" translate="деятельность" transcription="[ækˈtɪvɪti]"  level="2" />
-    <record word="amount" translate="сумма, колличество" transcription="[əˈmaʊnt]"  level="2" />
-    <record word="author" translate="автор" transcription="[ˈɔːθə]"  level="2" />
-    <record word="character" translate="характер" transcription="[ˈkærɪktə]"  level="2" />
-    <record word="dictionary" translate="словарь" transcription="[ˈdɪkʃ(ə)n(ə)ri]	"  level="2" />
-    <record word="event" translate="событие" transcription="[ɪˈvɛnt]"  level="2" />
-    <record word="guess" translate="предположение, догадка" transcription="[gɛs]"  level="2" />
-    <record word="dashboard" translate="панель управления" transcription="[ˈdæʃbɔːd]"  level="2" />
-    <record word="trouble" translate="проблема" transcription="[ˈtrʌbl]"  level="2" />
-    <record word="cartoon" translate="мультфильм" transcription="[kɑːˈtuːn]"  level="2" />
-    <record word="movie" translate="фильм" transcription="[ˈmuːvi]"  level="2" />
-    <record word="circus" translate="цирк" transcription="[ˈsɜːkəs]"  level="2" />
-    <record word="composer" translate="композитор" transcription="[kəmˈpəʊzə]"  level="2" />
-    <record word="dream" translate="мечта" transcription="[driːm]"  level="2" />
-    <record word="daily routine" translate="ежедневная рутина" transcription="[ˈdeɪli ruːˈtiːn]"  level="2" />
-    <record word="horror" translate="ужасы" transcription="[ˈhɒrə]"  level="2" />
-    <record word="laughter" translate="смех" transcription="[ˈlɑːftə]"  level="2" />
-    <record word="novel" translate="роман" transcription="[ˈnɒvəl]"  level="2" />
-    <record word="story" translate="история" transcription="[ˈstɔːri]"  level="2" />
-    <record word="thought" translate="мысль" transcription="[θɔːt]"  level="2" />
-    <record word="adventure" translate="приключение" transcription="[ədˈvɛnʧə]"  level="2" />
-    <record word="affair" translate="страх" transcription="[əˈfeə]"  level="2" />
-    <record word="anniversary" translate="дело, интрига" transcription="[ænɪˈvɜːsəri]	"  level="2" />
-    <record word="entertainment" translate="развлечение" transcription="[ɛntəˈteɪnmənt]"  level="2" />
-    <record word="amusement" translate="веселье" transcription="[əˈmjuːzmənt]"  level="2" />
-    <record word="influence	" translate="влияние" transcription="[ˈɪnflʊəns]"  level="2" />
-    <record word="attraction" translate="достопримечательность, аттракцион" transcription="[əˈtrækʃ(ə)n]"  level="2" />
-    <record word="swimming pool" translate="бассейн" transcription="[ˈswɪmɪŋ puːl]"  level="2" />
+    <record word="to appear" translate="появляться" transcription="[əˈpɪə]"  level="2" language="0" />
+    <record word="to cancel" translate="отменять" transcription="[ˈkænsəl]"  level="2" language="0" />
+    <record word="to bite" translate="кусать, укусить" transcription="[baɪt]"  level="2" language="0" />
+    <record word="to regret" translate="сожалеть" transcription="[rɪˈgrɛt]"  level="2" language="0" />
+    <record word="to blow" translate="дуть (о ветре), развеять, раздувать" transcription="[bləʊ]"  level="2" language="0" />
+    <record word="to compose" translate="составлять" transcription="[kəmˈpəʊz]"  level="2" language="0" />
+    <record word="to congratulate" translate="поздравлять" transcription="[kənˈgrætjʊleɪt]"  level="2" language="0" />
+    <record word="activity" translate="деятельность" transcription="[ækˈtɪvɪti]"  level="2" language="0" />
+    <record word="amount" translate="сумма, колличество" transcription="[əˈmaʊnt]"  level="2" language="0" />
+    <record word="author" translate="автор" transcription="[ˈɔːθə]"  level="2" language="0" />
+    <record word="character" translate="характер" transcription="[ˈkærɪktə]"  level="2" language="0" />
+    <record word="dictionary" translate="словарь" transcription="[ˈdɪkʃ(ə)n(ə)ri]	"  level="2" language="0" />
+    <record word="event" translate="событие" transcription="[ɪˈvɛnt]"  level="2" language="0" />
+    <record word="guess" translate="предположение, догадка" transcription="[gɛs]"  level="2" language="0" />
+    <record word="dashboard" translate="панель управления" transcription="[ˈdæʃbɔːd]"  level="2" language="0" />
+    <record word="trouble" translate="проблема" transcription="[ˈtrʌbl]"  level="2" language="0" />
+    <record word="cartoon" translate="мультфильм" transcription="[kɑːˈtuːn]"  level="2" language="0" />
+    <record word="movie" translate="фильм" transcription="[ˈmuːvi]"  level="2" language="0" />
+    <record word="circus" translate="цирк" transcription="[ˈsɜːkəs]"  level="2" language="0" />
+    <record word="composer" translate="композитор" transcription="[kəmˈpəʊzə]"  level="2" language="0" />
+    <record word="dream" translate="мечта" transcription="[driːm]"  level="2" language="0" />
+    <record word="daily routine" translate="ежедневная рутина" transcription="[ˈdeɪli ruːˈtiːn]"  level="2" language="0" />
+    <record word="horror" translate="ужасы" transcription="[ˈhɒrə]"  level="2" language="0" />
+    <record word="laughter" translate="смех" transcription="[ˈlɑːftə]"  level="2" language="0" />
+    <record word="novel" translate="роман" transcription="[ˈnɒvəl]"  level="2" language="0" />
+    <record word="story" translate="история" transcription="[ˈstɔːri]"  level="2" language="0" />
+    <record word="thought" translate="мысль" transcription="[θɔːt]"  level="2" language="0" />
+    <record word="adventure" translate="приключение" transcription="[ədˈvɛnʧə]"  level="2" language="0" />
+    <record word="affair" translate="страх" transcription="[əˈfeə]"  level="2" language="0" />
+    <record word="anniversary" translate="дело, интрига" transcription="[ænɪˈvɜːsəri]	"  level="2" language="0" />
+    <record word="entertainment" translate="развлечение" transcription="[ɛntəˈteɪnmənt]"  level="2" language="0" />
+    <record word="amusement" translate="веселье" transcription="[əˈmjuːzmənt]"  level="2" language="0" />
+    <record word="influence	" translate="влияние" transcription="[ˈɪnflʊəns]"  level="2" language="0" />
+    <record word="attraction" translate="достопримечательность, аттракцион" transcription="[əˈtrækʃ(ə)n]"  level="2" language="0" />
+    <record word="swimming pool" translate="бассейн" transcription="[ˈswɪmɪŋ puːl]"  level="2" language="0" />
 
-    <record word="to abolish" translate="отменять, уничтожать, упразднять" transcription="[əˈbɒlɪʃ]"  level="3" />
-    <record word="to approve" translate="утвердить, одобрить" transcription="[əˈpruːv]"  level="3" />
-    <record word="to boast" translate="гордиться, хвастаться" transcription="[bəʊst]"  level="3" />
-    <record word="to contribute" translate="жертвовать, вносить свой вклад" transcription="[kənˈtrɪbju(ː)t]"  level="3" />
-    <record word="to deliver" translate="доставлять, поставлять, приносить" transcription="[dɪˈlɪvə]"  level="3" />
-    <record word="to descend" translate="спуститься, сходить, снизойти" transcription="[dɪˈsɛnd]"  level="3" />
-    <record word="to concentrate" translate="сосредотачиваться" transcription="[ˈkɒnsəntreɪt]"  level="3" />
-    <record word="to distract" translate="отвлечь, отвлекать" transcription="[dɪsˈtrækt]	"  level="3" />
-    <record word="to torture" translate="мучить, терзать" transcription="[ˈtɔːʧə]"  level="3" />
-    <record word="addiction" translate="зависимость, пристрастие" transcription="[əˈdɪkʃ(ə)n]"  level="3" />
-    <record word="amateur" translate="любитель" transcription="[ˈæmətə(ː)]"  level="3" />
-    <record word="ambivalence" translate="нерешительность" transcription="[æmˈbɪvələns]"  level="3" />
-    <record word="commission" translate="Комиссия, поручение, заказчик" transcription="[kəˈmɪʃən]"  level="3" />
-    <record word="confidence" translate="доверие, уверенность, достоверность" transcription="[ˈkɒnfɪdəns]"  level="3" />
-    <record word="craving" translate="желание, тяга, стремление, жажда" transcription="[ˈkreɪvɪŋ]"  level="3" />
-    <record word="district" translate="район" transcription="[ˈdɪstrɪkt]	"  level="3" />
-    <record word="evidence" translate="доказательство, признак, факт" transcription="[ˈɛvɪdəns]"  level="3" />
-    <record word="honesty" translate="честность" transcription="[ˈɒnɪsti]"  level="3" />
-    <record word="circumstance" translate="обстоятельство, случай, событие" transcription="[ˈsɜːkəmstəns]"  level="3" />
-    <record word="kindness" translate="доброта" transcription="[ˈkaɪndnɪs]	"  level="3" />
-    <record word="justice" translate="справедливость" transcription="[ˈʤʌstɪs]"  level="3" />
-    <record word="disgust" translate="отвращение, брезгливость" transcription="[dɪsˈgʌst]"  level="3" />
-    <record word="suggestion" translate="предложение, суждение, идея" transcription="[səˈʤɛsʧən]"  level="3" />
-    <record word="nobility" translate="благородство, достоинство" transcription="[nəʊˈbɪlɪti]"  level="3" />
-    <record word="commotion" translate="суета" transcription="[kəˈməʊʃən]"  level="3" />
-    <record word="adherence" translate="приверженность" transcription="[ədˈhɪərəns]"  level="3" />
-    <record word="devotion" translate="преданность" transcription="[dɪˈvəʊʃən]	"  level="3" />
-    <record word="enticement" translate="приманка, соблазн, заманивание" transcription="[ ɪnˈtaɪsmənt]"  level="3" />
-    <record word="attractiveness" translate="привлекательность" transcription="[ əˈtræktɪvnəs]"  level="3" />
+    <record word="to abolish" translate="отменять, уничтожать, упразднять" transcription="[əˈbɒlɪʃ]"  level="3" language="0" />
+    <record word="to approve" translate="утвердить, одобрить" transcription="[əˈpruːv]"  level="3" language="0" />
+    <record word="to boast" translate="гордиться, хвастаться" transcription="[bəʊst]"  level="3" language="0" />
+    <record word="to contribute" translate="жертвовать, вносить свой вклад" transcription="[kənˈtrɪbju(ː)t]"  level="3" language="0" />
+    <record word="to deliver" translate="доставлять, поставлять, приносить" transcription="[dɪˈlɪvə]"  level="3" language="0" />
+    <record word="to descend" translate="спуститься, сходить, снизойти" transcription="[dɪˈsɛnd]"  level="3" language="0" />
+    <record word="to concentrate" translate="сосредотачиваться" transcription="[ˈkɒnsəntreɪt]"  level="3" language="0" />
+    <record word="to distract" translate="отвлечь, отвлекать" transcription="[dɪsˈtrækt]"  level="3" language="0" />
+    <record word="to torture" translate="мучить, терзать" transcription="[ˈtɔːʧə]"  level="3" language="0" />
+    <record word="addiction" translate="зависимость, пристрастие" transcription="[əˈdɪkʃ(ə)n]"  level="3" language="0" />
+    <record word="amateur" translate="любитель" transcription="[ˈæmətə(ː)]"  level="3" language="0" />
+    <record word="ambivalence" translate="нерешительность" transcription="[æmˈbɪvələns]"  level="3" language="0" />
+    <record word="commission" translate="Комиссия, поручение, заказчик" transcription="[kəˈmɪʃən]"  level="3" language="0" />
+    <record word="confidence" translate="доверие, уверенность, достоверность" transcription="[ˈkɒnfɪdəns]"  level="3" language="0" />
+    <record word="craving" translate="желание, тяга, стремление, жажда" transcription="[ˈkreɪvɪŋ]"  level="3" language="0" />
+    <record word="district" translate="район" transcription="[ˈdɪstrɪkt]"  level="3" language="0" />
+    <record word="evidence" translate="доказательство, признак, факт" transcription="[ˈɛvɪdəns]"  level="3" language="0" />
+    <record word="honesty" translate="честность" transcription="[ˈɒnɪsti]"  level="3" language="0" />
+    <record word="circumstance" translate="обстоятельство, случай, событие" transcription="[ˈsɜːkəmstəns]"  level="3" language="0" />
+    <record word="kindness" translate="доброта" transcription="[ˈkaɪndnɪs]	"  level="3" language="0" />
+    <record word="justice" translate="справедливость" transcription="[ˈʤʌstɪs]"  level="3" language="0" />
+    <record word="disgust" translate="отвращение, брезгливость" transcription="[dɪsˈgʌst]"  level="3" language="0" />
+    <record word="suggestion" translate="предложение, суждение, идея" transcription="[səˈʤɛsʧən]"  level="3" language="0" />
+    <record word="nobility" translate="благородство, достоинство" transcription="[nəʊˈbɪlɪti]"  level="3" language="0" />
+    <record word="commotion" translate="суета" transcription="[kəˈməʊʃən]"  level="3" language="0" />
+    <record word="adherence" translate="приверженность" transcription="[ədˈhɪərəns]"  level="3" language="0" />
+    <record word="devotion" translate="преданность" transcription="[dɪˈvəʊʃən]	"  level="3" language="0" />
+    <record word="enticement" translate="приманка, соблазн, заманивание" transcription="[ ɪnˈtaɪsmənt]"  level="3" language="0" />
+    <record word="attractiveness" translate="привлекательность" transcription="[ əˈtræktɪvnəs]"  level="3" language="0" />
 
-    <record word="to abhor" translate="ненавидеть" transcription="[əbˈhɔː]"  level="4" />
-    <record word="to abrogate" translate="отменить" transcription="[ˈæbrəʊgeɪt]"  level="4" />
-    <record word="to abstain" translate="воздержаться" transcription="[əbˈsteɪn]"  level="4" />
-    <record word="to strengthen" translate="укрепить, усилить" transcription="[ˈstrɛŋθən]"  level="4" />
-    <record word="to yield" translate="уступить" transcription="[jiːld]"  level="4" />
-    <record word="to sustain" translate="поддерживать" transcription="[səsˈteɪn]"  level="4" />
-    <record word="doorstep" translate="порог квартиры" transcription="[ˈdɔːstɛp]"  level="4" />
-    <record word="supervisor" translate="супервайзер" transcription="[ˈsjuːpəvaɪzə]"  level="4" />
-    <record word="affirmation" translate="утверждение, подтверждение" transcription="[ˌæfɜːˈmeɪʃ(ə)n]	"  level="4" />
-    <record word="uptick" translate="стимул, увеличение, толчок, подъем" transcription="[ʌp tɪk]"  level="4" />
-    <record word="drop-off" translate="спад, снижение, упадок" transcription="[drɒp-ɒf]"  level="4" />
-    <record word="conversation" translate="разговор, беседа, обсуждение" transcription="[kɒnvəˈseɪʃən]"  level="4" />
-    <record word="indifference" translate="безразличие, безучастие" transcription="[ɪnˈdɪfrəns]"  level="4" />
-    <record word="ageism" translate="эйджизм" transcription="[ˈeɪʤɪz(ə)m]"  level="4" />
-    <record word="segmentation" translate="сегментация" transcription="[sɛgmɛnˈteɪʃən]"  level="4" />
-    <record word="landmark" translate="веха, ориентир, достопримечательность" transcription="[ˈlændmɑːk]	"  level="4" />
-    <record word="upheaval" translate="переворот, катастрофа, волнение" transcription="[ʌpˈhiːvəl]	"  level="4" />
-    <record word="harassment" translate="преследование, домогательство" transcription="[ˈhærəsmənt]"  level="4" />
-    <record word="disarray" translate="беспорядок, разброд" transcription="[dɪsəˈreɪ]"  level="4" />
-    <record word="proof" translate="доказательство" transcription="[pruːf]"  level="4" />
-    <record word="influx" translate="наплыв, приток" transcription="[ˈɪnflʌks]"  level="4" />
-    <record word="struggle" translate="борьба, поединок, спор" transcription="[ˈstrʌgl]"  level="4" />
+    <record word="to abhor" translate="ненавидеть" transcription="[əbˈhɔː]"  level="4" language="0" />
+    <record word="to abrogate" translate="отменить" transcription="[ˈæbrəʊgeɪt]"  level="4" language="0" />
+    <record word="to abstain" translate="воздержаться" transcription="[əbˈsteɪn]"  level="4" language="0" />
+    <record word="to strengthen" translate="укрепить, усилить" transcription="[ˈstrɛŋθən]"  level="4" language="0" />
+    <record word="to yield" translate="уступить" transcription="[jiːld]"  level="4" language="0" />
+    <record word="to sustain" translate="поддерживать" transcription="[səsˈteɪn]"  level="4" language="0" />
+    <record word="doorstep" translate="порог квартиры" transcription="[ˈdɔːstɛp]"  level="4" language="0" />
+    <record word="supervisor" translate="супервайзер" transcription="[ˈsjuːpəvaɪzə]"  level="4" language="0" />
+    <record word="affirmation" translate="утверждение, подтверждение" transcription="[ˌæfɜːˈmeɪʃ(ə)n]	"  level="4" language="0" />
+    <record word="uptick" translate="стимул, увеличение, толчок, подъем" transcription="[ʌp tɪk]"  level="4" language="0" />
+    <record word="drop-off" translate="спад, снижение, упадок" transcription="[drɒp-ɒf]"  level="4" language="0" />
+    <record word="conversation" translate="разговор, беседа, обсуждение" transcription="[kɒnvəˈseɪʃən]"  level="4" language="0" />
+    <record word="indifference" translate="безразличие, безучастие" transcription="[ɪnˈdɪfrəns]"  level="4" language="0" />
+    <record word="ageism" translate="эйджизм" transcription="[ˈeɪʤɪz(ə)m]"  level="4" language="0" />
+    <record word="segmentation" translate="сегментация" transcription="[sɛgmɛnˈteɪʃən]"  level="4" language="0" />
+    <record word="landmark" translate="веха, ориентир, достопримечательность" transcription="[ˈlændmɑːk]	"  level="4" language="0" />
+    <record word="upheaval" translate="переворот, катастрофа, волнение" transcription="[ʌpˈhiːvəl]	"  level="4" language="0" />
+    <record word="harassment" translate="преследование, домогательство" transcription="[ˈhærəsmənt]"  level="4" language="0" />
+    <record word="disarray" translate="беспорядок, разброд" transcription="[dɪsəˈreɪ]"  level="4" language="0" />
+    <record word="proof" translate="доказательство" transcription="[pruːf]"  level="4" language="0" />
+    <record word="influx" translate="наплыв, приток" transcription="[ˈɪnflʌks]"  level="4" language="0" />
+    <record word="struggle" translate="борьба, поединок, спор" transcription="[ˈstrʌgl]"  level="4" language="0" />
 
-    <record word="to abate" translate="cокращать, уменьшать, ослаблять" transcription="[əˈbeɪt]"  level="5" />
-    <record word="to abjure" translate="отказаться, отрекаться, воздерживаться" transcription="[əbˈʤʊə]"  level="5" />
-    <record word="to dangle" translate="болтаться, зависать, висеть" transcription="[ˈdæŋgl]"  level="5" />
-    <record word="to abscond" translate="скрыться, пропасть, уйти" transcription="[əbˈskɒnd]"  level="5" />
-    <record word="to assuage" translate="успокаивать, утешать, усмирять" transcription="[əˈsweɪʤ]	"  level="5" />
-    <record word="to disabuse" translate="разочаровать, расстроить, развенчать" transcription="[ˌdɪsəˈbjuːz]"  level="5" />
-    <record word="to equivocate" translate="увиливать, оправдываться, оспаривать" transcription="[ɪˈkwɪvəkeɪt]"  level="5" />
-    <record word="to incise" translate="надрезать" transcription="[ɪnˈsaɪz]"  level="5" />
-    <record word="modality" translate="метод, форма" transcription="[məʊˈdælɪti]"  level="5" />
-    <record word="discerning" translate="распознавание" transcription="[dɪˈsɜːnɪŋ]"  level="5" />
-    <record word="similarity" translate="сходство, подобие, аналогия" transcription="[sɪmɪˈlærɪti]	"  level="5" />
-    <record word="pattern" translate="образец, модель, схема" transcription="[pætən]"  level="5" />
-    <record word="sequencing" translate="последовательность, порядок, упорядочивание" transcription="[ˈsiːkwənsɪŋ]	"  level="5" />
-    <record word="oversight	" translate="надзор, контроль" transcription="[ˈəʊvəsaɪt]	"  level="5" />
-    <record word="exhibition" translate="выставка" transcription="[ˌɛksɪˈbɪʃən]	"  level="5" />
-    <record word="specimen" translate="образец, модель, экспонат" transcription="[ˈspɛsɪmɪn]	"  level="5" />
-    <record word="interference" translate="интерференция, вмешательство" transcription="[ˌɪntəˈfɪərəns]	"  level="5" />
-    <record word="bureaucracy" translate="бюрократия" transcription="[bjʊəˈrɒkrəsi]"  level="5" />
-    <record word="generation" translate="поколение" transcription="[ˌʤɛnəˈreɪʃən]"  level="5" />
-    <record word="significance" translate="значение, значимость, важность" transcription="[sɪgˈnɪfɪkəns]"  level="5" />
+    <record word="to abate" translate="cокращать, уменьшать, ослаблять" transcription="[əˈbeɪt]"  level="5" language="0" />
+    <record word="to abjure" translate="отказаться, отрекаться, воздерживаться" transcription="[əbˈʤʊə]"  level="5" language="0" />
+    <record word="to dangle" translate="болтаться, зависать, висеть" transcription="[ˈdæŋgl]"  level="5" language="0" />
+    <record word="to abscond" translate="скрыться, пропасть, уйти" transcription="[əbˈskɒnd]"  level="5" language="0" />
+    <record word="to assuage" translate="успокаивать, утешать, усмирять" transcription="[əˈsweɪʤ]	"  level="5" language="0" />
+    <record word="to disabuse" translate="разочаровать, расстроить, развенчать" transcription="[ˌdɪsəˈbjuːz]"  level="5" language="0" />
+    <record word="to equivocate" translate="увиливать, оправдываться, оспаривать" transcription="[ɪˈkwɪvəkeɪt]"  level="5" language="0" />
+    <record word="to incise" translate="надрезать" transcription="[ɪnˈsaɪz]"  level="5" language="0" />
+    <record word="modality" translate="метод, форма" transcription="[məʊˈdælɪti]"  level="5" language="0" />
+    <record word="discerning" translate="распознавание" transcription="[dɪˈsɜːnɪŋ]"  level="5" language="0" />
+    <record word="similarity" translate="сходство, подобие, аналогия" transcription="[sɪmɪˈlærɪti]	"  level="5" language="0" />
+    <record word="pattern" translate="образец, модель, схема" transcription="[pætən]"  level="5" language="0" />
+    <record word="sequencing" translate="последовательность, порядок, упорядочивание" transcription="[ˈsiːkwənsɪŋ]	"  level="5" language="0" />
+    <record word="oversight	" translate="надзор, контроль" transcription="[ˈəʊvəsaɪt]	"  level="5" language="0" />
+    <record word="exhibition" translate="выставка" transcription="[ˌɛksɪˈbɪʃən]	"  level="5" language="0" />
+    <record word="specimen" translate="образец, модель, экспонат" transcription="[ˈspɛsɪmɪn]	"  level="5" language="0" />
+    <record word="interference" translate="интерференция, вмешательство" transcription="[ˌɪntəˈfɪərəns]	"  level="5" language="0" />
+    <record word="bureaucracy" translate="бюрократия" transcription="[bjʊəˈrɒkrəsi]"  level="5" language="0" />
+    <record word="generation" translate="поколение" transcription="[ˌʤɛnəˈreɪʃən]"  level="5" language="0" />
+    <record word="significance" translate="значение, значимость, важность" transcription="[sɪgˈnɪfɪkəns]"  level="5" language="0" />
 
-    <record word="to crumble" translate="крошить, осыпаться, разрушаться" transcription="[krʌmbl]"  level="6" />
-    <record word="to fatten" translate="откормливать, жиреть" transcription="[fætn]"  level="6" />
-    <record word="to convict" translate="осудить, обвинить" transcription="[ˈkɒnvɪkt]"  level="6" />
-    <record word="to aspire" translate="стремится, претендовать" transcription="[əsˈpaɪə]"  level="6" />
-    <record word="to creak" translate="скрипеть" transcription=" [kriːk]"  level="6" />
-    <record word="to revolt" translate="восстать, бунтовать" transcription="[rɪˈvəʊlt]"  level="6" />
-    <record word="to inherit" translate="наследовать, перенять" transcription=" [ɪnˈherɪt]"  level="6" />
-    <record word="to detest" translate="выявлять" transcription="[tuː dɪˈtekt]"  level="6" />
-    <record word="aversion" translate="отвращение, непринятие" transcription="[əˈvɜːʃn]"  level="6" />
-    <record word="conscience" translate="совесть, сознание" transcription=" [ˈkɒnʃns]"  level="6" />
-    <record word="instalment" translate="частичный взнос" transcription=" [ɪnˈstɔːlmənt]"  level="6" />
-    <record word="diaper" translate="подгузник" transcription=" [ˈdaɪəpə]"  level="6" />
-    <record word="adolescent" translate="подросток" transcription=" [ædəˈles(ə)nt]"  level="6" />
-    <record word="orphanage" translate="детский дом" transcription=" [ˈɔːfənɪʤ]"  level="6" />
-    <record word="descendant" translate="потомок" transcription=" [dɪˈsendənt]"  level="6" />
-    <record word="concession" translate="уступка, концессия, льгота" transcription=" [kənˈseʃn]"  level="6" />
+    <record word="to crumble" translate="крошить, осыпаться, разрушаться" transcription="[krʌmbl]"  level="6" language="0" />
+    <record word="to fatten" translate="откормливать, жиреть" transcription="[fætn]"  level="6" language="0" />
+    <record word="to convict" translate="осудить, обвинить" transcription="[ˈkɒnvɪkt]"  level="6" language="0" />
+    <record word="to aspire" translate="стремится, претендовать" transcription="[əsˈpaɪə]"  level="6" language="0" />
+    <record word="to creak" translate="скрипеть" transcription=" [kriːk]"  level="6" language="0" />
+    <record word="to revolt" translate="восстать, бунтовать" transcription="[rɪˈvəʊlt]"  level="6" language="0" />
+    <record word="to inherit" translate="наследовать, перенять" transcription=" [ɪnˈherɪt]"  level="6" language="0" />
+    <record word="to detest" translate="выявлять" transcription="[tuː dɪˈtekt]"  level="6" language="0" />
+    <record word="aversion" translate="отвращение, непринятие" transcription="[əˈvɜːʃn]"  level="6" language="0" />
+    <record word="conscience" translate="совесть, сознание" transcription=" [ˈkɒnʃns]"  level="6" language="0" />
+    <record word="instalment" translate="частичный взнос" transcription=" [ɪnˈstɔːlmənt]"  level="6" language="0" />
+    <record word="diaper" translate="подгузник" transcription=" [ˈdaɪəpə]"  level="6" language="0" />
+    <record word="adolescent" translate="подросток" transcription=" [ædəˈles(ə)nt]"  level="6" language="0" />
+    <record word="orphanage" translate="детский дом" transcription=" [ˈɔːfənɪʤ]"  level="6" language="0" />
+    <record word="descendant" translate="потомок" transcription=" [dɪˈsendənt]"  level="6" language="0" />
+    <record word="concession" translate="уступка, концессия, льгота" transcription=" [kənˈseʃn]"  level="6" language="0" />
 
+
+    <record word="vert" translate="зеленый" transcription="[vɛʁ]"  level="1" language="1" />
+    <record word="un, une" translate="один, одна" transcription="[œ̃]"  level="1" language="1" />
+    <record word="deux" translate="два" transcription="[dø]"  level="1" language="1" />
+    <record word="trois" translate="три" transcription="[tʁwɑ]"  level="1" language="1" />
+    <record word="quatre" translate="четыре" transcription="[katʁ]"  level="1" language="1" />
+
+    <record word="chaleur" translate="жар" transcription="[ʃalœʁ]"  level="2" language="1" />
+    <record word="Le petit déjeuner" translate="завтрак" transcription="[pəti deʒœne]"  level="2" language="1" />
+    <record word="Le déjeuner" translate="обед" transcription="[deʒœne]"  level="2" language="1" />
+    <record word="Du café" translate="кафе" transcription="[kafe]"  level="2" language="1" />
+    <record word="Du jus" translate="сок" transcription="[ʒy]"  level="2" language="1" />
+
+    <record word="tableau" translate="картина, изображение" transcription="[tablo]"  level="3" language="1" />
+    <record word="Une profession" translate="профессия" transcription="[pʁɔfɛsjɔ̃]"  level="3" language="1" />
+    <record word="Un professeur" translate="преподаватель" transcription="[pʁɔfesœʁ]"  level="3" language="1" />
+    <record word="Un policier" translate="полицейский" transcription="[pɔlisje]"  level="3" language="1" />
+    <record word="Une ménagère" translate="домохозяйка" transcription="[menaʒɛʁ]"  level="3" language="1" />
+
+    <record word="écoute" translate="слушать, прослушивать, услышать" transcription="[ekut]"  level="4" language="1" />
+    <record word="un immeuble" translate="многоквартирный дом" transcription="[imœbl]"  level="4" language="1" />
+    <record word="un ascenseur" translate="лифт" transcription="[asɑ̃sœʁ]"  level="4" language="1" />
+    <record word="un voisin" translate="сосед" transcription="[voisin]"  level="4" language="1" />
+    <record word="une observation" translate="замечание" transcription="[ɔpsɛʁvasjɔ̃]"  level="4" language="1" />
+
+    <record word="cependant" translate="однако, между тем" transcription="[səpɑ̃dɑ̃]"  level="5" language="1" />
+    <record word="partager" translate="разделять" transcription="[paʁtaʒe]"  level="5" language="1" />
+    <record word="évoluer" translate="развиваться" transcription="[evɔlɥe]"  level="5" language="1" />
+    <record word="majoritairement" translate="преимущественно" transcription="[maʒoʁitɛʁmɑ̃]"  level="5" language="1" />
+    <record word="détenir" translate="владеть, обладать, задержать" transcription="[detniʁ]"  level="5" language="1" />
+
+    <record word="cotisation" translate="членский взнос" transcription="[kɔtizasjɔ̃]"  level="6" language="1" />
+    <record word="considérer" translate="(внимательно) рассматривать, учитывать, полагать " transcription="[kɔ̃sideʁe]"  level="6" language="1" />
+    <record word="réduire" translate="уменьшить, сократить, свернуть" transcription="[ʁedɥiʁ]"  level="6" language="1" />
+    <record word="percevoir" translate="воспринимать, ощущать, собирать" transcription="[pɛʁsəvwaʁ]"  level="6" language="1" />
+    <record word="manquer une occasion" translate="упустить случай" transcription="[mɑ̃ke œ̃ ɔkazjɔ̃]"  level="6" language="1" />
 </words>
